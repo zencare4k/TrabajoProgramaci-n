@@ -21,7 +21,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
-        main.playBackgroundMusic("C:\\Users\\zenca\\Documents\\GitHub\\TrabajoProgramaci-n\\Inadex_\\src\\Effects\\Login_Background.wav");
+        main.playBackgroundMusic("src/resources_audio/Login_Background.wav");
    
         
     }
@@ -143,7 +143,7 @@ public class Login extends javax.swing.JFrame {
    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        main.playSound("C:\\Users\\zenca\\Documents\\GitHub\\TrabajoProgramaci-n\\Inadex_\\src\\Effects\\OK.wav");
+        main.playSound("src/resources_audio/OK.wav");
     }//GEN-LAST:event_jButton1ActionPerformed
   
     //Este metodo sirve para reproducir musica de fondo en bucle
