@@ -4,6 +4,12 @@
  */
 package Inadex_gui;
 
+import inadex_.main;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import javax.swing.JTextField;
+
 /**
  *
  * @author zenca
@@ -15,6 +21,9 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        main.playBackgroundMusic("C:\\Users\\zenca\\Documents\\GitHub\\TrabajoProgramaci-n\\Inadex_\\src\\Effects\\Login_Background.wav");
+   
+        
     }
 
     /**
@@ -49,6 +58,11 @@ public class Login extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Iniciar Sesión");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jTextField1.setBackground(new java.awt.Color(255, 102, 0));
         jTextField1.setForeground(new java.awt.Color(255, 255, 255));
@@ -125,10 +139,21 @@ public class Login extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
-
-    /**
+    
+   
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        main.playSound("C:\\Users\\zenca\\Documents\\GitHub\\TrabajoProgramaci-n\\Inadex_\\src\\Effects\\OK.wav");
+    }//GEN-LAST:event_jButton1ActionPerformed
+  
+    //Este metodo sirve para reproducir musica de fondo en bucle
+    
+    
+  /**
      * @param args the command line arguments
      */
+
+    
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
