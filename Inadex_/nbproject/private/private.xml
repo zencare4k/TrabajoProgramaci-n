@@ -3,9 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/BBDD/conexion_BBDD.java</file>
             <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/Login.java</file>
             <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/inadex_/main.java</file>
+=======
+            <file>file:/C:/Users/Carlos%20Marban/Documents/NetBeansProjects/Inadex_/src/Inadex_gui/gui.java</file>
+            <file>file:/C:/Users/Carlos%20Marban/Documents/NetBeansProjects/Inadex_/src/inadex_/main.java</file>
+>>>>>>> 781a1dbd6eb0162e1817e9b1bb869c639d16dcea
         </group>
     </open-files>
 </project-private>

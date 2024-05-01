@@ -19,7 +19,11 @@ import javax.swing.JOptionPane;
 public class conexion_BBDD {
 	
 	static String timeZone = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+<<<<<<< HEAD
 	static String dbName = "inadex";
+=======
+	static String dbName = "prueba";
+>>>>>>> 781a1dbd6eb0162e1817e9b1bb869c639d16dcea
 	static String url = "jdbc:mysql://localhost:3306/" + dbName + timeZone;
 	static String user = " ";
 	static String pass = " ";
