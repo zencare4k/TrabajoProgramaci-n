@@ -9,11 +9,9 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import java.awt.Color;
-
-
-
 import java.awt.Font;
 import java.awt.FontFormatException;
+import java.awt.event.KeyAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.File;
@@ -23,9 +21,7 @@ import java.util.logging.Logger;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-
 import javax.swing.JFrame;
-
 import javax.swing.JLabel;
 
 /**
@@ -47,8 +43,7 @@ public class main {
         login.setResizable(false);
         login.setTitle("Inadex Login");
         JFrame framel = new JFrame();
-        
-      
+       
         
        
     }
@@ -85,11 +80,8 @@ public class main {
         } catch (Exception e) {
             e.printStackTrace();
         }
+     
   }
-
-        
-
-
 }
 
     
