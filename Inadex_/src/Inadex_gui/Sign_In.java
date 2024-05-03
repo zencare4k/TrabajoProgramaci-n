@@ -281,13 +281,15 @@ private static Clip clip;
          String usuario = Usuario_SignIn.getText();
          String correo = Correo_SigIn.getText();
          
-        String insertQuery = "INSERT INTO usuarios (Nombre, Apellido, Usuario, Contrasena, Correo) VALUES ('" + nombre + "', '" + apellido + "', '" + usuario + "', '" + contrasena + "', '" + correo + "')";
-        try {
+        
+        if (nombre.contains(nombre) | apellido.contains(apellido) | contrasena.contains(contrasena) | usuario.contains(usuario) | correo.contains(correo)) {
+            String insertQuery = "INSERT INTO usuarios (Nombre, Apellido, Usuario, Contrasena, Correo) VALUES ('" + nombre + "', '" + apellido + "', '" + usuario + "', '" + contrasena + "', '" + correo + "')"; 
             conexion_BBDD.EjecutarUpdate(insertQuery);
             conexion_BBDD.CerrarConexion();
             JOptionPane.showMessageDialog(null, "Datos insertados correctamente");
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error al insertar datos en la base de datos");
+        }
+        if (nombre.isEmpty() | apellido.isEmpty() | contrasena.isEmpty() | usuario.isEmpty() | correo.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "No hay ningún campo (de furbo) relleno");
         }
         
     }//GEN-LAST:event_SigIn_SigInActionPerformed
