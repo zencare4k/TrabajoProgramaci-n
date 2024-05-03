@@ -176,7 +176,7 @@ public class Login extends javax.swing.JFrame {
         SignIn.setResizable(false);
         SignIn.setTitle("Inadex Sign in");
         SignIn.setLocationRelativeTo(null);
-        SignIn.setSize(563, 689);
+        SignIn.setSize(563, 708);
         SignIn.setVisible(true);
         Login login = new Login();
          login.setVisible(false);

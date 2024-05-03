@@ -191,7 +191,7 @@ private static Clip clip;
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(204, 204, 204)
                         .addComponent(SigIn_SigIn, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -284,10 +284,12 @@ private static Clip clip;
         String insertQuery = "INSERT INTO usuarios (Nombre, Apellido, Usuario, Contrasena, Correo) VALUES ('" + nombre + "', '" + apellido + "', '" + usuario + "', '" + contrasena + "', '" + correo + "')";
         try {
             conexion_BBDD.EjecutarUpdate(insertQuery);
+            conexion_BBDD.CerrarConexion();
             JOptionPane.showMessageDialog(null, "Datos insertados correctamente");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error al insertar datos en la base de datos");
         }
+        
     }//GEN-LAST:event_SigIn_SigInActionPerformed
 
     private void Contrasena_SignIn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Contrasena_SignIn1ActionPerformed
