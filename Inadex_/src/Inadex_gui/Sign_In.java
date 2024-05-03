@@ -7,6 +7,9 @@ package Inadex_gui;
 import BBDD.conexion_BBDD;
 import Inadex_gui.Login;
 import inadex_.main;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.sound.sampled.Clip;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -282,15 +285,20 @@ private static Clip clip;
          String correo = Correo_SigIn.getText();
          
         
-        if (nombre.contains(nombre) | apellido.contains(apellido) | contrasena.contains(contrasena) | usuario.contains(usuario) | correo.contains(correo)) {
-            String insertQuery = "INSERT INTO usuarios (Nombre, Apellido, Usuario, Contrasena, Correo) VALUES ('" + nombre + "', '" + apellido + "', '" + usuario + "', '" + contrasena + "', '" + correo + "')"; 
-            conexion_BBDD.EjecutarUpdate(insertQuery);
-            conexion_BBDD.CerrarConexion();
-            JOptionPane.showMessageDialog(null, "Datos insertados correctamente");
+        try {
+          String insertQuery = "INSERT INTO usuarios (Nombre, Apellido, Usuario, Contrasena, Correo) VALUES ('" + nombre + "', '" + apellido + "', '" + usuario + "', '" + contrasena + "', '" + correo + "')";
+          conexion_BBDD.EjecutarUpdate(insertQuery);
+          JOptionPane.showMessageDialog(null, "Se han insertado los datos correctamente.");
+          
+       
+
+        } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "Error al insertar datos en la base de datos");
         }
         if (nombre.isEmpty() | apellido.isEmpty() | contrasena.isEmpty() | usuario.isEmpty() | correo.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "No hay ningún campo (de furbo) relleno");
-        }
+                conexion_BBDD.CerrarConexion();
+                JOptionPane.showMessageDialog(null, "No hay ningún campo (de furbo) relleno");
+            }
         
     }//GEN-LAST:event_SigIn_SigInActionPerformed
 
