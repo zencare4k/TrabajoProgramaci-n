@@ -4,13 +4,19 @@
  */
 package Inadex_gui;
 
+import BBDD.conexion_BBDD;
 import inadex_.main;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
 import static java.lang.invoke.MethodHandles.loop;
 import javax.sound.sampled.Clip;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -46,8 +52,8 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         Login_Login = new javax.swing.JButton();
-        Usuario_Login = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        Usuario_SignIn = new javax.swing.JTextField();
+        Contrasena_SignIn1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         SignIn_Login = new javax.swing.JButton();
 
@@ -72,20 +78,20 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        Usuario_Login.setBackground(new java.awt.Color(255, 102, 0));
-        Usuario_Login.setForeground(new java.awt.Color(255, 255, 255));
-        Usuario_Login.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Usuario_Login.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        Usuario_Login.addActionListener(new java.awt.event.ActionListener() {
+        Usuario_SignIn.setBackground(new java.awt.Color(255, 102, 0));
+        Usuario_SignIn.setForeground(new java.awt.Color(255, 255, 255));
+        Usuario_SignIn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Usuario_SignIn.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        Usuario_SignIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Usuario_LoginActionPerformed(evt);
+                Usuario_SignInActionPerformed(evt);
             }
         });
 
-        jTextField2.setBackground(new java.awt.Color(255, 102, 0));
-        jTextField2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Contrasena_SignIn1.setBackground(new java.awt.Color(255, 102, 0));
+        Contrasena_SignIn1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        Contrasena_SignIn1.setForeground(new java.awt.Color(255, 255, 255));
+        Contrasena_SignIn1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -113,8 +119,8 @@ public class Login extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
                             .addComponent(jLabel2)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Usuario_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Contrasena_SignIn1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Usuario_SignIn, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(224, 224, 224)
@@ -131,11 +137,11 @@ public class Login extends javax.swing.JFrame {
                 .addGap(64, 64, 64)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Usuario_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Usuario_SignIn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Contrasena_SignIn1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
                 .addComponent(Login_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -157,15 +163,22 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Usuario_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Usuario_LoginActionPerformed
+    private void Usuario_SignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Usuario_SignInActionPerformed
         // TODO add your handling code here:
          
-    }//GEN-LAST:event_Usuario_LoginActionPerformed
+    }//GEN-LAST:event_Usuario_SignInActionPerformed
    
     private void Login_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Login_LoginActionPerformed
         // TODO add your handling code here:
        main.playSound("src/resources_audio/OK.wav");
-        
+        try {
+            conexion_BBDD.Conectar();
+            String query = "SELECT * FROM usuarios WHERE Usuario = ? AND Contrasena = ? AND Nombre = ? AND Apellido = ? AND Correo = ?";
+            conexion_BBDD.EjecutarSentencia(query);
+           
+        } catch (Exception e) {
+             JOptionPane.showMessageDialog(null, "Inicio de sesión fallido");
+        }
     }//GEN-LAST:event_Login_LoginActionPerformed
 
     private void SignIn_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignIn_LoginActionPerformed
@@ -198,13 +211,13 @@ public class Login extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Contrasena_SignIn1;
     private javax.swing.JButton Login_Login;
     private javax.swing.JButton SignIn_Login;
-    private javax.swing.JTextField Usuario_Login;
+    private javax.swing.JTextField Usuario_SignIn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
