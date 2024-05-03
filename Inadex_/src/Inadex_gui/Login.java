@@ -4,11 +4,14 @@
  */
 package Inadex_gui;
 
+import inadex_.Sign_In;
 import inadex_.main;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import static java.lang.invoke.MethodHandles.loop;
+import javax.sound.sampled.Clip;
 import javax.swing.JTextField;
 
 /**
@@ -16,16 +19,20 @@ import javax.swing.JTextField;
  * @author zenca
  */
 public class Login extends javax.swing.JFrame {
-
+    private Clip clip;
     /**
      * Creates new form Login
      */
+    
     public Login() {
         initComponents();
-        main.playSound("src/resources_audio/Login_Background.wav");
-   
+       
+        main.playBackgroundMusic("src/resources_audio/Login_Background.wav");
+          
         
     }
+
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -89,6 +96,7 @@ public class Login extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Registrarse");
+        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -107,10 +115,8 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(jLabel3)
                             .addComponent(jLabel2)
                             .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(121, 121, 121)
-                        .addComponent(jLabel1))
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(222, 222, 222)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -121,9 +127,9 @@ public class Login extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(24, 24, 24)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
+                .addGap(64, 64, 64)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -159,13 +165,27 @@ public class Login extends javax.swing.JFrame {
    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        main.playSound("src/resources_audio/OK.wav");
+       main.playSound("src/resources_audio/OK.wav");
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
           main.playSound("src/resources_audio/OK.wav");
+          Sign_In SignIn = new Sign_In();
+          main.stopBackgroundMusic();   
+        SignIn.setResizable(false);
+        SignIn.setTitle("Inadex Sign in");
+        SignIn.setLocationRelativeTo(null);
+        SignIn.setSize(563, 689);
+        SignIn.setVisible(true);
+        Login login = new Login();
+         login.setVisible(false);
+         main.stopBackgroundMusic();
+         dispose();
+      
+         
+       
     }//GEN-LAST:event_jButton2ActionPerformed
   
     //Este metodo sirve para reproducir musica de fondo en bucle

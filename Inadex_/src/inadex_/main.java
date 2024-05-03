@@ -34,16 +34,22 @@ public class main {
     /**
      * @param args the command line arguments
      */
+private static Clip backgroundMusic;
+private static Clip OK;
 
+private static Login login = new Login();
     public static void main(String[] args) {
     
-        Login login = new Login();
+        
         login.setVisible(true);
         login.setLocationRelativeTo(null);
         login.setResizable(false);
         login.setTitle("Inadex Login");
         JFrame framel = new JFrame();
-       
+        //registrarse
+        
+      
+        
         
        
     }
@@ -52,37 +58,49 @@ public class main {
  
     
     
+    
     //audio al pulsar jbutton
     
     public static void playSound(String filename){
         try {
             File file = new File (filename);
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(file);
-            Clip clip = AudioSystem.getClip();
-            clip.open(audioInputStream);
-            clip.start();
+            OK = AudioSystem.getClip();
+            OK.open(audioInputStream);
+            OK.start();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+    
+ 
+
+     
     //audio de fondo
    
   public static void playBackgroundMusic(String filename){
          try {
             File file = new File(filename);
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(file);
-            Clip clip = AudioSystem.getClip();
-            clip.open(audioInputStream);
-            clip.loop(Clip.LOOP_CONTINUOUSLY); 
-            clip.start();
-            
-           
+            backgroundMusic = AudioSystem.getClip();
+            backgroundMusic.open(audioInputStream);
+            backgroundMusic.loop(Clip.LOOP_CONTINUOUSLY); 
+            backgroundMusic.start();
+          
         } catch (Exception e) {
             e.printStackTrace();
         }
      
   }
+  public static void stopBackgroundMusic() {
+      do {          
+          backgroundMusic.close();
+          backgroundMusic.stop();
+          
+      } while (login == null);
+    }
+ 
 }
 
-    
+
 
