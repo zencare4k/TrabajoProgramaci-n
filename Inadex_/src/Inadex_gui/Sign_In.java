@@ -2,11 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package inadex_;
+package Inadex_gui;
 
+import BBDD.conexion_BBDD;
 import Inadex_gui.Login;
+import inadex_.main;
 import javax.sound.sampled.Clip;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -14,6 +17,8 @@ import javax.swing.JFrame;
  */
 public class Sign_In extends javax.swing.JFrame {
 private static Clip clip;
+         
+
     /**
      * Creates new form Sign_In
      */
@@ -74,7 +79,6 @@ private static Clip clip;
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(583, 647));
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 255));
 
@@ -270,10 +274,25 @@ private static Clip clip;
         login.setTitle("Inadex Login");
         JFrame framel = new JFrame();
          main.stopBackgroundMusic();
+         
+         String nombre = Nombre_SignIn.getText();
+         String apellido = Apellido_SignIn.getText();
+         String contrasena = Contrasena_SignIn1.getText();
+         String usuario = Usuario_SignIn.getText();
+         String correo = Correo_SigIn.getText();
+         
+        String insertQuery = "INSERT INTO usuarios (Nombre, Apellido, Usuario, Contrasena, Correo) VALUES ('" + nombre + "', '" + apellido + "', '" + usuario + "', '" + contrasena + "', '" + correo + "')";
+        try {
+            conexion_BBDD.EjecutarUpdate(insertQuery);
+            JOptionPane.showMessageDialog(null, "Datos insertados correctamente");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error al insertar datos en la base de datos");
+        }
     }//GEN-LAST:event_SigIn_SigInActionPerformed
 
     private void Contrasena_SignIn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Contrasena_SignIn1ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_Contrasena_SignIn1ActionPerformed
 
     /**

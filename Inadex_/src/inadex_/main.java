@@ -4,6 +4,7 @@
  */
 package inadex_;
 
+import BBDD.conexion_BBDD;
 import Inadex_gui.Login;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import javax.swing.*;
@@ -48,7 +49,9 @@ private static Login login = new Login();
         JFrame framel = new JFrame();
         //registrarse
         
-      
+        conexion_BBDD.Conectar();
+        
+        
         
         
        
@@ -99,6 +102,7 @@ private static Login login = new Login();
           
       } while (login == null);
     }
+  
  
 }
 

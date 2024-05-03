@@ -20,13 +20,13 @@ public class conexion_BBDD {
 	
 	static String timeZone = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 
-	static String dbName = "inadex";
+	static String dbName = "";
 
 	
 
-	static String url = "jdbc:mysql://localhost:3306/" + dbName + timeZone;
-	static String user = " ";
-	static String pass = " ";
+	static String url = "jdbc:mysql://localhost:3306/inadex" + dbName + timeZone;
+	static String user = "root";
+	static String pass = "";
 	static String driver = "com.mysql.cj.jdbc.Driver";
     
     static Connection conexion;
@@ -37,7 +37,7 @@ public class conexion_BBDD {
     	try {
            Class.forName(driver) ;
            conexion = DriverManager.getConnection(url, user, pass);
-           System.out.println("Base de datos clientes.fdb situada en :\n "+url);
+           System.out.println("Base de datos inadex.fdb situada en :\n "+url);
            consulta = conexion.createStatement();
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e.getMessage());
