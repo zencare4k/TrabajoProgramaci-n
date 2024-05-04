@@ -13,6 +13,7 @@ import java.util.logging.Logger;
 import javax.sound.sampled.Clip;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.Popup;
 
 /**
  *
@@ -176,9 +177,6 @@ private static Clip clip;
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(101, 101, 101)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(83, 83, 83)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
@@ -192,37 +190,40 @@ private static Clip clip;
                             .addComponent(Contrasena_SignIn1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(204, 204, 204)
+                        .addGap(105, 105, 105)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(210, 210, 210)
                         .addComponent(SigIn_SigIn, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(102, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Nombre_SignIn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(Apellido_SignIn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Usuario_SignIn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(Correo_SigIn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Contrasena_SignIn1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(SigIn_SigIn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -233,7 +234,7 @@ private static Clip clip;
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -284,22 +285,22 @@ private static Clip clip;
          String usuario = Usuario_SignIn.getText();
          String correo = Correo_SigIn.getText();
          
-        
-        try {
-          String insertQuery = "INSERT INTO usuarios (Nombre, Apellido, Usuario, Contrasena, Correo) VALUES ('" + nombre + "', '" + apellido + "', '" + usuario + "', '" + contrasena + "', '" + correo + "')";
-          conexion_BBDD.EjecutarUpdate(insertQuery);
-          JOptionPane.showMessageDialog(null, "Se han insertado los datos correctamente.");
-          
        
+         if (nombre.contains(nombre) | correo.contains(correo) | usuario.contains(usuario) | apellido.contains(apellido) | contrasena.contains(contrasena)) {
+               
+             try {
+                   String insertQuery = "INSERT INTO usuarios (Nombre, Apellido, Usuario, Contrasena, Correo) VALUES ('" + nombre + "', '" + apellido + "', '" + usuario + "', '" + contrasena + "', '" + correo + "')";
+             conexion_BBDD.EjecutarSentencia(insertQuery);
+             JOptionPane.showMessageDialog(null, "Se han rellenado los datos corrctamente");
+             } catch (Exception e) {
+                 JOptionPane.showMessageDialog(null, "Error al rellenar los datos");
+             }
+        }  if (nombre.isEmpty()| correo.isEmpty()| usuario.isEmpty() | contrasena.isEmpty() | apellido.isEmpty()) {
+              JOptionPane.showMessageDialog(null, "No has rellenado nada");
+              conexion_BBDD.CerrarConexion();
 
-        } catch (Exception e) {
-        JOptionPane.showMessageDialog(null, "Error al insertar datos en la base de datos");
-        }
-        if (nombre.isEmpty() | apellido.isEmpty() | contrasena.isEmpty() | usuario.isEmpty() | correo.isEmpty()) {
-                conexion_BBDD.CerrarConexion();
-                JOptionPane.showMessageDialog(null, "No hay ningún campo (de furbo) relleno");
-            }
-        
+             }
+     
     }//GEN-LAST:event_SigIn_SigInActionPerformed
 
     private void Contrasena_SignIn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Contrasena_SignIn1ActionPerformed

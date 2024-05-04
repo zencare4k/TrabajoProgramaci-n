@@ -15,6 +15,7 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import static java.lang.invoke.MethodHandles.loop;
+import java.util.jar.Manifest;
 import javax.sound.sampled.Clip;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -53,9 +54,10 @@ public class Login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         Login_Login = new javax.swing.JButton();
         Usuario_SignIn = new javax.swing.JTextField();
-        Contrasena_SignIn1 = new javax.swing.JTextField();
+        Contrasena_SignIn = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         SignIn_Login = new javax.swing.JButton();
+        SignIn_Login1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -88,10 +90,15 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        Contrasena_SignIn1.setBackground(new java.awt.Color(255, 102, 0));
-        Contrasena_SignIn1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        Contrasena_SignIn1.setForeground(new java.awt.Color(255, 255, 255));
-        Contrasena_SignIn1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Contrasena_SignIn.setBackground(new java.awt.Color(255, 102, 0));
+        Contrasena_SignIn.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        Contrasena_SignIn.setForeground(new java.awt.Color(255, 255, 255));
+        Contrasena_SignIn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Contrasena_SignIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Contrasena_SignInActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -108,6 +115,17 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        SignIn_Login1.setBackground(new java.awt.Color(255, 102, 0));
+        SignIn_Login1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        SignIn_Login1.setForeground(new java.awt.Color(255, 255, 255));
+        SignIn_Login1.setText("Registrarse");
+        SignIn_Login1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        SignIn_Login1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SignIn_Login1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -119,21 +137,26 @@ public class Login extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
                             .addComponent(jLabel2)
-                            .addComponent(Contrasena_SignIn1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Contrasena_SignIn, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Usuario_SignIn, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(SignIn_Login1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(224, 224, 224)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(SignIn_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Login_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SignIn_Login1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(64, 64, 64)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -141,12 +164,12 @@ public class Login extends javax.swing.JFrame {
                 .addGap(44, 44, 44)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Contrasena_SignIn1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Contrasena_SignIn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
                 .addComponent(Login_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addComponent(SignIn_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -171,34 +194,68 @@ public class Login extends javax.swing.JFrame {
     private void Login_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Login_LoginActionPerformed
         // TODO add your handling code here:
        main.playSound("src/resources_audio/OK.wav");
+        String usuario_login = Usuario_SignIn.getText();
+        String pass_login = Contrasena_SignIn.getText();
+        Menu menu = new Menu();
+        Login login = new Login();
+
         try {
-            conexion_BBDD.Conectar();
-            String query = "SELECT * FROM usuarios WHERE Usuario = ? AND Contrasena = ? AND Nombre = ? AND Apellido = ? AND Correo = ?";
-            conexion_BBDD.EjecutarSentencia(query);
+            if (usuario_login.contains(usuario_login) | pass_login.contains(pass_login)) {
+                conexion_BBDD.Conectar();
+                String query = "SELECT Usuario, Contrasena FROM inadex.usuarios WHERE Usuario = '" + usuario_login + "' AND Contrasena = '" + pass_login + "'";
+                conexion_BBDD.EjecutarSentencia(query);
+                JOptionPane.showMessageDialog(null, "Sesión iniciada");
+                main.stopBackgroundMusic();
+
+                dispose();
+                menu.setVisible(true);
+                menu.setSize(785, 660);
+                menu.setTitle("Inadex");
+                menu.setResizable(false);
+                menu.setLocationRelativeTo(null);
+                if (usuario_login.isEmpty() | pass_login.isEmpty()) {
+                    menu.setVisible(false);
+                    conexion_BBDD.CerrarConexion();
+                    conexion_BBDD.EjecutarSentencia(null);
+                    JOptionPane.showMessageDialog(null, "No se ha iniciado sesión, por favor registrese");
+                    
+                }
+            
+
+            
+            }
            
         } catch (Exception e) {
              JOptionPane.showMessageDialog(null, "Inicio de sesión fallido");
         }
     }//GEN-LAST:event_Login_LoginActionPerformed
 
+    private void SignIn_Login1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignIn_Login1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SignIn_Login1ActionPerformed
+
     private void SignIn_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignIn_LoginActionPerformed
         // TODO add your handling code here:
-          main.playSound("src/resources_audio/OK.wav");
-          Sign_In SignIn = new Sign_In();
-          main.stopBackgroundMusic();   
+        main.playSound("src/resources_audio/OK.wav");
+        Sign_In SignIn = new Sign_In();
+        main.stopBackgroundMusic();
         SignIn.setResizable(false);
         SignIn.setTitle("Inadex Sign in");
         SignIn.setLocationRelativeTo(null);
-        SignIn.setSize(563, 708);
+        SignIn.setSize(547, 768);
         SignIn.setVisible(true);
         Login login = new Login();
-         login.setVisible(false);
-         main.stopBackgroundMusic();
-         dispose();
+        login.setVisible(false);
+        main.stopBackgroundMusic();
+        dispose();
+     
+        
       
-         
-       
     }//GEN-LAST:event_SignIn_LoginActionPerformed
+
+    private void Contrasena_SignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Contrasena_SignInActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Contrasena_SignInActionPerformed
   
     //Este metodo sirve para reproducir musica de fondo en bucle
     
@@ -211,9 +268,10 @@ public class Login extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Contrasena_SignIn1;
+    private javax.swing.JTextField Contrasena_SignIn;
     private javax.swing.JButton Login_Login;
     private javax.swing.JButton SignIn_Login;
+    private javax.swing.JButton SignIn_Login1;
     private javax.swing.JTextField Usuario_SignIn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
