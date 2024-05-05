@@ -6,6 +6,7 @@ package inadex_;
 
 import BBDD.conexion_BBDD;
 import Inadex_gui.Login;
+import Inadex_gui.Sign_In;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
@@ -24,6 +25,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.border.*;
 /**
  *
  * @author Carlos Marban
@@ -45,24 +47,11 @@ private static Login login = new Login();
         login.setLocationRelativeTo(null);
         login.setResizable(false);
         login.setTitle("Inadex Login");
-        JFrame framel = new JFrame();
-        //registrarse
-        
+        JFrame framel = new JFrame();        
         conexion_BBDD.Conectar();
-        
-        
-        
-        
-       
     }
-  
-    
- 
-    
-    
-    
     //audio al pulsar jbutton
-    
+  
     public static void playSound(String filename){
         try {
             File file = new File (filename);

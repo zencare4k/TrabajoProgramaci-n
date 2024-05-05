@@ -285,7 +285,6 @@ private static Clip clip;
          String usuario = Usuario_SignIn.getText();
          String correo = Correo_SigIn.getText();
          String insertQuery = "INSERT INTO usuarios (Nombre, Apellido, Usuario, Contrasena, Correo) VALUES ('" + nombre + "', '" + apellido + "', '" + usuario + "', '" + contrasena + "', '" + correo + "')";
-
         if (correo.isEmpty() || usuario.isEmpty() || contrasena.isEmpty() || nombre.isEmpty() || apellido.isEmpty() ) {
             JOptionPane.showMessageDialog(null, "No se ha rellenado ningún campo");
             conexion_BBDD.CerrarConexion();
@@ -296,8 +295,8 @@ private static Clip clip;
                  conexion_BBDD.EjecutarUpdate(insertQuery);
              } catch (SQLException ex) {
                  Logger.getLogger(Sign_In.class.getName()).log(Level.SEVERE, null, ex);
-             }
-        }
+             } 
+       } 
     }//GEN-LAST:event_SigIn_SigInActionPerformed
 
     private void Pass_SignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pass_SignInActionPerformed
