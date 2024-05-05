@@ -56,7 +56,7 @@ private static Clip clip;
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         SigIn_SigIn = new javax.swing.JButton();
-        Contrasena_SignIn1 = new javax.swing.JTextField();
+        Pass_SignIn = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
 
         jTextField1.setBackground(new java.awt.Color(255, 102, 0));
@@ -156,13 +156,13 @@ private static Clip clip;
             }
         });
 
-        Contrasena_SignIn1.setBackground(new java.awt.Color(255, 102, 0));
-        Contrasena_SignIn1.setForeground(new java.awt.Color(255, 255, 255));
-        Contrasena_SignIn1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Contrasena_SignIn1.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        Contrasena_SignIn1.addActionListener(new java.awt.event.ActionListener() {
+        Pass_SignIn.setBackground(new java.awt.Color(255, 102, 0));
+        Pass_SignIn.setForeground(new java.awt.Color(255, 255, 255));
+        Pass_SignIn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Pass_SignIn.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        Pass_SignIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Contrasena_SignIn1ActionPerformed(evt);
+                Pass_SignInActionPerformed(evt);
             }
         });
 
@@ -187,7 +187,7 @@ private static Clip clip;
                             .addComponent(jLabel5)
                             .addComponent(jLabel6)
                             .addComponent(Correo_SigIn, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Contrasena_SignIn1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Pass_SignIn, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(105, 105, 105)
@@ -220,7 +220,7 @@ private static Clip clip;
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Contrasena_SignIn1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Pass_SignIn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(SigIn_SigIn, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(82, Short.MAX_VALUE))
@@ -269,8 +269,8 @@ private static Clip clip;
 
     private void SigIn_SigInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SigIn_SigInActionPerformed
         // TODO add your handling code here:
-                main.playSound("src/resources_audio/OK.wav");
-        dispose();
+         main.playSound("src/resources_audio/OK.wav");
+         dispose();
          Login login = new Login();
          login.setVisible(true);
           login.setLocationRelativeTo(null);
@@ -281,32 +281,29 @@ private static Clip clip;
          
          String nombre = Nombre_SignIn.getText();
          String apellido = Apellido_SignIn.getText();
-         String contrasena = Contrasena_SignIn1.getText();
+         String contrasena = Pass_SignIn.getText();
          String usuario = Usuario_SignIn.getText();
          String correo = Correo_SigIn.getText();
-         
-       
-         if (nombre.contains(nombre) | correo.contains(correo) | usuario.contains(usuario) | apellido.contains(apellido) | contrasena.contains(contrasena)) {
-               
-             try {
-                   String insertQuery = "INSERT INTO usuarios (Nombre, Apellido, Usuario, Contrasena, Correo) VALUES ('" + nombre + "', '" + apellido + "', '" + usuario + "', '" + contrasena + "', '" + correo + "')";
-             conexion_BBDD.EjecutarSentencia(insertQuery);
-             JOptionPane.showMessageDialog(null, "Se han rellenado los datos corrctamente");
-             } catch (Exception e) {
-                 JOptionPane.showMessageDialog(null, "Error al rellenar los datos");
-             }
-        }  if (nombre.isEmpty()| correo.isEmpty()| usuario.isEmpty() | contrasena.isEmpty() | apellido.isEmpty()) {
-              JOptionPane.showMessageDialog(null, "No has rellenado nada");
-              conexion_BBDD.CerrarConexion();
+         String insertQuery = "INSERT INTO usuarios (Nombre, Apellido, Usuario, Contrasena, Correo) VALUES ('" + nombre + "', '" + apellido + "', '" + usuario + "', '" + contrasena + "', '" + correo + "')";
 
+        if (correo.isEmpty() || usuario.isEmpty() || contrasena.isEmpty() || nombre.isEmpty() || apellido.isEmpty() ) {
+            JOptionPane.showMessageDialog(null, "No se ha rellenado ningún campo");
+            conexion_BBDD.CerrarConexion();
+        } else{
+             try {
+                 conexion_BBDD.Conectar();
+                 JOptionPane.showMessageDialog(null, "Se ha registrado correctamente");
+                 conexion_BBDD.EjecutarUpdate(insertQuery);
+             } catch (SQLException ex) {
+                 Logger.getLogger(Sign_In.class.getName()).log(Level.SEVERE, null, ex);
              }
-     
+        }
     }//GEN-LAST:event_SigIn_SigInActionPerformed
 
-    private void Contrasena_SignIn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Contrasena_SignIn1ActionPerformed
+    private void Pass_SignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pass_SignInActionPerformed
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_Contrasena_SignIn1ActionPerformed
+    }//GEN-LAST:event_Pass_SignInActionPerformed
 
     /**
      * @param args the command line arguments
@@ -315,9 +312,9 @@ private static Clip clip;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Apellido_SignIn;
-    private javax.swing.JTextField Contrasena_SignIn1;
     private javax.swing.JTextField Correo_SigIn;
     private javax.swing.JTextField Nombre_SignIn;
+    private javax.swing.JTextField Pass_SignIn;
     private javax.swing.JButton SigIn_SigIn;
     private javax.swing.JTextField Usuario_SignIn;
     private javax.swing.JButton jButton2;

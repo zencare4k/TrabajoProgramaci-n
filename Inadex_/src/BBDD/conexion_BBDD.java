@@ -20,11 +20,11 @@ public class conexion_BBDD {
 	
 	static String timeZone = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 
-	static String dbName = "";
+	static String dbName = "inadex";
 
 	
 
-	static String url = "jdbc:mysql://localhost:3306/inadex" + dbName + timeZone;
+	static String url = "jdbc:mysql://localhost:3306/" + dbName + timeZone;
 	static String user = "root";
 	static String pass = "";
 	static String driver = "com.mysql.cj.jdbc.Driver";

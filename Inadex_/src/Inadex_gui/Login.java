@@ -200,7 +200,7 @@ public class Login extends javax.swing.JFrame {
         Login login = new Login();
 
         try {
-            if (usuario_login.contains(usuario_login) | pass_login.contains(pass_login)) {
+            if (usuario_login.contains(usuario_login) || pass_login.contains(pass_login)) {
                 conexion_BBDD.Conectar();
                 String query = "SELECT Usuario, Contrasena FROM inadex.usuarios WHERE Usuario = '" + usuario_login + "' AND Contrasena = '" + pass_login + "'";
                 conexion_BBDD.EjecutarSentencia(query);
@@ -231,7 +231,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_Login_LoginActionPerformed
 
     private void SignIn_Login1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignIn_Login1ActionPerformed
-        // TODO add your handling code here:
+        // TODO addg your handling code here:
     }//GEN-LAST:event_SignIn_Login1ActionPerformed
 
     private void SignIn_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignIn_LoginActionPerformed

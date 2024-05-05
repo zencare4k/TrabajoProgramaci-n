@@ -106,7 +106,7 @@
                               <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="Correo_SigIn" alignment="0" min="-2" pref="362" max="-2" attributes="0"/>
-                              <Component id="Contrasena_SignIn1" alignment="0" min="-2" pref="362" max="-2" attributes="0"/>
+                              <Component id="Pass_SignIn" alignment="0" min="-2" pref="362" max="-2" attributes="0"/>
                               <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -146,7 +146,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="Contrasena_SignIn1" min="-2" pref="42" max="-2" attributes="0"/>
+                  <Component id="Pass_SignIn" min="-2" pref="42" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="SigIn_SigIn" min="-2" pref="38" max="-2" attributes="0"/>
                   <EmptySpace pref="82" max="32767" attributes="0"/>
@@ -313,7 +313,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SigIn_SigInActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="Contrasena_SignIn1">
+        <Component class="javax.swing.JTextField" name="Pass_SignIn">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="66" red="ff" type="rgb"/>
@@ -331,7 +331,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Contrasena_SignIn1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Pass_SignInActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
