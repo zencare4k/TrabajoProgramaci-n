@@ -51,7 +51,6 @@ private static Login login = new Login();
         conexion_BBDD.Conectar();
     }
     //audio al pulsar jbutton
-  
     public static void playSound(String filename){
         try {
             File file = new File (filename);
@@ -63,10 +62,6 @@ private static Login login = new Login();
             e.printStackTrace();
         }
     }
-    
- 
-
-     
     //audio de fondo
    
   public static void playBackgroundMusic(String filename){
@@ -83,6 +78,7 @@ private static Login login = new Login();
         }
      
   }
+  //parar la musica
   public static void stopBackgroundMusic() {
       do {          
           backgroundMusic.close();
@@ -90,8 +86,7 @@ private static Login login = new Login();
           
       } while (login == null);
     }
-  
- 
+
 }
 
 

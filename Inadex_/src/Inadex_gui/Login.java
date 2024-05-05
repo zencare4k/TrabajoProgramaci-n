@@ -216,7 +216,7 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
          
     }//GEN-LAST:event_Usuario_SignInActionPerformed
-   
+   //botón de login funcional
     private void Login_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Login_LoginActionPerformed
         // TODO add your handling code here:
      main.playSound("src/resources_audio/OK.wav");
@@ -224,14 +224,13 @@ public class Login extends javax.swing.JFrame {
     String pass_login = Contrasena_SignIn.getText();
     Menu menu = new Menu();
 
-    // Consulta para verificar si el usuario y la contraseña existen en la base de datos
     String query = "SELECT Usuario, Contrasena FROM usuarios WHERE Usuario = '" + usuario_login + "' AND Contrasena = '" + pass_login + "'";
 
     try {
         conexion_BBDD.Conectar();
         ResultSet rs = conexion_BBDD.EjecutarSentencia(query);
 
-        if (rs.next()) { // Si hay resultados, el usuario y la contraseña son válidos
+        if (rs.next()) {
             JOptionPane.showMessageDialog(null, "Sesión iniciada");
             main.stopBackgroundMusic();
             dispose();
@@ -240,12 +239,12 @@ public class Login extends javax.swing.JFrame {
             menu.setTitle("Inadex");
             menu.setResizable(false);
             menu.setLocationRelativeTo(null);
-        } else { // Si no hay resultados, el usuario o la contraseña son incorrectos
+        } else { 
             JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos");
         }
 
-        conexion_BBDD.CerrarConexion(); // Cerrar la conexión después de usarla
-    } catch (SQLException e) { // Manejar errores de SQL
+        conexion_BBDD.CerrarConexion();
+    } catch (SQLException e) { 
         JOptionPane.showMessageDialog(null, "Error en la consulta SQL: " + e.getMessage());
     }
     }//GEN-LAST:event_Login_LoginActionPerformed
