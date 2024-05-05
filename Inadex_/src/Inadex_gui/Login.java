@@ -6,6 +6,7 @@ package Inadex_gui;
 
 import BBDD.conexion_BBDD;
 import inadex_.main;
+import java.awt.PopupMenu;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -53,6 +54,7 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenu1 = new javax.swing.JPopupMenu();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jlabel1 = new javax.swing.JLabel();
@@ -250,9 +252,8 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_Login_LoginActionPerformed
 
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
-        // TODO addg your handling code here:
-    
-        
+            
+            
         
     }//GEN-LAST:event_DeleteActionPerformed
 
@@ -303,6 +304,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JLabel jlabel1;
     // End of variables declaration//GEN-END:variables
 }
