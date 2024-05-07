@@ -36,55 +36,8 @@ public class main {
     /**
      * @param args the command line arguments
      */
-private static Clip backgroundMusic;
-private static Clip OK;
-
-private static Login login = new Login();
     public static void main(String[] args) {
-    
         
-        login.setVisible(true);
-        login.setLocationRelativeTo(null);
-        login.setResizable(false);
-        login.setTitle("Inadex Login");
-        JFrame framel = new JFrame();        
-        conexion_BBDD.Conectar();
-    }
-    //audio al pulsar jbutton
-    public static void playSound(String filename){
-        try {
-            File file = new File (filename);
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(file);
-            OK = AudioSystem.getClip();
-            OK.open(audioInputStream);
-            OK.start();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    //audio de fondo
-   
-  public static void playBackgroundMusic(String filename){
-         try {
-            File file = new File(filename);
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(file);
-            backgroundMusic = AudioSystem.getClip();
-            backgroundMusic.open(audioInputStream);
-            backgroundMusic.loop(Clip.LOOP_CONTINUOUSLY); 
-            backgroundMusic.start();
-          
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-     
-  }
-  //parar la musica
-  public static void stopBackgroundMusic() {
-      do {          
-          backgroundMusic.close();
-          backgroundMusic.stop();
-          
-      } while (login == null);
     }
 
 }

@@ -4,6 +4,7 @@
  */
 package Inadex_gui;
 
+import Controlador.Controlador;
 import inadex_.main;
 
 /**
@@ -11,13 +12,14 @@ import inadex_.main;
  * @author zenca
  */
 public class Menu extends javax.swing.JFrame {
-
+    Controlador controlador = new Controlador();
     /**
      * Creates new form Menu
      */
     public Menu() {
         initComponents();
-         main.playBackgroundMusic("src/resources_audio/Login_Background.wav");
+        controlador.playBackgroundMusic("src/resources_audio/Login_Background.wav");
+
     }
 
     /**

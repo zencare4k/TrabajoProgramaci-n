@@ -5,6 +5,7 @@
 package Inadex_gui;
 
 import BBDD.conexion_BBDD;
+import Controlador.Controlador;
 import Inadex_gui.Login;
 import inadex_.main;
 import java.sql.SQLException;
@@ -21,6 +22,7 @@ import javax.swing.Popup;
  */
 public class Sign_In extends javax.swing.JFrame {
 private static Clip clip;
+Controlador controlador = new Controlador();
          
 
     /**
@@ -28,7 +30,7 @@ private static Clip clip;
      */
     public Sign_In() {
         initComponents();
-         main.playBackgroundMusic("src/resources_audio/Login_Background.wav");
+         controlador.playBackgroundMusic("src/resources_audio/Login_Background.wav");
         
     }
 
@@ -278,12 +280,11 @@ private static Clip clip;
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-    main.stopBackgroundMusic();
         
     }//GEN-LAST:event_jButton2ActionPerformed
 //botón de registrarse funcional
     private void SigIn_SigInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SigIn_SigInActionPerformed
-         main.playSound("src/resources_audio/OK.wav");
+         controlador.playSound("src/resources_audio/OK.wav");
          dispose();
          Login login = new Login();
          login.setVisible(true);
@@ -291,7 +292,7 @@ private static Clip clip;
         login.setResizable(false);
         login.setTitle("Inadex Login");
         JFrame framel = new JFrame();
-         main.stopBackgroundMusic();
+         controlador.stopBackgroundMusic();
          
          String nombre = Nombre_SignIn.getText();
          String apellido = Apellido_SignIn.getText();

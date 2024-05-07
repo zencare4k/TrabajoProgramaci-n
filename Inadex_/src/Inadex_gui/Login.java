@@ -5,6 +5,7 @@
 package Inadex_gui;
 
 import BBDD.conexion_BBDD;
+import Controlador.Controlador;
 import inadex_.main;
 import java.awt.PopupMenu;
 import java.awt.event.KeyEvent;
@@ -33,14 +34,16 @@ import javax.swing.border.*;
  */
 public class Login extends javax.swing.JFrame {
     private Clip clip;
+    Controlador controlador = new  Controlador();
     /**
      * Creates new form Login
      */
     
     public Login() {
         initComponents();
-        main.playBackgroundMusic("src/resources_audio/Login_Background.wav");
         
+                controlador.playBackgroundMusic("src/resources_audio/Login_Background.wav");
+
     }
 
 
@@ -221,34 +224,7 @@ public class Login extends javax.swing.JFrame {
    //botón de login funcional
     private void Login_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Login_LoginActionPerformed
         // TODO add your handling code here:
-     main.playSound("src/resources_audio/OK.wav");
-    String usuario_login = Usuario_SignIn.getText();
-    String pass_login = Contrasena_SignIn.getText();
-    Menu menu = new Menu();
-
-    String query = "SELECT Usuario, Contrasena FROM usuarios WHERE Usuario = '" + usuario_login + "' AND Contrasena = '" + pass_login + "'";
-
-    try {
-        conexion_BBDD.Conectar();
-        ResultSet rs = conexion_BBDD.EjecutarSentencia(query);
-
-        if (rs.next()) {
-            JOptionPane.showMessageDialog(null, "Sesión iniciada");
-            main.stopBackgroundMusic();
-            dispose();
-            menu.setVisible(true);
-            menu.setSize(615, 843);
-            menu.setTitle("Inadex");
-            menu.setResizable(false);
-            menu.setLocationRelativeTo(null);
-        } else { 
-            JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos");
-        }
-
-        conexion_BBDD.CerrarConexion();
-    } catch (SQLException e) { 
-        JOptionPane.showMessageDialog(null, "Error en la consulta SQL: " + e.getMessage());
-    }
+    
     }//GEN-LAST:event_Login_LoginActionPerformed
 
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
@@ -259,21 +235,7 @@ public class Login extends javax.swing.JFrame {
 
     private void SignIn_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignIn_LoginActionPerformed
         // TODO add your handling code here:
-        main.playSound("src/resources_audio/OK.wav");
-        Sign_In SignIn = new Sign_In();
-        main.stopBackgroundMusic();
-        SignIn.setResizable(false);
-        SignIn.setTitle("Inadex Sign in");
-        SignIn.setLocationRelativeTo(null);
-        SignIn.setSize(547, 768);
-        SignIn.setVisible(true);
-        Login login = new Login();
-        login.setVisible(false);
-        main.stopBackgroundMusic();
-        dispose();
-        
-        
-      
+        controlador.SigIn_LoginB();
     }//GEN-LAST:event_SignIn_LoginActionPerformed
 
     private void Contrasena_SignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Contrasena_SignInActionPerformed
