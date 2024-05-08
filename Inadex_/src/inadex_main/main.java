@@ -33,13 +33,16 @@ import javax.swing.border.*;
 
 
 public class main {
-            private VistaLogin vistalogin;
-
+           
+            
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Vistalogin = new VistaLogin();
+        VistaLogin vistalogin = new VistaLogin();
+      vistalogin.setVisible(true);
+      vistalogin.setResizable(false);
+      vistalogin.setLocationRelativeTo(null);
 
     }
 

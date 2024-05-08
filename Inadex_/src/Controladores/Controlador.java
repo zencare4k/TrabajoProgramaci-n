@@ -27,16 +27,7 @@ import javax.swing.JTextField;
 public class Controlador{
 
  /* public void SigIn_LoginB(){
-      stopBackgroundMusic();
-      playSound("src/resources_audio/OK.wav");
-      sigin.setResizable(false);
-      sigin.setTitle("Inadex SigIn");
-      sigin.setLocationRelativeTo(null);
-      sigin.setSize(547, 768);
-      sigin.setVisible(true);
-      VistaLogin login = new VistaLogin();
-      login.setVisible(false);
-      dispose();
+     
   }*/
 /**
  * Controladores de el Sonido

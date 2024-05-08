@@ -6,6 +6,7 @@ package Inadex_gui;
 
 import Servicios.conexion_BBDD;
 import Controladores.Controlador;
+import Controladores.ControladorLogin;
 import Inadex_gui.VistaMusica;
 import inadex_main.main;
 import java.awt.HeadlessException;
@@ -31,6 +32,7 @@ import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 import javax.swing.UIManager;
 import javax.swing.border.*;
+import org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping;
 
 
 /**
@@ -42,12 +44,9 @@ public class VistaLogin extends javax.swing.JFrame {
     private Clip clip;
     private VistaMusica musica;
     private VistaMenu menu;
-    private static String usuario_login;     
-    private static String pass_login;
+    private static ControladorLogin usuario_login ;     
+    private static ControladorLogin pass_login;
 
-    public VistaLogin(JTextField textField, Clip clip, VistaMusica musica, VistaMenu menu, JTextField Contrasena_Text, JButton Delete, JButton Login_Button, JButton SignIn_Button, JButton Update, JTextField Usuario_Text, JLabel jLabel1, JLabel jLabel3, JPanel jPanel1, JPopupMenu jPopupMenu1, JLabel jlabel1) throws HeadlessException {
-    
-    }
     
     
     /**
@@ -233,6 +232,27 @@ public class VistaLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+
+
+
+    public void setContrasena_Text(javax.swing.JTextField contrasena_Text) {
+        Contrasena_Text = contrasena_Text;
+    }
+
+
+
+    public javax.swing.JTextField getUsuario_Text() {
+        return Usuario_Text;
+    }
+
+
+
+    public void setUsuario_Text(javax.swing.JTextField usuario_Text) {
+        Usuario_Text = usuario_Text;
+    }
+
+    
+
     private void Usuario_TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Usuario_TextActionPerformed
         // TODO add your handling code here:
          
@@ -251,14 +271,9 @@ public class VistaLogin extends javax.swing.JFrame {
         menu.setLocationRelativeTo(null);
 
     }//GEN-LAST:event_Login_ButtonActionPerformed
-    public static String getUsuarioLogin(){
-        return usuario_login;
-    }
-    private static String getPassLogin(){
-        return pass_login;
-    }
+ 
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
-            
+        
             
         
     }//GEN-LAST:event_DeleteActionPerformed
@@ -269,7 +284,7 @@ public class VistaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_SignIn_ButtonActionPerformed
 
     private void Contrasena_TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Contrasena_TextActionPerformed
-        // TODO add your handling code here:
+      
     }//GEN-LAST:event_Contrasena_TextActionPerformed
 
     private void UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateActionPerformed
