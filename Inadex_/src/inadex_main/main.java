@@ -39,8 +39,8 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-                vistaLogin = new VistaLogin();
-                vistalogin.setVisible(true);
+        Vistalogin = new VistaLogin();
+
     }
 
 }

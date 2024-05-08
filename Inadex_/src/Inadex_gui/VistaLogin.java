@@ -8,6 +8,7 @@ import Servicios.conexion_BBDD;
 import Controladores.Controlador;
 import Inadex_gui.VistaMusica;
 import inadex_main.main;
+import java.awt.HeadlessException;
 import java.awt.PopupMenu;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
@@ -24,7 +25,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
 import javax.swing.UIManager;
 import javax.swing.border.*;
 
@@ -38,7 +42,12 @@ public class VistaLogin extends javax.swing.JFrame {
     private Clip clip;
     private VistaMusica musica;
     private VistaMenu menu;
+    private static String usuario_login;     
+    private static String pass_login;
+
+    public VistaLogin(JTextField textField, Clip clip, VistaMusica musica, VistaMenu menu, JTextField Contrasena_Text, JButton Delete, JButton Login_Button, JButton SignIn_Button, JButton Update, JTextField Usuario_Text, JLabel jLabel1, JLabel jLabel3, JPanel jPanel1, JPopupMenu jPopupMenu1, JLabel jlabel1) throws HeadlessException {
     
+    }
     
     
     /**
@@ -68,11 +77,11 @@ public class VistaLogin extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jlabel1 = new javax.swing.JLabel();
-        Login_Login = new javax.swing.JButton();
-        Usuario_SignIn = new javax.swing.JTextField();
-        Contrasena_SignIn = new javax.swing.JTextField();
+        Login_Button = new javax.swing.JButton();
+        Usuario_Text = new javax.swing.JTextField();
+        Contrasena_Text = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        SignIn_Login = new javax.swing.JButton();
+        SignIn_Button = new javax.swing.JButton();
         Delete = new javax.swing.JButton();
         Update = new javax.swing.JButton();
 
@@ -86,34 +95,34 @@ public class VistaLogin extends javax.swing.JFrame {
         jlabel1.setForeground(new java.awt.Color(255, 255, 255));
         jlabel1.setText("Usuario/Correo Electrónico:");
 
-        Login_Login.setBackground(new java.awt.Color(255, 102, 0));
-        Login_Login.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        Login_Login.setForeground(new java.awt.Color(255, 255, 255));
-        Login_Login.setText("Iniciar Sesión");
-        Login_Login.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Login_Login.addActionListener(new java.awt.event.ActionListener() {
+        Login_Button.setBackground(new java.awt.Color(255, 102, 0));
+        Login_Button.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        Login_Button.setForeground(new java.awt.Color(255, 255, 255));
+        Login_Button.setText("Iniciar Sesión");
+        Login_Button.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Login_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Login_LoginActionPerformed(evt);
+                Login_ButtonActionPerformed(evt);
             }
         });
 
-        Usuario_SignIn.setBackground(new java.awt.Color(255, 102, 0));
-        Usuario_SignIn.setForeground(new java.awt.Color(255, 255, 255));
-        Usuario_SignIn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Usuario_SignIn.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        Usuario_SignIn.addActionListener(new java.awt.event.ActionListener() {
+        Usuario_Text.setBackground(new java.awt.Color(255, 102, 0));
+        Usuario_Text.setForeground(new java.awt.Color(255, 255, 255));
+        Usuario_Text.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Usuario_Text.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        Usuario_Text.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Usuario_SignInActionPerformed(evt);
+                Usuario_TextActionPerformed(evt);
             }
         });
 
-        Contrasena_SignIn.setBackground(new java.awt.Color(255, 102, 0));
-        Contrasena_SignIn.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        Contrasena_SignIn.setForeground(new java.awt.Color(255, 255, 255));
-        Contrasena_SignIn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Contrasena_SignIn.addActionListener(new java.awt.event.ActionListener() {
+        Contrasena_Text.setBackground(new java.awt.Color(255, 102, 0));
+        Contrasena_Text.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        Contrasena_Text.setForeground(new java.awt.Color(255, 255, 255));
+        Contrasena_Text.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Contrasena_Text.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Contrasena_SignInActionPerformed(evt);
+                Contrasena_TextActionPerformed(evt);
             }
         });
 
@@ -121,14 +130,14 @@ public class VistaLogin extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Contraseña:");
 
-        SignIn_Login.setBackground(new java.awt.Color(255, 102, 0));
-        SignIn_Login.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        SignIn_Login.setForeground(new java.awt.Color(255, 255, 255));
-        SignIn_Login.setText("Registrarse");
-        SignIn_Login.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        SignIn_Login.addActionListener(new java.awt.event.ActionListener() {
+        SignIn_Button.setBackground(new java.awt.Color(255, 102, 0));
+        SignIn_Button.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        SignIn_Button.setForeground(new java.awt.Color(255, 255, 255));
+        SignIn_Button.setText("Registrarse");
+        SignIn_Button.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        SignIn_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SignIn_LoginActionPerformed(evt);
+                SignIn_ButtonActionPerformed(evt);
             }
         });
 
@@ -167,13 +176,13 @@ public class VistaLogin extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel3)
                                     .addComponent(jlabel1)
-                                    .addComponent(Contrasena_SignIn, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Usuario_SignIn, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(Contrasena_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Usuario_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(224, 224, 224)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(SignIn_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Login_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(SignIn_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Login_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 102, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
@@ -198,15 +207,15 @@ public class VistaLogin extends javax.swing.JFrame {
                 .addGap(64, 64, 64)
                 .addComponent(jlabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Usuario_SignIn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Usuario_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Contrasena_SignIn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Contrasena_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
-                .addComponent(Login_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Login_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(SignIn_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(SignIn_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -224,37 +233,44 @@ public class VistaLogin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Usuario_SignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Usuario_SignInActionPerformed
+    private void Usuario_TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Usuario_TextActionPerformed
         // TODO add your handling code here:
          
-    }//GEN-LAST:event_Usuario_SignInActionPerformed
-private void Login_L(){
-}   
+    }//GEN-LAST:event_Usuario_TextActionPerformed
+
 //botón de login funcional
-    private void Login_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Login_LoginActionPerformed
+    private void Login_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Login_ButtonActionPerformed
         // TODO add your handling code here:
         musica = new VistaMusica();
         menu = new VistaMenu();
-        VistaMusica.stopMusic();
-        
+        musica.stopMusic();
+        menu.setVisible(true);
+        menu.setSize(615, 843);
+        menu.setTitle("Inadex");
+        menu.setResizable(false);
+        menu.setLocationRelativeTo(null);
 
-  
-    }//GEN-LAST:event_Login_LoginActionPerformed
-
+    }//GEN-LAST:event_Login_ButtonActionPerformed
+    public static String getUsuarioLogin(){
+        return usuario_login;
+    }
+    private static String getPassLogin(){
+        return pass_login;
+    }
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
             
             
         
     }//GEN-LAST:event_DeleteActionPerformed
 
-    private void SignIn_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignIn_LoginActionPerformed
+    private void SignIn_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignIn_ButtonActionPerformed
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_SignIn_LoginActionPerformed
+    }//GEN-LAST:event_SignIn_ButtonActionPerformed
 
-    private void Contrasena_SignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Contrasena_SignInActionPerformed
+    private void Contrasena_TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Contrasena_TextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Contrasena_SignInActionPerformed
+    }//GEN-LAST:event_Contrasena_TextActionPerformed
 
     private void UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateActionPerformed
         // TODO add your handling code here:
@@ -271,12 +287,12 @@ private void Login_L(){
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Contrasena_SignIn;
+    private javax.swing.JTextField Contrasena_Text;
     private javax.swing.JButton Delete;
-    private javax.swing.JButton Login_Login;
-    private javax.swing.JButton SignIn_Login;
+    private javax.swing.JButton Login_Button;
+    private javax.swing.JButton SignIn_Button;
     private javax.swing.JButton Update;
-    private javax.swing.JTextField Usuario_SignIn;
+    private javax.swing.JTextField Usuario_Text;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;

@@ -60,15 +60,15 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jlabel1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="Contrasena_SignIn" alignment="0" min="-2" pref="362" max="-2" attributes="0"/>
-                                      <Component id="Usuario_SignIn" alignment="0" min="-2" pref="362" max="-2" attributes="0"/>
+                                      <Component id="Contrasena_Text" alignment="0" min="-2" pref="362" max="-2" attributes="0"/>
+                                      <Component id="Usuario_Text" alignment="0" min="-2" pref="362" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="224" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="SignIn_Login" min="-2" pref="112" max="-2" attributes="0"/>
-                                      <Component id="Login_Login" min="-2" pref="112" max="-2" attributes="0"/>
+                                      <Component id="SignIn_Button" min="-2" pref="112" max="-2" attributes="0"/>
+                                      <Component id="Login_Button" min="-2" pref="112" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -103,15 +103,15 @@
                   <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                   <Component id="jlabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="Usuario_SignIn" min="-2" pref="42" max="-2" attributes="0"/>
+                  <Component id="Usuario_Text" min="-2" pref="42" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="Contrasena_SignIn" min="-2" pref="42" max="-2" attributes="0"/>
+                  <Component id="Contrasena_Text" min="-2" pref="42" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                  <Component id="Login_Login" min="-2" pref="36" max="-2" attributes="0"/>
+                  <Component id="Login_Button" min="-2" pref="36" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="SignIn_Login" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Component id="SignIn_Button" min="-2" pref="37" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -136,7 +136,7 @@
             <Property name="text" type="java.lang.String" value="Usuario/Correo Electr&#xf3;nico:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="Login_Login">
+        <Component class="javax.swing.JButton" name="Login_Button">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="66" red="ff" type="rgb"/>
@@ -155,10 +155,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Login_LoginActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Login_ButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="Usuario_SignIn">
+        <Component class="javax.swing.JTextField" name="Usuario_Text">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="66" red="ff" type="rgb"/>
@@ -176,10 +176,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Usuario_SignInActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Usuario_TextActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="Contrasena_SignIn">
+        <Component class="javax.swing.JTextField" name="Contrasena_Text">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="66" red="ff" type="rgb"/>
@@ -197,7 +197,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Contrasena_SignInActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Contrasena_TextActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
@@ -211,7 +211,7 @@
             <Property name="text" type="java.lang.String" value="Contrase&#xf1;a:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="SignIn_Login">
+        <Component class="javax.swing.JButton" name="SignIn_Button">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="66" red="ff" type="rgb"/>
@@ -230,7 +230,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SignIn_LoginActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SignIn_ButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Delete">
