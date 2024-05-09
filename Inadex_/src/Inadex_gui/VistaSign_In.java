@@ -3,8 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Inadex_gui;
-
-import Servicios.conexion_BBDD;
+import Controladores.ControladorSignIn;
+import Servicios.Servicios;
 import Inadex_gui.VistaLogin;
 import inadex_main.main;
 import java.sql.SQLException;
@@ -22,7 +22,7 @@ import javax.swing.Popup;
 public class VistaSign_In extends javax.swing.JFrame {
 private static Clip clip;
 VistaMusica controladorMusica = new VistaMusica();
-         
+    ControladorSignIn controlador = new ControladorSignIn();
 
     /**
      * Creates new form Sign_In
@@ -298,19 +298,8 @@ VistaMusica controladorMusica = new VistaMusica();
          String contrasena = Pass_SignIn.getText();
          String usuario = Usuario_SignIn.getText();
          String correo = Correo_SigIn.getText();
-         String insertQuery = "INSERT INTO usuarios (Nombre, Apellido, Usuario, Contrasena, Correo) VALUES ('" + nombre + "', '" + apellido + "', '" + usuario + "', '" + contrasena + "', '" + correo + "')";
-        if (correo.isEmpty() || usuario.isEmpty() || contrasena.isEmpty() || nombre.isEmpty() || apellido.isEmpty() ) {
-            JOptionPane.showMessageDialog(null, "No se ha rellenado ningún campo");
-            conexion_BBDD.CerrarConexion();
-        } else{
-             try {
-                 conexion_BBDD.Conectar();
-                 JOptionPane.showMessageDialog(null, "Se ha registrado correctamente");
-                 conexion_BBDD.EjecutarUpdate(insertQuery);
-             } catch (SQLException ex) {
-                 Logger.getLogger(VistaSign_In.class.getName()).log(Level.SEVERE, null, ex);
-             } 
-       } 
+         
+         boolean mensaje = controlador.registrar(usuario, contrasena, apellido, nombre, correo);
     }//GEN-LAST:event_SigIn_SigInActionPerformed
 
     private void Pass_SignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pass_SignInActionPerformed

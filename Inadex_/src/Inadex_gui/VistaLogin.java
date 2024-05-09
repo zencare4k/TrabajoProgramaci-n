@@ -4,7 +4,7 @@
  */
 package Inadex_gui;
 
-import Servicios.conexion_BBDD;
+import Servicios.Servicios;
 import Controladores.ControladorLogin;
 import Inadex_gui.VistaMusica;
 import inadex_main.main;
@@ -44,7 +44,7 @@ public class VistaLogin extends javax.swing.JFrame {
     private VistaMenu menu;
     private static ControladorLogin usuario_login ;     
     private static ControladorLogin pass_login;
-
+    private VistaSign_In sign_In;
     
     
     /**
@@ -285,7 +285,12 @@ public class VistaLogin extends javax.swing.JFrame {
 
     private void SignIn_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignIn_ButtonActionPerformed
         // TODO add your handling code here:
-        
+        sign_In = new VistaSign_In();
+        sign_In.setVisible(true);
+        sign_In.setSize(547, 768);
+        sign_In.setTitle("Inadex");
+        sign_In.setResizable(false);
+        sign_In.setLocationRelativeTo(null);
     }//GEN-LAST:event_SignIn_ButtonActionPerformed
 
     private void Contrasena_TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Contrasena_TextActionPerformed

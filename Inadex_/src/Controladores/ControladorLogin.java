@@ -5,8 +5,8 @@
 package Controladores;
 
 import Inadex_gui.VistaLogin;
-import Servicios.ServiciosLogin;
-import Servicios.conexion_BBDD;
+import Servicios.Servicios;
+import Servicios.Servicios;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -22,14 +22,17 @@ public class ControladorLogin {
         this.vista = vista;
     }
 
-    public void metodoControlLogin() {
-        // Obtener el usuario y la contraseña de la vista
+    public  void Ususpass() {
         String usuario = vista.obtenerUsuario();
         String contrasena = vista.obtenerPass();
-
-        // Llamar al servicio de inicio de sesión para autenticar al usuario
-         ServiciosLogin.loginService(usuario, contrasena);    
     }
+    public void MostrarLogin(){
+        vista.setVisible(true);
+    }
+    public void OcultarLogin(){
+        vista.setVisible(false);
+    }
+    
 }
            
 

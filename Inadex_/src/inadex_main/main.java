@@ -4,7 +4,7 @@
  */
 package inadex_main;
 
-import Servicios.conexion_BBDD;
+import Servicios.Servicios;
 import Inadex_gui.VistaLogin;
 import Inadex_gui.VistaSign_In;
 import javax.swing.plaf.basic.BasicInternalFrameUI;

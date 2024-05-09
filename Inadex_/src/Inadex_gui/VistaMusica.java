@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Inadex_gui;
-import Servicios.conexion_BBDD;
+import Servicios.Servicios;
 import Inadex_gui.VistaLogin;
 
 import Inadex_gui.VistaMenu;
