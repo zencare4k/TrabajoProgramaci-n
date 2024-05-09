@@ -5,7 +5,6 @@
 package Inadex_gui;
 
 import Servicios.conexion_BBDD;
-import Controladores.Controlador;
 import Inadex_gui.VistaLogin;
 import inadex_main.main;
 import java.sql.SQLException;

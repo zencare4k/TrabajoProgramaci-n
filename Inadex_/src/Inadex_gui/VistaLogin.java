@@ -5,7 +5,6 @@
 package Inadex_gui;
 
 import Servicios.conexion_BBDD;
-import Controladores.Controlador;
 import Controladores.ControladorLogin;
 import Inadex_gui.VistaMusica;
 import inadex_main.main;
@@ -32,8 +31,7 @@ import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 import javax.swing.UIManager;
 import javax.swing.border.*;
-import org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping;
-
+import Controladores.ControladorLogin;
 
 /**
  *
@@ -269,9 +267,16 @@ public class VistaLogin extends javax.swing.JFrame {
         menu.setTitle("Inadex");
         menu.setResizable(false);
         menu.setLocationRelativeTo(null);
+        
 
     }//GEN-LAST:event_Login_ButtonActionPerformed
- 
+    
+    public String obtenerPass(){
+        return Contrasena_Text.getText();
+    }
+    public String obtenerUsuario(){
+        return Usuario_Text.getText();
+    }
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
         
             

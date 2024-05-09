@@ -4,7 +4,6 @@
  */
 package Inadex_gui;
 
-import Controladores.Controlador;
 import inadex_main.main;
 
 /**

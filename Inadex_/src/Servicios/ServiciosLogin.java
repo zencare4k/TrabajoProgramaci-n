@@ -1,9 +1,7 @@
 package Servicios;
 
-import Inadex_gui.VistaLogin;
-import Inadex_gui.VistaMusica;
-import java.sql.ResultSet;
 import javax.swing.JOptionPane;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -13,33 +11,39 @@ import java.sql.SQLException;
  * @author Carlos Marban
  */
 public class ServiciosLogin extends conexion_BBDD {
-    private VistaLogin vistalogin;
 
     /**
      * Método para realizar el inicio de sesión.
      */
-    public void loginService() {
+    public static boolean loginService(String usuario, String pass) {
         try {
-            
+            // Consulta parametrizada para evitar la inyección SQL
+            String query = "SELECT Usuario, Contrasena FROM usuarios WHERE Usuario = ? AND Contrasena = ?";
             conexion_BBDD.Conectar();
 
-            String usuario = vistalogin.getUsuarioLogin();
-            String pass_login = vistalogin.getPassLogin();
+            // Crear una consulta parametrizada
+            java.sql.PreparedStatement statement = conexion_BBDD.conexion.prepareStatement(query);
+            statement.setString(1, usuario);
+            statement.setString(2, pass);
 
-            String query = "SELECT Usuario, Contrasena FROM usuarios WHERE Usuario = '" + usuario + "' AND Contrasena = '" + pass_login + "'";
-
-            ResultSet rs = conexion_BBDD.EjecutarSentencia(query);
+            // Ejecutar la consulta
+            ResultSet rs = statement.executeQuery();
             
             if (rs.next()) {
-                JOptionPane.showMessageDialog(null, "Sesión iniciada");
+                // Si el usuario y la contraseña son correctos, devuelve verdadero
+                return true;
             } else {
+                // Si el usuario o la contraseña son incorrectos, muestra un mensaje de error
                 JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos");
+                return false;
             }
-
-            
-            conexion_BBDD.CerrarConexion();
         } catch (SQLException e) {
+            // En caso de error de SQL, muestra un mensaje de error y devuelve falso
             JOptionPane.showMessageDialog(null, "Error en la consulta SQL: " + e.getMessage());
+            return false;
+        } finally {
+            // Asegúrate de cerrar la conexión después de usarla
+            conexion_BBDD.CerrarConexion();
         }
     }
 }
