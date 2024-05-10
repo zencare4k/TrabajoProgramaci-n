@@ -7,6 +7,7 @@ package Controladores;
 import Inadex_gui.VistaLogin;
 import Inadex_gui.VistaSign_In;
 import Servicios.Servicios;
+import java.sql.SQLException;
 /**
  *
  * @author Carlos Marban
@@ -19,7 +20,7 @@ public class ControladorSignIn {
         this.servicios = new Servicios();
         
     }
-    public boolean registrar(String usuario, String contrasena, String apellido, String nombre, String correo){
+    public boolean registrar(String usuario, String contrasena, String apellido, String nombre, String correo) throws SQLException{
         return servicios.registrarUsuario(usuario, contrasena, correo, nombre, apellido);
     }
     public void setVista(VistaSign_In vista){
@@ -31,6 +32,4 @@ public class ControladorSignIn {
     public void OcultarSignIn(){
         vista.setVisible(false);
     }
-    
-            
 }

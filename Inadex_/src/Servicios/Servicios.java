@@ -33,7 +33,7 @@ public class Servicios {
     	try {
            Class.forName(driver) ;
            conexion = DriverManager.getConnection(url, user, pass);
-           System.out.println("Base de datos clientes.fdb situada en :\n "+url);
+           System.out.println("Base de datos inadex.fdb situada en :\n "+url);
            consulta = conexion.createStatement();
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e.getMessage());
@@ -68,12 +68,16 @@ public class Servicios {
         	consulta.close();
         }catch(Exception e){}
     }
-public boolean registrarUsuario(String Usuario, String Contrasena, String Correo, String Nombre, String Apellido) {
-    String query = "INSERT INTO usuarios (Usuario, Contrasena, Correo, Nombre, Apellido) VALUES (?, ?, ?, ?, ?)";
+public boolean registrarUsuario(String Usuario, String Contrasena, String Correo, String Nombre, String Apellido) throws SQLException {
+    String sent = "INSERT INTO usuarios (Usuario, Contrasena, Correo, Nombre, Apellido) VALUES (?, ?, ?, ?, ?)";
+    if (Usuario.isEmpty() || Contrasena.isEmpty() || Correo.isEmpty() || Nombre.isEmpty() || Apellido.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Rellena todos los campos");
+        return false;
+    }
     try {
         Conectar();
-
-        PreparedStatement preparedStatement = conexion.prepareStatement(query);
+ 
+        PreparedStatement preparedStatement = conexion.prepareStatement(sent);
         preparedStatement.setString(1, Usuario);
         preparedStatement.setString(2, Contrasena);
         preparedStatement.setString(3, Correo);
@@ -84,17 +88,14 @@ public boolean registrarUsuario(String Usuario, String Contrasena, String Correo
 
         // Cerrar la conexión
         CerrarConexion();
-        if (Nombre.isEmpty() || Usuario.isEmpty() || Contrasena.isEmpty() || Correo.isEmpty() ||Apellido.isEmpty()) {
-            CerrarConexion();
-            controladorLogin.OcultarLogin();
-            throw new IllegalArgumentException("Todos los campos son obligatorios.");
-        }
+     
         
         return rowsInserted > 0;
         
         
     } catch (SQLException e) {
         e.printStackTrace();
+
         return false;
     }
     

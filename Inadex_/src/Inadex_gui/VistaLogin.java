@@ -267,7 +267,8 @@ public class VistaLogin extends javax.swing.JFrame {
         menu.setTitle("Inadex");
         menu.setResizable(false);
         menu.setLocationRelativeTo(null);
-        
+        musica.playSound("src/resources_audio/OK.wav");
+
 
     }//GEN-LAST:event_Login_ButtonActionPerformed
     
@@ -291,6 +292,9 @@ public class VistaLogin extends javax.swing.JFrame {
         sign_In.setTitle("Inadex");
         sign_In.setResizable(false);
         sign_In.setLocationRelativeTo(null);
+        musica.playSound("src/resources_audio/OK.wav");
+        dispose();
+
     }//GEN-LAST:event_SignIn_ButtonActionPerformed
 
     private void Contrasena_TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Contrasena_TextActionPerformed

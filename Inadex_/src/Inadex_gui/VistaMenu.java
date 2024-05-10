@@ -17,7 +17,6 @@ public class VistaMenu extends javax.swing.JFrame {
      */
     public VistaMenu() {
         initComponents();
-        controladorMusica.playBackgroundMusic("src/resources_audio/Login_Background.wav");
 
     }
 

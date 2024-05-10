@@ -29,7 +29,6 @@ VistaMusica controladorMusica = new VistaMusica();
      */
     public VistaSign_In() {
         initComponents();
-         controladorMusica.playBackgroundMusic("src/resources_audio/Login_Background.wav");
         
     }
 
@@ -299,7 +298,12 @@ VistaMusica controladorMusica = new VistaMusica();
          String usuario = Usuario_SignIn.getText();
          String correo = Correo_SigIn.getText();
          
-         boolean mensaje = controlador.registrar(usuario, contrasena, apellido, nombre, correo);
+    try {
+        boolean mensaje = controlador.registrar(usuario,  contrasena, apellido, nombre, correo);
+    } catch (SQLException ex) {
+        Logger.getLogger(VistaSign_In.class.getName()).log(Level.SEVERE, null, ex);
+    }
+         dispose();
     }//GEN-LAST:event_SigIn_SigInActionPerformed
 
     private void Pass_SignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Pass_SignInActionPerformed
