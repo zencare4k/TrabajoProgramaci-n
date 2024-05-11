@@ -41,6 +41,7 @@ public class main {
     public static void main(String[] args) {
         VistaLogin vistalogin = new VistaLogin();
       vistalogin.setVisible(true);
+      vistalogin.setTitle("Inadex Login");
       vistalogin.setResizable(false);
       vistalogin.setLocationRelativeTo(null);
 

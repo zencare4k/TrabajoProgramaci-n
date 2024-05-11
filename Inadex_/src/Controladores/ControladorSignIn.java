@@ -30,6 +30,6 @@ public class ControladorSignIn {
         vista.setVisible(true);
     }
     public void OcultarSignIn(){
-        vista.setVisible(false);
+        vista.dispose();
     }
 }

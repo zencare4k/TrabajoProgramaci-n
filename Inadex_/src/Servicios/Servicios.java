@@ -6,6 +6,7 @@ package Servicios;
 
 import Controladores.ControladorLogin;
 import Inadex_gui.VistaLogin;
+import Inadex_gui.VistaMenu;
 import java.sql.*;
 import javax.swing.JOptionPane;
 import java.sql.Connection;
@@ -22,12 +23,12 @@ public class Servicios {
 	static String user = "root";
 	static String pass = "";
 	static String driver = "com.mysql.cj.jdbc.Driver";
-    
-    static Connection conexion;
-    static Statement consulta;
-    static ResultSet resultado;
-    private ControladorLogin controladorLogin;
-
+        private VistaMenu menu = new VistaMenu();
+        static Connection conexion;
+        static Statement consulta;
+        static ResultSet resultado;
+        private ControladorLogin controladorLogin;
+        private VistaLogin vistaLogin = new VistaLogin();
     //Conectar a la base de datos
     public static void Conectar(){
     	try {
@@ -83,13 +84,12 @@ public boolean registrarUsuario(String Usuario, String Contrasena, String Correo
         preparedStatement.setString(3, Correo);
         preparedStatement.setString(4, Nombre);
         preparedStatement.setString(5, Apellido);
-
         int rowsInserted = preparedStatement.executeUpdate();
 
         // Cerrar la conexión
         CerrarConexion();
      
-        
+
         return rowsInserted > 0;
         
         
@@ -101,4 +101,33 @@ public boolean registrarUsuario(String Usuario, String Contrasena, String Correo
     
 }
     
+public boolean loginUsuario(String Usuario, String Contrasena) {
+    String sent = "SELECT * FROM usuarios WHERE Usuario = ? AND Contrasena = ?";
+    if (Usuario.isEmpty() || Contrasena.isEmpty()) {
+        menu.dispose();
+        JOptionPane.showMessageDialog(null, "Rellena todos los campos");
+        return false;
+    }
+    
+    try {
+        
+        Conectar();
+        PreparedStatement preparedStatement = conexion.prepareStatement(sent);
+        preparedStatement.setString(1, Usuario);
+        preparedStatement.setString(2, Contrasena);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        
+        // Verificar si hay al menos una fila en el resultado
+        return resultSet.next();
+    } catch (SQLException e) {
+        // Manejar la excepción de manera específica o proporcionar un mensaje de error descriptivo
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(null, "Error al intentar iniciar sesión: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        return false;
+    } finally {
+        // Cerrar la conexión en un bloque finally para asegurarse de que siempre se cierre
+        CerrarConexion();
+    }
+}
+
 }

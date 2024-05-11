@@ -32,6 +32,9 @@ import javax.swing.JPopupMenu;
 import javax.swing.UIManager;
 import javax.swing.border.*;
 import Controladores.ControladorLogin;
+import Inadex_gui.VistaSign_In;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -45,8 +48,7 @@ public class VistaLogin extends javax.swing.JFrame {
     private static ControladorLogin usuario_login ;     
     private static ControladorLogin pass_login;
     private VistaSign_In sign_In;
-    
-    
+    ControladorLogin controlador = new ControladorLogin();
     /**
      * Creates new form Login
      */
@@ -268,8 +270,26 @@ public class VistaLogin extends javax.swing.JFrame {
         menu.setResizable(false);
         menu.setLocationRelativeTo(null);
         musica.playSound("src/resources_audio/OK.wav");
-
-
+           String usuario = Usuario_Text.getText();
+        String contrasena = Contrasena_Text.getText();
+        try {
+    // Intenta realizar el inicio de sesión
+    boolean loginExitoso = controlador.login(usuario, contrasena);
+    VistaLogin vista = new VistaLogin();
+    if (loginExitoso) {
+        vista.setVisible(true);
+        vista.setLocationRelativeTo(null);
+    } else {
+        // Si el inicio de sesión falla, muestra un mensaje al usuario
+        menu.dispose();
+        JOptionPane.showMessageDialog(null, "Nombre de usuario o contraseña incorrectos", "Error de inicio de sesión", JOptionPane.ERROR_MESSAGE);
+    }
+} catch (Exception ex) {
+    // En caso de que ocurra una excepción durante el inicio de sesión, muestra un mensaje de error
+    Logger.getLogger(VistaLogin.class.getName()).log(Level.SEVERE, null, ex);
+    JOptionPane.showMessageDialog(null, "Ocurrió un error durante el inicio de sesión", "Error", JOptionPane.ERROR_MESSAGE);
+}
+       
     }//GEN-LAST:event_Login_ButtonActionPerformed
     
     public String obtenerPass(){
@@ -294,7 +314,11 @@ public class VistaLogin extends javax.swing.JFrame {
         sign_In.setLocationRelativeTo(null);
         musica.playSound("src/resources_audio/OK.wav");
         dispose();
+        
+        
 
+        
+        
     }//GEN-LAST:event_SignIn_ButtonActionPerformed
 
     private void Contrasena_TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Contrasena_TextActionPerformed

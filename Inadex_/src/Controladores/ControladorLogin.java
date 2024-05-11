@@ -17,22 +17,17 @@ import javax.swing.JOptionPane;
  */
 public class ControladorLogin {
     private VistaLogin vista;
-
-    public ControladorLogin(VistaLogin vista) {
+    private Servicios servicios;
+    
+    public ControladorLogin(){
+    this.servicios = new Servicios();
+}
+    public boolean login(String usuario, String contrasena) throws SQLException{
+        return servicios.loginUsuario(usuario, contrasena);
+    }
+        public void setVista(VistaLogin vista){
         this.vista = vista;
     }
-
-    public  void Ususpass() {
-        String usuario = vista.obtenerUsuario();
-        String contrasena = vista.obtenerPass();
-    }
-    public void MostrarLogin(){
-        vista.setVisible(true);
-    }
-    public void OcultarLogin(){
-        vista.setVisible(false);
-    }
-    
 }
            
 
