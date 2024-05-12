@@ -3,7 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package inadex_main;
+import Inadex_gui.VistaDelete;
 import Inadex_gui.VistaLogin;
+import javax.swing.SwingUtilities;
+import Servicios.Servicios;
 /**
  *
  * @author zenca
@@ -17,6 +20,8 @@ public class main {
         vista.setTitle("Inadex");
         vista.setResizable(false);
         vista.setLocationRelativeTo(null);
+            /* Create and display the form */
+            
     }
     
 }

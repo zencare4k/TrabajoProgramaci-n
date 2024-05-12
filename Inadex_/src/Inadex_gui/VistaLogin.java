@@ -35,6 +35,8 @@ public class VistaLogin extends javax.swing.JFrame {
     private static ControladorLogin usuario_login ;     
     private static ControladorLogin pass_login;
     private VistaSign_In sign_In;
+    VistaDelete vDelete = new VistaDelete();
+    VistaLogin login = new VistaLogin();
     ControladorLogin controlador = new ControladorLogin();
     /**
      * Creates new form Login
@@ -285,7 +287,16 @@ public class VistaLogin extends javax.swing.JFrame {
         return Usuario_Text.getText();
     }
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
-        
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+            vDelete.setVisible(true);
+            vDelete.setLocationRelativeTo(null);
+            dispose();
+              
+                
+                
+            }
+        });
             
         
     }//GEN-LAST:event_DeleteActionPerformed

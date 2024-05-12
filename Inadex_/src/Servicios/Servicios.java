@@ -10,10 +10,11 @@ import Inadex_gui.VistaMenu;
 import java.sql.*;
 import javax.swing.JOptionPane;
 import java.sql.Connection;
+import java.util.ArrayList;
 
 /**
  *
- * @author Jose
+ * @author Carlos
  */
 public class Servicios {
 	private Connection connection;
@@ -129,5 +130,34 @@ public boolean loginUsuario(String Usuario, String Contrasena) {
         CerrarConexion();
 }
 }
+/*
+*VistaBorrar
+*/
+     public ArrayList<String> obtenerDatosColumna(String Usuario) {
+        ArrayList<String> datos = new ArrayList<>();
+        try {
+            // Establecer la conexión a la base de datos (reemplaza "url", "usuario" y "contraseña" con los valores adecuados)
+
+            // Consulta SQL para obtener los datos de la columna
+            String sql = "SELECT " + Usuario + " FROM usuarios";
+            Statement stmt = conexion.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+
+            // Agregar los datos a la lista
+            while (rs.next()) {
+                datos.add(rs.getString(Usuario));
+            }
+
+            // Cerrar la conexión y liberar recursos
+            rs.close();
+            stmt.close();
+            conexion.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return datos;
+ 
+     
+  }
 
 }
