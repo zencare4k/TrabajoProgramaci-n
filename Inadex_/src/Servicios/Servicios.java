@@ -28,7 +28,7 @@ public class Servicios {
         static Statement consulta;
         static ResultSet resultado;
         private ControladorLogin controladorLogin;
-        private VistaLogin vistaLogin = new VistaLogin();
+       
     //Conectar a la base de datos
     public static void Conectar(){
     	try {
@@ -108,9 +108,9 @@ public boolean loginUsuario(String Usuario, String Contrasena) {
         JOptionPane.showMessageDialog(null, "Rellena todos los campos");
         return false;
     }
-    
+
     try {
-        
+
         Conectar();
         PreparedStatement preparedStatement = conexion.prepareStatement(sent);
         preparedStatement.setString(1, Usuario);
@@ -127,7 +127,7 @@ public boolean loginUsuario(String Usuario, String Contrasena) {
     } finally {
         // Cerrar la conexión en un bloque finally para asegurarse de que siempre se cierre
         CerrarConexion();
-    }
+}
 }
 
 }

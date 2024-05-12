@@ -4,7 +4,6 @@
  */
 package Controladores;
 
-import Inadex_gui.VistaLogin;
 import Inadex_gui.VistaSign_In;
 import Servicios.Servicios;
 import java.sql.SQLException;

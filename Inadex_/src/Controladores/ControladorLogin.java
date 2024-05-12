@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author Carlos Marban
@@ -18,17 +19,21 @@ import javax.swing.JOptionPane;
 public class ControladorLogin {
     private VistaLogin vista;
     private Servicios servicios;
-    
-    public ControladorLogin(){
+      public ControladorLogin(){
     this.servicios = new Servicios();
 }
     public boolean login(String usuario, String contrasena) throws SQLException{
         return servicios.loginUsuario(usuario, contrasena);
     }
-        public void setVista(VistaLogin vista){
+     public void setVista(VistaLogin vista){
         this.vista = vista;
     }
+  
+
 }
+       
+
+
            
 
 

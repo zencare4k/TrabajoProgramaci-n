@@ -4,22 +4,7 @@
  */
 package Inadex_gui;
 
-import Servicios.Servicios;
-import Controladores.ControladorLogin;
-import Inadex_gui.VistaMusica;
-import inadex_main.main;
-import java.awt.HeadlessException;
-import java.awt.PopupMenu;
-import java.awt.event.KeyEvent;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import static java.lang.invoke.MethodHandles.loop;
-import java.util.jar.Manifest;
+
 import javax.sound.sampled.Clip;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -32,9 +17,11 @@ import javax.swing.JPopupMenu;
 import javax.swing.UIManager;
 import javax.swing.border.*;
 import Controladores.ControladorLogin;
-import Inadex_gui.VistaSign_In;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.awt.HeadlessException;
+import java.lang.System.Logger.Level;
+import javax.swing.JOptionPane;
+import org.glassfish.hk2.utilities.reflection.Logger;
+
 
 /**
  *
@@ -55,10 +42,10 @@ public class VistaLogin extends javax.swing.JFrame {
     
     public VistaLogin() {
         initComponents();
-        
+        System.out.println("Inadex_gui.VistaLogin.<init>()");
         musica = new VistaMusica();
         musica.playBackgroundMusic("src/resources_audio/Login_Background.wav");
-
+        musica.playSound("src/resources_audio/Mark_inazuma.wav");
     }
 
 
@@ -176,7 +163,8 @@ public class VistaLogin extends javax.swing.JFrame {
                                     .addComponent(jLabel3)
                                     .addComponent(jlabel1)
                                     .addComponent(Contrasena_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Usuario_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(Usuario_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel1)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(224, 224, 224)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -189,10 +177,6 @@ public class VistaLogin extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(126, 126, 126))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -265,31 +249,33 @@ public class VistaLogin extends javax.swing.JFrame {
         menu = new VistaMenu();
         musica.stopMusic();
         menu.setVisible(true);
-        menu.setSize(615, 843);
+        menu.setSize(1295, 900);
         menu.setTitle("Inadex");
         menu.setResizable(false);
         menu.setLocationRelativeTo(null);
         musica.playSound("src/resources_audio/OK.wav");
            String usuario = Usuario_Text.getText();
-        String contrasena = Contrasena_Text.getText();
+           String contrasena = Contrasena_Text.getText();
         try {
+            
     // Intenta realizar el inicio de sesión
     boolean loginExitoso = controlador.login(usuario, contrasena);
-    VistaLogin vista = new VistaLogin();
     if (loginExitoso) {
-        vista.setVisible(true);
-        vista.setLocationRelativeTo(null);
-    } else {
-        // Si el inicio de sesión falla, muestra un mensaje al usuario
+        musica.stopMusic();
+        musica.playBackgroundMusic("src/resources_audio/Login_Background.wav");
+        
+    }  else {
         menu.dispose();
         JOptionPane.showMessageDialog(null, "Nombre de usuario o contraseña incorrectos", "Error de inicio de sesión", JOptionPane.ERROR_MESSAGE);
     }
-} catch (Exception ex) {
-    // En caso de que ocurra una excepción durante el inicio de sesión, muestra un mensaje de error
-    Logger.getLogger(VistaLogin.class.getName()).log(Level.SEVERE, null, ex);
+} catch (HeadlessException ex) {
     JOptionPane.showMessageDialog(null, "Ocurrió un error durante el inicio de sesión", "Error", JOptionPane.ERROR_MESSAGE);
-}
-       
+    
+}       catch (SQLException ex) {
+            java.util.logging.Logger.getLogger(VistaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+      
+
     }//GEN-LAST:event_Login_ButtonActionPerformed
     
     public String obtenerPass(){
