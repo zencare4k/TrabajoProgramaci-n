@@ -36,7 +36,6 @@ public class VistaLogin extends javax.swing.JFrame {
     private static ControladorLogin pass_login;
     private VistaSign_In sign_In;
     VistaDelete vDelete = new VistaDelete();
-    VistaLogin login = new VistaLogin();
     ControladorLogin controlador = new ControladorLogin();
     /**
      * Creates new form Login
@@ -269,6 +268,8 @@ public class VistaLogin extends javax.swing.JFrame {
     }  else {
         menu.dispose();
         JOptionPane.showMessageDialog(null, "Nombre de usuario o contraseña incorrectos", "Error de inicio de sesión", JOptionPane.ERROR_MESSAGE);
+        musica.playBackgroundMusic("src/resources_audio/Login_Background.wav");
+
     }
 } catch (HeadlessException ex) {
     JOptionPane.showMessageDialog(null, "Ocurrió un error durante el inicio de sesión", "Error", JOptionPane.ERROR_MESSAGE);
@@ -287,6 +288,8 @@ public class VistaLogin extends javax.swing.JFrame {
         return Usuario_Text.getText();
     }
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
+        musica.playSound("src/resources_audio/OK.wav");
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
             vDelete.setVisible(true);

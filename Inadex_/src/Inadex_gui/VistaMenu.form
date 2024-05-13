@@ -176,6 +176,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OtakuActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Occult">
           <Properties>
@@ -195,6 +198,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OccultActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Brain">
           <Properties>
@@ -236,6 +242,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ShurikenActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Street_Sallys">
           <Properties>
@@ -255,6 +264,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Street_SallysActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Wild">
           <Properties>
@@ -274,6 +286,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="WildActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Inazuma_KFC">
           <Properties>
@@ -293,6 +308,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Inazuma_KFCActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Umbrella">
           <Properties>
@@ -312,6 +330,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UmbrellaActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="RaimonOG">
           <Properties>
@@ -331,6 +352,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RaimonOGActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Raimon">
           <Properties>
@@ -350,6 +374,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RaimonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Farm">
           <Properties>
@@ -369,6 +396,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FarmActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Royal_Academy">
           <Properties>
@@ -410,6 +440,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ZeusActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>

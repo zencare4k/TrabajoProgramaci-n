@@ -79,12 +79,22 @@ public class VistaMenu extends javax.swing.JFrame {
         Otaku.setText("Otaku");
         Otaku.setToolTipText("");
         Otaku.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Otaku.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OtakuActionPerformed(evt);
+            }
+        });
 
         Occult.setBackground(new java.awt.Color(255, 102, 0));
         Occult.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Occult.setForeground(new java.awt.Color(255, 255, 255));
         Occult.setText("Occult");
         Occult.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Occult.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OccultActionPerformed(evt);
+            }
+        });
 
         Brain.setBackground(new java.awt.Color(255, 102, 0));
         Brain.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -102,48 +112,88 @@ public class VistaMenu extends javax.swing.JFrame {
         Shuriken.setForeground(new java.awt.Color(255, 255, 255));
         Shuriken.setText("Shuriiken");
         Shuriken.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Shuriken.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ShurikenActionPerformed(evt);
+            }
+        });
 
         Street_Sallys.setBackground(new java.awt.Color(255, 102, 0));
         Street_Sallys.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Street_Sallys.setForeground(new java.awt.Color(255, 255, 255));
         Street_Sallys.setText("Street Sally`s");
         Street_Sallys.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Street_Sallys.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Street_SallysActionPerformed(evt);
+            }
+        });
 
         Wild.setBackground(new java.awt.Color(255, 102, 0));
         Wild.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Wild.setForeground(new java.awt.Color(255, 255, 255));
         Wild.setText("Wild");
         Wild.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Wild.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                WildActionPerformed(evt);
+            }
+        });
 
         Inazuma_KFC.setBackground(new java.awt.Color(255, 102, 0));
         Inazuma_KFC.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Inazuma_KFC.setForeground(new java.awt.Color(255, 255, 255));
         Inazuma_KFC.setText("Inazuma Kids FC");
         Inazuma_KFC.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Inazuma_KFC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Inazuma_KFCActionPerformed(evt);
+            }
+        });
 
         Umbrella.setBackground(new java.awt.Color(255, 102, 0));
         Umbrella.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Umbrella.setForeground(new java.awt.Color(255, 255, 255));
         Umbrella.setText("Umbrella");
         Umbrella.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Umbrella.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UmbrellaActionPerformed(evt);
+            }
+        });
 
         RaimonOG.setBackground(new java.awt.Color(255, 102, 0));
         RaimonOG.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         RaimonOG.setForeground(new java.awt.Color(255, 255, 255));
         RaimonOG.setText("Raimon OG");
         RaimonOG.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        RaimonOG.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RaimonOGActionPerformed(evt);
+            }
+        });
 
         Raimon.setBackground(new java.awt.Color(255, 102, 0));
         Raimon.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Raimon.setForeground(new java.awt.Color(255, 255, 255));
         Raimon.setText("Raimon");
         Raimon.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Raimon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RaimonActionPerformed(evt);
+            }
+        });
 
         Farm.setBackground(new java.awt.Color(255, 102, 0));
         Farm.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Farm.setForeground(new java.awt.Color(255, 255, 255));
         Farm.setText("Farm");
         Farm.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Farm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FarmActionPerformed(evt);
+            }
+        });
 
         Royal_Academy.setBackground(new java.awt.Color(255, 102, 0));
         Royal_Academy.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -161,6 +211,11 @@ public class VistaMenu extends javax.swing.JFrame {
         Zeus.setForeground(new java.awt.Color(255, 255, 255));
         Zeus.setText("Zeus");
         Zeus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Zeus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ZeusActionPerformed(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo_red_2.png"))); // NOI18N
 
@@ -243,11 +298,82 @@ public class VistaMenu extends javax.swing.JFrame {
     private void Royal_AcademyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Royal_AcademyActionPerformed
         // TODO add your handling code here:
         controladorMusica.playSound("src/resources_audio/Jude_Royal.wav");
+        controladorMusica.playSound("src/resources_audio/OK.wav");
+
     }//GEN-LAST:event_Royal_AcademyActionPerformed
 
     private void BrainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BrainActionPerformed
         // TODO add your handling code here:
+        controladorMusica.playSound("src/resources_audio/OK.wav");
+
     }//GEN-LAST:event_BrainActionPerformed
+
+    private void ZeusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZeusActionPerformed
+        // TODO add your handling code here:
+        controladorMusica.playSound("src/resources_audio/OK.wav");
+        controladorMusica.playSound("src/resources_audio/Byron_Zeus.wav");
+    }//GEN-LAST:event_ZeusActionPerformed
+
+    private void Street_SallysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Street_SallysActionPerformed
+        // TODO add your handling code here:
+        controladorMusica.playSound("src/resources_audio/OK.wav");
+
+    }//GEN-LAST:event_Street_SallysActionPerformed
+
+    private void RaimonOGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RaimonOGActionPerformed
+        // TODO add your handling code here:
+        controladorMusica.playSound("src/resources_audio/OK.wav");
+
+    }//GEN-LAST:event_RaimonOGActionPerformed
+
+    private void WildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WildActionPerformed
+        // TODO add your handling code here:
+        controladorMusica.playSound("src/resources_audio/OK.wav");
+
+        
+    }//GEN-LAST:event_WildActionPerformed
+
+    private void ShurikenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShurikenActionPerformed
+        // TODO add your handling code here:
+        controladorMusica.playSound("src/resources_audio/OK.wav");
+
+    }//GEN-LAST:event_ShurikenActionPerformed
+
+    private void UmbrellaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UmbrellaActionPerformed
+        // TODO add your handling code here:
+        controladorMusica.playSound("src/resources_audio/OK.wav");
+
+    }//GEN-LAST:event_UmbrellaActionPerformed
+
+    private void RaimonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RaimonActionPerformed
+        // TODO add your handling code here:
+        controladorMusica.playSound("src/resources_audio/OK.wav");
+
+    }//GEN-LAST:event_RaimonActionPerformed
+
+    private void OtakuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OtakuActionPerformed
+        // TODO add your handling code here:
+        controladorMusica.playSound("src/resources_audio/OK.wav");
+
+    }//GEN-LAST:event_OtakuActionPerformed
+
+    private void OccultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OccultActionPerformed
+        // TODO add your handling code here:
+        controladorMusica.playSound("src/resources_audio/OK.wav");
+
+    }//GEN-LAST:event_OccultActionPerformed
+
+    private void Inazuma_KFCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Inazuma_KFCActionPerformed
+        // TODO add your handling code here:
+        controladorMusica.playSound("src/resources_audio/OK.wav");
+
+    }//GEN-LAST:event_Inazuma_KFCActionPerformed
+
+    private void FarmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FarmActionPerformed
+        // TODO add your handling code here:
+        controladorMusica.playSound("src/resources_audio/OK.wav");
+
+    }//GEN-LAST:event_FarmActionPerformed
 
     /**
      * @param args the command line arguments
