@@ -20,7 +20,6 @@ public class main {
         vista.setTitle("Inadex");
         vista.setResizable(false);
         vista.setLocationRelativeTo(null);
-            /* Create and display the form */
             
     }
     

@@ -133,31 +133,30 @@ public boolean loginUsuario(String Usuario, String Contrasena) {
 /*
 *VistaBorrar
 */
-     public ArrayList<String> obtenerDatosColumna(String Usuario) {
-        ArrayList<String> datos = new ArrayList<>();
-        try {
-            // Establecer la conexión a la base de datos (reemplaza "url", "usuario" y "contraseña" con los valores adecuados)
 
-            // Consulta SQL para obtener los datos de la columna
-            String sql = "SELECT " + Usuario + " FROM usuarios";
-            Statement stmt = conexion.createStatement();
-            ResultSet rs = stmt.executeQuery(sql);
 
-            // Agregar los datos a la lista
-            while (rs.next()) {
-                datos.add(rs.getString(Usuario));
-            }
 
-            // Cerrar la conexión y liberar recursos
-            rs.close();
-            stmt.close();
-            conexion.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
+public String[] obtenerUsuarios() {
+    try {
+        if (conexion == null) {
+            Conectar(); // Llama al método que establece la conexión
         }
-        return datos;
- 
-     
-  }
-
+        String sql = "SELECT Usuario FROM usuarios";
+        PreparedStatement statement = conexion.prepareStatement(sql);
+        ResultSet resultSet = statement.executeQuery();
+        resultSet.last();
+        int rowCount = resultSet.getRow();
+        resultSet.beforeFirst();
+        String[] usuarios = new String[rowCount];
+        int i = 0;
+        while (resultSet.next()) {
+            usuarios[i] = resultSet.getString("Usuario");
+            i++;
+        }
+        return usuarios;
+    } catch (SQLException e) {
+        e.printStackTrace();
+        return new String[]{};
+    }
+}
 }
