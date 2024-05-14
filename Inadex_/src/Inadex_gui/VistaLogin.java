@@ -17,17 +17,18 @@ import javax.swing.JPopupMenu;
 import javax.swing.UIManager;
 import javax.swing.border.*;
 import Controladores.ControladorLogin;
+import Servicios.Servicios;
 import java.awt.HeadlessException;
 import java.lang.System.Logger.Level;
 import javax.swing.JOptionPane;
 import org.glassfish.hk2.utilities.reflection.Logger;
-
 
 /**
  *
  * @author zenca
  */
 public class VistaLogin extends javax.swing.JFrame {
+    Servicios servicios = new Servicios();
     private JTextField textField;
     private Clip clip;
     private VistaMusica musica;
@@ -289,17 +290,14 @@ public class VistaLogin extends javax.swing.JFrame {
     }
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
         musica.playSound("src/resources_audio/OK.wav");
-
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-            vDelete.setVisible(true);
-            vDelete.setLocationRelativeTo(null);
-            dispose();
+        vDelete.setVisible(true);
+        vDelete.setLocationRelativeTo(null);
+        servicios.borrarUsuarios();
+        dispose();
               
                 
                 
-            }
-        });
+          
             
         
     }//GEN-LAST:event_DeleteActionPerformed

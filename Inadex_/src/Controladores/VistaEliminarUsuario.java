@@ -4,15 +4,10 @@
  */
 package Controladores;
 
-import Inadex_gui.VistaDelete;
-import Servicios.Servicios;
-import java.awt.List;
-
 /**
  *
  * @author zenca
  */
-public class ControladorBorrar {
-    
+class VistaEliminarUsuario {
     
 }

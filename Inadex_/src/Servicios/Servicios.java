@@ -9,9 +9,9 @@ import Inadex_gui.VistaLogin;
 import Inadex_gui.VistaMenu;
 import java.sql.*;
 import javax.swing.JOptionPane;
+import Inadex_gui.VistaDelete;
 import java.sql.Connection;
 import java.util.ArrayList;
-
 /**
  *
  * @author Carlos
@@ -136,27 +136,19 @@ public boolean loginUsuario(String Usuario, String Contrasena) {
 
 
 
-public String[] obtenerUsuarios() {
+public void borrarUsuarios() {
     try {
-        if (conexion == null) {
-            Conectar(); // Llama al método que establece la conexión
-        }
-        String sql = "SELECT Usuario FROM usuarios";
-        PreparedStatement statement = conexion.prepareStatement(sql);
-        ResultSet resultSet = statement.executeQuery();
-        resultSet.last();
-        int rowCount = resultSet.getRow();
-        resultSet.beforeFirst();
-        String[] usuarios = new String[rowCount];
-        int i = 0;
-        while (resultSet.next()) {
-            usuarios[i] = resultSet.getString("Usuario");
-            i++;
-        }
-        return usuarios;
+        // Ejecutar la consulta para borrar todos los usuarios
+        Conectar();
+        String sent = "DELETE FROM usuarios";
+
+        Statement statement = conexion.createStatement();
+        EjecutarUpdate(sent);
+        statement.close();
+        
     } catch (SQLException e) {
         e.printStackTrace();
-        return new String[]{};
     }
 }
+
 }
