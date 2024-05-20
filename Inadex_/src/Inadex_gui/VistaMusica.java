@@ -51,8 +51,5 @@ public class VistaMusica {
         }
      
     }
-   public static void stopMusic(){
-       backgroundMusic.stop();
-       backgroundMusic.close();
-   }
+
 }

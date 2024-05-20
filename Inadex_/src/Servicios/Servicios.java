@@ -5,13 +5,17 @@
 package Servicios;
 
 import Controladores.ControladorLogin;
-import Inadex_gui.VistaLogin;
 import Inadex_gui.VistaMenu;
-import java.sql.*;
-import javax.swing.JOptionPane;
-import Inadex_gui.VistaDelete;
+import java.util.List;
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Carlos
@@ -78,7 +82,6 @@ public boolean registrarUsuario(String Usuario, String Contrasena, String Correo
     }
     try {
         Conectar();
- 
         PreparedStatement preparedStatement = conexion.prepareStatement(sent);
         preparedStatement.setString(1, Usuario);
         preparedStatement.setString(2, Contrasena);
@@ -87,7 +90,6 @@ public boolean registrarUsuario(String Usuario, String Contrasena, String Correo
         preparedStatement.setString(5, Apellido);
         int rowsInserted = preparedStatement.executeUpdate();
 
-        // Cerrar la conexión
         CerrarConexion();
      
 
@@ -150,5 +152,70 @@ public void borrarUsuarios() {
         e.printStackTrace();
     }
 }
+ /*
+*Servicio update    
+*/
 
+    /**
+     *
+     * @return
+     * @throws SQLException
+     */
+     public List<String> getUsuarios() {
+            List<String> usuarios;
+            usuarios = new ArrayList<>();
+        String query = "SELECT Usuario FROM usuarios";
+
+        try {
+            Conectar();
+            ResultSet resultSet = EjecutarSentencia(query);
+
+            while (resultSet.next()) {
+                usuarios.add(resultSet.getString("Usuario"));
+            }
+
+            Servicios.CerrarConexion();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return usuarios;
+    }
+
+    public void updateUsuario(String usuario, String newUsuario, String newPassword) throws SQLException {
+        String query = "UPDATE usuarios SET Usuario = '" + newUsuario + "', Contrasena = '" + newPassword + "' WHERE Usuario = '" + usuario + "'";
+        
+        try {
+            Conectar();
+            EjecutarUpdate(query);
+            CerrarConexion();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new SQLException(e.getMessage());
+        }
+    }
+    /*
+    *Conseguir jugadores del brain
+    *
+    */
+         public List<String> getJugadoresBrain() {
+            List<String> jugadores;
+            jugadores = new ArrayList<>();
+        String query = "SELECT Nombre_J, PT, PE, Tiro, Aguante, Fisico, Control, Defensa, Rapidez, Valor, Elemento, Posicion  FROM jugador WHEN Id_J BETWEEN 1 AND 16 ";
+
+        try {
+            Conectar();
+            ResultSet resultSet = EjecutarSentencia(query);
+
+            while (resultSet.next()) {
+                jugadores.add(resultSet.getString("Nombre_J, PT, PE, Tiro, Aguante, Fisico, Control, Defensa, Rapidez, Valor, Elemento, Posicion"));
+            }
+
+            Servicios.CerrarConexion();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return jugadores;
+    }
 }

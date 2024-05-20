@@ -17,9 +17,15 @@ import javax.swing.JPopupMenu;
 import javax.swing.UIManager;
 import javax.swing.border.*;
 import Controladores.ControladorLogin;
+import Controladores.ControladorUpdate;
+import Inadex_gui.VistaUpdate;
 import Servicios.Servicios;
 import java.awt.HeadlessException;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.lang.System.Logger.Level;
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 import org.glassfish.hk2.utilities.reflection.Logger;
 
@@ -46,8 +52,7 @@ public class VistaLogin extends javax.swing.JFrame {
         initComponents();
         System.out.println("Inadex_gui.VistaLogin.<init>()");
         musica = new VistaMusica();
-        musica.playBackgroundMusic("src/resources_audio/Login_Background.wav");
-        musica.playSound("src/resources_audio/Mark_inazuma.wav");
+
     }
 
 
@@ -81,7 +86,7 @@ public class VistaLogin extends javax.swing.JFrame {
 
         jlabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jlabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jlabel1.setText("Usuario/Correo Electrónico:");
+        jlabel1.setText("Usuario:");
 
         Login_Button.setBackground(new java.awt.Color(255, 102, 0));
         Login_Button.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
@@ -165,8 +170,7 @@ public class VistaLogin extends javax.swing.JFrame {
                                     .addComponent(jLabel3)
                                     .addComponent(jlabel1)
                                     .addComponent(Contrasena_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Usuario_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel1)))
+                                    .addComponent(Usuario_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(224, 224, 224)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -179,6 +183,10 @@ public class VistaLogin extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(128, 128, 128)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -249,7 +257,6 @@ public class VistaLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
         musica = new VistaMusica();
         menu = new VistaMenu();
-        musica.stopMusic();
         menu.setVisible(true);
         menu.setSize(1295, 900);
         menu.setTitle("Inadex");
@@ -263,13 +270,10 @@ public class VistaLogin extends javax.swing.JFrame {
     // Intenta realizar el inicio de sesión
     boolean loginExitoso = controlador.login(usuario, contrasena);
     if (loginExitoso) {
-        musica.stopMusic();
-        musica.playBackgroundMusic("src/resources_audio/Login_Background.wav");
         
     }  else {
         menu.dispose();
         JOptionPane.showMessageDialog(null, "Nombre de usuario o contraseña incorrectos", "Error de inicio de sesión", JOptionPane.ERROR_MESSAGE);
-        musica.playBackgroundMusic("src/resources_audio/Login_Background.wav");
 
     }
 } catch (HeadlessException ex) {
@@ -279,7 +283,38 @@ public class VistaLogin extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(VistaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
       
+/*
+ * lectura y escritura de ficheros
+ */
+        File CheckLogin = new File("src/CheckLogin.txt");
+        int cont = 0;
+        try{
+            Scanner lector = new Scanner(CheckLogin);
 
+            while(lector.hasNextLine()){
+                cont += 1;
+                String linea = lector.nextLine();
+               if(linea.equals("tercera")){
+                    System.out.println( cont +"\t"+ linea);
+                }
+            }
+            
+            
+        }catch(FileNotFoundException e){
+            System.out.println(e);
+        }
+
+        FileWriter fichero = null;
+        try {
+            fichero = new FileWriter("src/CheckLogin.txt");
+            String linea = "Has iniciado sesión correctamente " +  usuario ;
+            fichero.write(linea);
+            fichero.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        
+    
     }//GEN-LAST:event_Login_ButtonActionPerformed
     
     public String obtenerPass(){
@@ -291,6 +326,7 @@ public class VistaLogin extends javax.swing.JFrame {
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
         musica.playSound("src/resources_audio/OK.wav");
         vDelete.setVisible(true);
+        vDelete.setResizable(false);
         vDelete.setLocationRelativeTo(null);
         servicios.borrarUsuarios();
         dispose();
@@ -325,6 +361,26 @@ public class VistaLogin extends javax.swing.JFrame {
 
     private void UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateActionPerformed
         // TODO add your handling code here:
+        VistaUpdate vista = new VistaUpdate();
+        VistaLogin vistaL = new VistaLogin();
+                musica.playSound("src/resources_audio/OK.wav");
+
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+        
+    /**
+     *
+     */
+    public void run() {
+                VistaUpdate vista = new VistaUpdate();
+                Servicios servicios = new Servicios();
+                vista.setTitle("Actualizar Usuario y Contraseña");
+                ControladorUpdate controller = new ControladorUpdate(servicios, vista);
+                vista.setVisible(true);
+                vista.setLocationRelativeTo(null);
+                vista.setSize(619, 473);
+            }
+        });
+       dispose();
     }//GEN-LAST:event_UpdateActionPerformed
   
     //Este metodo sirve para reproducir musica de fondo en bucle

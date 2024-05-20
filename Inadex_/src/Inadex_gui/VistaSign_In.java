@@ -290,7 +290,6 @@ VistaMusica controladorMusica = new VistaMusica();
         login.setResizable(false);
         login.setTitle("Inadex Login");
         JFrame framel = new JFrame();
-         controladorMusica.stopMusic();
          
          String nombre = Nombre_SignIn.getText();
          String apellido = Apellido_SignIn.getText();

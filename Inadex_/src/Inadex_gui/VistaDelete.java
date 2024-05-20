@@ -19,6 +19,7 @@ public class VistaDelete extends javax.swing.JFrame {
 }
     private JComboBox<String> comboBox;
     private Servicios servicios;
+    VistaMusica musica = new VistaMusica();
     ControladorBorrar CBorrar = new ControladorBorrar();
     /**
      * Creates new form VistaDelete
@@ -37,6 +38,7 @@ public class VistaDelete extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         Delete = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        returnLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,7 +47,7 @@ public class VistaDelete extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo_red_2.png"))); // NOI18N
 
         Delete.setBackground(new java.awt.Color(255, 102, 0));
-        Delete.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        Delete.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         Delete.setForeground(new java.awt.Color(255, 255, 255));
         Delete.setText("Borrar");
         Delete.setActionCommand("jbutton1");
@@ -60,6 +62,16 @@ public class VistaDelete extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Pulsa el botón para borrar a todos los usuarios");
 
+        returnLogin.setBackground(new java.awt.Color(255, 102, 0));
+        returnLogin.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        returnLogin.setForeground(new java.awt.Color(255, 255, 255));
+        returnLogin.setText("Volver Al Login");
+        returnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                returnLoginActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -67,26 +79,31 @@ public class VistaDelete extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
+                        .addGap(78, 78, 78)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(returnLogin))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(86, 86, 86)
                         .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(32, 32, 32)
-                                .addComponent(jLabel1)))))
-                .addContainerGap(62, Short.MAX_VALUE))
+                        .addGap(48, 48, 48)
+                        .addComponent(jLabel2)))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(returnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65)
+                .addGap(44, 44, 44)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addGap(39, 39, 39)
                 .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -110,6 +127,18 @@ public class VistaDelete extends javax.swing.JFrame {
    
     }//GEN-LAST:event_DeleteActionPerformed
 
+    private void returnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnLoginActionPerformed
+        // TODO add your handling code here:
+        VistaLogin vista = new VistaLogin();
+        vista.setVisible(true);
+        vista.setLocationRelativeTo(null);
+        musica.playSound("src/resources_audio/OK.wav");
+        vista.setTitle("Inadex");
+
+        dispose();
+
+    }//GEN-LAST:event_returnLoginActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -119,5 +148,6 @@ public class VistaDelete extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton returnLogin;
     // End of variables declaration//GEN-END:variables
 }

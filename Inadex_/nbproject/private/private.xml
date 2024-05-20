@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/Controladores/ControladorLogin.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>25</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaLogin.java</file>
             <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Servicios/Servicios.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Controladores/ControladorUpdate.java</file>
             <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaSign_In.java</file>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Controladores/ControladorLogin.java</file>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Controladores/ControladorBorrar.java</file>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/inadex_main/main.java</file>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaMenu.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaUpdate.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Controladores/ControladoresEquipos/ControladorBrain.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/VistaBrain.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaMusica.java</file>
         </group>
     </open-files>
 </project-private>
