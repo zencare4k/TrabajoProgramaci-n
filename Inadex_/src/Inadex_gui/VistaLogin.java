@@ -6,28 +6,17 @@ package Inadex_gui;
 
 
 import javax.sound.sampled.Clip;
-import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JPopupMenu;
-import javax.swing.UIManager;
-import javax.swing.border.*;
 import Controladores.ControladorLogin;
 import Controladores.ControladorUpdate;
-import Inadex_gui.VistaUpdate;
 import Servicios.Servicios;
 import java.awt.HeadlessException;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
-import java.lang.System.Logger.Level;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
-import org.glassfish.hk2.utilities.reflection.Logger;
 
 /**
  *
@@ -44,6 +33,7 @@ public class VistaLogin extends javax.swing.JFrame {
     private VistaSign_In sign_In;
     VistaDelete vDelete = new VistaDelete();
     ControladorLogin controlador = new ControladorLogin();
+    
     /**
      * Creates new form Login
      */
@@ -274,7 +264,7 @@ public class VistaLogin extends javax.swing.JFrame {
     }  else {
         menu.dispose();
         JOptionPane.showMessageDialog(null, "Nombre de usuario o contraseña incorrectos", "Error de inicio de sesión", JOptionPane.ERROR_MESSAGE);
-
+        
     }
 } catch (HeadlessException ex) {
     JOptionPane.showMessageDialog(null, "Ocurrió un error durante el inicio de sesión", "Error", JOptionPane.ERROR_MESSAGE);
@@ -361,7 +351,8 @@ public class VistaLogin extends javax.swing.JFrame {
 
     private void UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateActionPerformed
         // TODO add your handling code here:
-        VistaUpdate vista = new VistaUpdate();
+        String[] usuarios ={"1", "2", "3"}; // TODO Recoger lista usuarios de BBDD
+        VistaUpdate vista = new VistaUpdate(usuarios);
         VistaLogin vistaL = new VistaLogin();
                 musica.playSound("src/resources_audio/OK.wav");
 
@@ -371,7 +362,6 @@ public class VistaLogin extends javax.swing.JFrame {
      *
      */
     public void run() {
-                VistaUpdate vista = new VistaUpdate();
                 Servicios servicios = new Servicios();
                 vista.setTitle("Actualizar Usuario y Contraseña");
                 ControladorUpdate controller = new ControladorUpdate(servicios, vista);

@@ -4,21 +4,27 @@
  */
 package Inadex_gui;
 
-import inadex_main.main;
-import java.awt.Scrollbar;
-import javax.swing.JPanel;
-import javax.swing.JScrollBar;
-import Inadex_gui.VistaLogin;
+import Controladores.ControladoresEquipos.ControladorRaimon;
+
+import Inadex_gui.VistasEquipos.VistaRaimon;
+import Servicios.Servicios;
+import javax.swing.JButton;
+import javax.swing.JTable;
 /**
  *
  * @author zenca
  */
 public class VistaMenu extends javax.swing.JFrame {
+     private Servicios servicios;
+    private VistaMenu vistam;
+
+        private VistaRaimon vistaR = new VistaRaimon();
     VistaMusica controladorMusica = new VistaMusica();
-    VistaLogin login;
+    ControladorRaimon raimon = new ControladorRaimon( vistaR, servicios);
     /**
      * Creates new form Menu
      */
+    
     public VistaMenu() {
 
         initComponents();
@@ -349,6 +355,11 @@ public class VistaMenu extends javax.swing.JFrame {
     private void RaimonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RaimonActionPerformed
         // TODO add your handling code here:
         controladorMusica.playSound("src/resources_audio/OK.wav");
+        raimon.cargarJugadores();
+        vistaR.setVisible(true);
+        vistaR.setLocationRelativeTo(null);
+        vistaR.setTitle("Raimon");
+        
 
     }//GEN-LAST:event_RaimonActionPerformed
 
@@ -370,12 +381,21 @@ public class VistaMenu extends javax.swing.JFrame {
 
     }//GEN-LAST:event_Inazuma_KFCActionPerformed
 
+    public JButton getRaimon() {
+        return Raimon;
+    }
+
+    public void setRaimon(JButton Raimon) {
+        this.Raimon = Raimon;
+    }
+
     private void FarmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FarmActionPerformed
         // TODO add your handling code here:
         controladorMusica.playSound("src/resources_audio/OK.wav");
 
     }//GEN-LAST:event_FarmActionPerformed
 
+    
     /**
      * @param args the command line arguments
      */

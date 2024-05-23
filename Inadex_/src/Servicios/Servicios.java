@@ -6,6 +6,7 @@ package Servicios;
 
 import Controladores.ControladorLogin;
 import Inadex_gui.VistaMenu;
+import Modelos.Jugador;
 import java.util.List;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,12 +16,14 @@ import java.sql.Statement;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Carlos
  */
 public class Servicios {
+    public Jugador jugador;
 	private Connection connection;
 	static String timeZone = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	static String dbName = "inadex";
@@ -138,7 +141,7 @@ public boolean loginUsuario(String Usuario, String Contrasena) {
 
 
 
-public void borrarUsuarios() {
+public boolean borrarUsuarios() {
     try {
         // Ejecutar la consulta para borrar todos los usuarios
         Conectar();
@@ -151,6 +154,7 @@ public void borrarUsuarios() {
     } catch (SQLException e) {
         e.printStackTrace();
     }
+    return false;
 }
  /*
 *Servicio update    
@@ -178,7 +182,6 @@ public void borrarUsuarios() {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return usuarios;
     }
 
@@ -198,21 +201,33 @@ public void borrarUsuarios() {
     *Conseguir jugadores del brain
     *
     */
-         public List<String> getJugadoresBrain() {
-            List<String> jugadores;
-            jugadores = new ArrayList<>();
-        String query = "SELECT Nombre_J, PT, PE, Tiro, Aguante, Fisico, Control, Defensa, Rapidez, Valor, Elemento, Posicion  FROM jugador WHEN Id_J BETWEEN 1 AND 16 ";
+   
+      public ArrayList<Jugador> getJugadores() {
+        ArrayList<Jugador> jugadores = new ArrayList<>();
+        String sql = "SELECT NombreJugador, PT, PE, Tiro, Aguante, Fisico, Control, Defensa, Rapidez, Valor, Elemento, Posicion FROM jugadores";
 
-        try {
-            Conectar();
-            ResultSet resultSet = EjecutarSentencia(query);
-
-            while (resultSet.next()) {
-                jugadores.add(resultSet.getString("Nombre_J, PT, PE, Tiro, Aguante, Fisico, Control, Defensa, Rapidez, Valor, Elemento, Posicion"));
+        try (
+            Statement stmt = connection.createStatement();
+            ResultSet rs = stmt.executeQuery(sql)
+        ) {
+            while (rs.next()) {
+                Jugador jugador = new Jugador(
+                    rs.getString("NombreJugador"),
+                    rs.getInt("PT"),
+                    rs.getInt("PE"),
+                    rs.getInt("Tiro"),
+                    rs.getInt("Aguante"),
+                    rs.getInt("Fisico"),
+                    rs.getInt("Control"),
+                    rs.getInt("Defensa"),
+                    rs.getInt("Rapidez"),
+                    rs.getInt("Valor"),
+                    rs.getString("Elemento"),
+                    rs.getString("Posicion")
+                );
+                jugadores.add(jugador);
             }
-
-            Servicios.CerrarConexion();
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

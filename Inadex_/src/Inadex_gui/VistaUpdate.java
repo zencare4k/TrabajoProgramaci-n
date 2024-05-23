@@ -3,23 +3,34 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Inadex_gui;
+import Servicios.Servicios;
 import java.util.List;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 
 /**
  *
- * @author zenca
+ * @author Carlos
  */
 public class VistaUpdate extends javax.swing.JFrame {
 VistaLogin vista = new VistaLogin();
 VistaMusica vistaM = new VistaMusica();
-
+Servicios servicios = new Servicios();
+String[] usuarios ={};
 private JButton update;
+private JComboBox<String> SUusuario;
     /**
      * Creates new form VistaUpdate
      */
-    public VistaUpdate() {
+    public VistaUpdate(String[] usuarios) {
         initComponents();
+        this.usuarios = usuarios;
+        
+        List<String> usuariosList = servicios.getUsuarios();
+        SUusuario = new JComboBox<>(usuariosList.toArray(new String[0]));
+       
+   
     }
 
     /**
@@ -31,15 +42,18 @@ private JButton update;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel4 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         pass = new javax.swing.JTextField();
-        usuario = new javax.swing.JTextField();
+        Usuarios = new javax.swing.JTextField();
         actualizar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         SUsuario = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         returnLogin = new javax.swing.JButton();
+
+        jLabel4.setText("jLabel4");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,13 +69,13 @@ private JButton update;
             }
         });
 
-        usuario.setBackground(new java.awt.Color(255, 102, 0));
-        usuario.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        usuario.setForeground(new java.awt.Color(255, 255, 255));
-        usuario.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        usuario.addActionListener(new java.awt.event.ActionListener() {
+        Usuarios.setBackground(new java.awt.Color(255, 102, 0));
+        Usuarios.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Usuarios.setForeground(new java.awt.Color(255, 255, 255));
+        Usuarios.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Usuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usuarioActionPerformed(evt);
+                UsuariosActionPerformed(evt);
             }
         });
 
@@ -81,7 +95,7 @@ private JButton update;
         SUsuario.setBackground(new java.awt.Color(255, 102, 0));
         SUsuario.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         SUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        SUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona un Usuario" }));
+        SUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(usuarios));
         SUsuario.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         SUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,7 +141,7 @@ private JButton update;
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(35, 35, 35)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Usuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(pass, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -149,7 +163,7 @@ private JButton update;
                 .addComponent(SUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Usuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -174,9 +188,9 @@ private JButton update;
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarioActionPerformed
+    private void UsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsuariosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_usuarioActionPerformed
+    }//GEN-LAST:event_UsuariosActionPerformed
 
     private void passActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passActionPerformed
         // TODO add your handling code here:
@@ -185,6 +199,19 @@ private JButton update;
     private void actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarActionPerformed
             vistaM.playSound("src/resources_audio/OK.wav");
             vista.setTitle("Inadex");
+            String contraseña = pass.getText();
+            String usuario = Usuarios.getText();
+            try {
+              if(usuario.isEmpty() && contraseña.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "No has rellenado ningún campo");
+            servicios.CerrarConexion();
+        }
+        } catch (Exception e) {
+              servicios.Conectar();
+                JOptionPane.showMessageDialog(null, "Los Cambios se realizaron correctamente");
+        }
+       
+
 
 
 // TODO add your handling code here:
@@ -209,7 +236,7 @@ private JButton update;
     }
 
     public String getNewUsuario() {
-        return usuario.getText();
+        return Usuarios.getText();
     }
 
     public String getNewPassword() {
@@ -229,16 +256,18 @@ private JButton update;
     /**
      * @param args the command line arguments
      */
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> SUsuario;
+    private javax.swing.JTextField Usuarios;
     private javax.swing.JButton actualizar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField pass;
     private javax.swing.JButton returnLogin;
-    private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
 }

@@ -12,14 +12,14 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaLogin.java</file>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Servicios/Servicios.java</file>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Controladores/ControladorUpdate.java</file>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaSign_In.java</file>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaUpdate.java</file>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Controladores/ControladoresEquipos/ControladorBrain.java</file>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/VistaBrain.java</file>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaMusica.java</file>
+            <file>file:/C:/Users/zenca/Documents/DAW/Fol/TrabajoProgramaci-n/Inadex_/src/Servicios/Servicios.java</file>
+            <file>file:/C:/Users/zenca/Documents/DAW/Fol/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaMenu.java</file>
+            <file>file:/C:/Users/zenca/Documents/DAW/Fol/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaLogin.java</file>
+            <file>file:/C:/Users/zenca/Documents/DAW/Fol/TrabajoProgramaci-n/Inadex_/src/inadex_main/main.java</file>
+            <file>file:/C:/Users/zenca/Documents/DAW/Fol/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaUpdate.java</file>
+            <file>file:/C:/Users/zenca/Documents/DAW/Fol/TrabajoProgramaci-n/Inadex_/src/Modelos/Jugador.java</file>
+            <file>file:/C:/Users/zenca/Documents/DAW/Fol/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/VistaRaimon.java</file>
+            <file>file:/C:/Users/zenca/Documents/DAW/Fol/TrabajoProgramaci-n/Inadex_/src/Controladores/ControladoresEquipos/ControladorRaimon.java</file>
         </group>
     </open-files>
 </project-private>

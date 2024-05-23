@@ -66,6 +66,7 @@ public class VistaDelete extends javax.swing.JFrame {
         returnLogin.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         returnLogin.setForeground(new java.awt.Color(255, 255, 255));
         returnLogin.setText("Volver Al Login");
+        returnLogin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         returnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 returnLoginActionPerformed(evt);
@@ -103,7 +104,7 @@ public class VistaDelete extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(39, 39, 39)
                 .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -123,7 +124,6 @@ public class VistaDelete extends javax.swing.JFrame {
 
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
         // TODO add your handling code here:
-        servicios.borrarUsuarios();
    
     }//GEN-LAST:event_DeleteActionPerformed
 

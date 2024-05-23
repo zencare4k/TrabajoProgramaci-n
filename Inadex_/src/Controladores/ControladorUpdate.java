@@ -10,6 +10,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 /**
  *
@@ -26,14 +28,18 @@ public class ControladorUpdate {
         vista.getUpdateButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                updateUsuario();
+                try {
+                    updateUsuario();
+                } catch (SQLException ex) {
+                    Logger.getLogger(ControladorUpdate.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
         
         loadUsuarios();
     }
 
-    private void loadUsuarios() {
+    public void loadUsuarios() {
         try {
             List<String> usuarios = servicios.getUsuarios();
             vista.setUserComboBoxData(usuarios);
@@ -42,16 +48,14 @@ public class ControladorUpdate {
         }
     }
 
-    private void updateUsuario() {
+    public void updateUsuario() throws SQLException {
         String usuario = vista.getSelectedUsuario();
         String newUsuario = vista.getNewUsuario();
         String newPassword = vista.getNewPassword();
         
-        try {
             servicios.updateUsuario(usuario, newUsuario, newPassword);
             loadUsuarios();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(vista, "Error al actualizar usuario: " + e.getMessage());
-        }
+      
     }
 }
+
