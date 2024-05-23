@@ -10,22 +10,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ControladorRaimon {
-    private VistaRaimon vista;
-    private Servicios servicios;
+    private Servicios servicios = new Servicios();
+    private ArrayList<Jugador> jugadores;
+        private VistaRaimon vista = new VistaRaimon(jugadores);
 
+    
     // Constructor que toma VistaMenu, VistaRaimon y Servicios
-      public ControladorRaimon(VistaRaimon vista, Servicios servicios) {
-        this.vista = vista;
-        this.servicios = servicios; // Inicializamos el objeto servicios con el valor pasado como argumento
+      public ControladorRaimon(Servicios servicios) {
+        this.servicios = new Servicios(); // Inicializamos el objeto servicios con el valor pasado como argumento
     }
 
     // Método para inicializar el controlador
  
     // Método para cargar jugadores
      public ArrayList<Jugador> cargarJugadores() {
-        if (servicios != null) { // Verificamos que servicios no sea null antes de usarlo
-            // Cargar los jugadores desde el modelo y actualizarlos en la vista
-            List<Jugador> jugadoresList = servicios.getJugadores();
+        if (servicios != null) { 
+            
+            ArrayList<Jugador> jugadoresList = servicios.getJugadores();
             vista.setJugadores(jugadoresList);
         } else {
             System.err.println("El objeto servicios no ha sido inicializado correctamente.");

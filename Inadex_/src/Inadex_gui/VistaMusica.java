@@ -24,7 +24,7 @@ import javax.swing.JTextField;
 public class VistaMusica {
    private static Clip backgroundMusic;
    private static Clip OK; 
-      public static void playSound(String filename){
+      public  void playSound(String filename){
         try {
             File file = new File (filename);
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(file);

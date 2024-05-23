@@ -18,7 +18,7 @@ public class VistaDelete extends javax.swing.JFrame {
     initComponents();
 }
     private JComboBox<String> comboBox;
-    private Servicios servicios;
+    private Servicios servicios = new Servicios();
     VistaMusica musica = new VistaMusica();
     ControladorBorrar CBorrar = new ControladorBorrar();
     /**

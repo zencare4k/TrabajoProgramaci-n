@@ -15,6 +15,8 @@ import java.awt.HeadlessException;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalTime;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
@@ -321,13 +323,38 @@ public class VistaLogin extends javax.swing.JFrame {
         servicios.borrarUsuarios();
         dispose();
               
-                
-                
+    
+      
           
             
         
     }//GEN-LAST:event_DeleteActionPerformed
+public void EscribirFichero() throws SQLException, IOException {
+    String usuario = Usuario_Text.getText();
+    String contrasena = Contrasena_Text.getText();
 
+    // Obtener la hora actual
+    LocalTime horaActual = LocalTime.now();
+
+    // Imprimir la hora actual
+    System.out.println("Hora actual: " + horaActual);
+
+    boolean loginExitoso = controlador.login(usuario, contrasena);
+
+    try {
+        try (FileWriter fichero = new FileWriter("src/CheckLogin.txt")) {
+            if (loginExitoso) {
+                fichero.write("Has iniciado sesión correctamente " + usuario + " a la hora " + horaActual);
+            } else {
+                fichero.write("Error al iniciar sesión para el usuario " + usuario + " a la hora " + horaActual);
+            }
+            // Es importante cerrar el FileWriter después de escribir en el archivo
+            fichero.close();
+        }
+    } catch (IOException e) {
+        System.out.println("Error al escribir en el archivo: " + e.getMessage());
+    }
+}
     private void SignIn_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignIn_ButtonActionPerformed
         // TODO add your handling code here:
         sign_In = new VistaSign_In();

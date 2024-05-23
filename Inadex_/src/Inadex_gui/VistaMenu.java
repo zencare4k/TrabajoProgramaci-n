@@ -7,7 +7,9 @@ package Inadex_gui;
 import Controladores.ControladoresEquipos.ControladorRaimon;
 
 import Inadex_gui.VistasEquipos.VistaRaimon;
+import Modelos.Jugador;
 import Servicios.Servicios;
+import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JTable;
 /**
@@ -18,9 +20,11 @@ public class VistaMenu extends javax.swing.JFrame {
      private Servicios servicios;
     private VistaMenu vistam;
 
-        private VistaRaimon vistaR = new VistaRaimon();
     VistaMusica controladorMusica = new VistaMusica();
-    ControladorRaimon raimon = new ControladorRaimon( vistaR, servicios);
+    ControladorRaimon raimon = new ControladorRaimon(servicios);
+    private ArrayList<Jugador> jugadores;
+    private VistaRaimon vistaR = new VistaRaimon(jugadores);
+
     /**
      * Creates new form Menu
      */
@@ -356,8 +360,10 @@ public class VistaMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         controladorMusica.playSound("src/resources_audio/OK.wav");
         raimon.cargarJugadores();
-        vistaR.setVisible(true);
         vistaR.setLocationRelativeTo(null);
+        ArrayList<Jugador> jugadores = new ControladorRaimon(servicios).cargarJugadores();
+        new VistaRaimon(jugadores);
+        
         vistaR.setTitle("Raimon");
         
 

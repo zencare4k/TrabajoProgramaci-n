@@ -7,6 +7,7 @@ package Inadex_gui.VistasEquipos;
 import Modelos.Jugador;
 import Servicios.Servicios;
 import java.awt.BorderLayout;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
@@ -22,15 +23,15 @@ public class VistaRaimon extends javax.swing.JFrame {
     /**
      * Creates new form VistaBrain
      */
-    public VistaRaimon() {
+    public VistaRaimon(ArrayList<Jugador> jugadores) {
 
         initComponents();
     }
-    public void setJugadores(List<Jugador> jugadoresList) {
+    public void setJugadores(List<Jugador> jugadores) {
         DefaultTableModel tableModel = (DefaultTableModel) tablaRaimon.getModel();
-        tableModel.setRowCount(0); // Limpiar la tabla antes de agregar nuevos datos
+        tableModel.setRowCount(0); 
 
-        for (Jugador jugador : jugadoresList) {
+        for (Jugador jugador : jugadores) {
             tableModel.addRow(new Object[]{
                 jugador.getNombreJugador(),
                 jugador.getPT(),
@@ -46,6 +47,10 @@ public class VistaRaimon extends javax.swing.JFrame {
                 jugador.getPosicion()
             });
         }
+        setVisible(true);
+        setLocationRelativeTo(null);
+        setTitle("Raimon");
+        setResizable(false);
     }
   
     /**
@@ -101,6 +106,7 @@ public class VistaRaimon extends javax.swing.JFrame {
         jLabel2.setText("Instituto Raimon");
 
         tablaRaimon.setBackground(new java.awt.Color(255, 102, 0));
+        tablaRaimon.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         tablaRaimon.setForeground(new java.awt.Color(255, 255, 255));
         tablaRaimon.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -110,11 +116,11 @@ public class VistaRaimon extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Nombre", "PT", "PE", "Tiro", "Aguante", "Físico", "Control", "Defensa", "Rapidez", "Valor", "Elemento", "Posición"
+                "Nombre_J", "PT", "PE", "Tiro", "Aguante", "Fisico", "Control", "Defensa", "Rapidez", "Valor", "Elemento", "Posicion"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                true, false, false, false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -130,29 +136,28 @@ public class VistaRaimon extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
+                .addContainerGap(172, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 629, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20))
+                        .addComponent(jLabel1)
+                        .addGap(412, 412, 412))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(259, 259, 259))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(170, 170, 170)
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(492, 492, 492))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 841, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(141, 141, 141))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
+                .addGap(21, 21, 21)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 489, Short.MAX_VALUE))
+                .addGap(53, 53, 53)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 259, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

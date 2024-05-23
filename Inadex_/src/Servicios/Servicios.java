@@ -31,7 +31,7 @@ public class Servicios {
 	static String user = "root";
 	static String pass = "";
 	static String driver = "com.mysql.cj.jdbc.Driver";
-        private VistaMenu menu = new VistaMenu();
+        private VistaMenu menu;
         static Connection conexion;
         static Statement consulta;
         static ResultSet resultado;
@@ -70,6 +70,8 @@ public class Servicios {
     		throw new SQLException("");
     	} 
     }
+
+ 
     
     //para cerrar conexión
     public static void CerrarConexion(){
@@ -110,6 +112,7 @@ public boolean registrarUsuario(String Usuario, String Contrasena, String Correo
 public boolean loginUsuario(String Usuario, String Contrasena) {
     String sent = "SELECT * FROM usuarios WHERE Usuario = ? AND Contrasena = ?";
     if (Usuario.isEmpty() || Contrasena.isEmpty()) {
+        menu = new VistaMenu();
         menu.dispose();
         JOptionPane.showMessageDialog(null, "Rellena todos los campos");
         return false;
@@ -178,7 +181,7 @@ public boolean borrarUsuarios() {
                 usuarios.add(resultSet.getString("Usuario"));
             }
 
-            Servicios.CerrarConexion();
+            CerrarConexion();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -204,15 +207,15 @@ public boolean borrarUsuarios() {
    
       public ArrayList<Jugador> getJugadores() {
         ArrayList<Jugador> jugadores = new ArrayList<>();
-        String sql = "SELECT NombreJugador, PT, PE, Tiro, Aguante, Fisico, Control, Defensa, Rapidez, Valor, Elemento, Posicion FROM jugadores";
+        String sql = "SELECT Nombre_J, PT, PE, Tiro, Aguante, Fisico, Control, Defensa, Rapidez, Valor, Elemento, Posicion FROM jugador WHERE Id_J BETWEEN 81 AND 94";
 
         try (
-            Statement stmt = connection.createStatement();
+            Statement stmt = conexion.createStatement();
             ResultSet rs = stmt.executeQuery(sql)
         ) {
             while (rs.next()) {
                 Jugador jugador = new Jugador(
-                    rs.getString("NombreJugador"),
+                    rs.getString("Nombre_J"),
                     rs.getInt("PT"),
                     rs.getInt("PE"),
                     rs.getInt("Tiro"),

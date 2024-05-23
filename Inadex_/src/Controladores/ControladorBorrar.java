@@ -13,7 +13,7 @@ import java.awt.List;
  * @author zenca
  */
 public class ControladorBorrar {
-    Servicios servicios;
+    Servicios servicios = new Servicios();
     public boolean ControladorBorrarv(){
     return servicios.borrarUsuarios();
 }
