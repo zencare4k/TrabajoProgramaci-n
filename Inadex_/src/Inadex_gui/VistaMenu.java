@@ -5,11 +5,21 @@
 package Inadex_gui;
 
 import Controladores.ControladoresEquipos.ControladorRaimon;
-
-import Inadex_gui.VistasEquipos.VistaRaimon;
+import Inadex_gui.VistasEquipos.ZeusVistaCampo;
+import Inadex_gui.VistasEquipos.InazumaKidsVista;
+import Inadex_gui.VistasEquipos.RaimonOGVista;
+import Inadex_gui.VistasEquipos.VistaCampoBrain;
+import Inadex_gui.VistasEquipos.VistaCampoStreetSallys;
+import Inadex_gui.VistasEquipos.VistaCampoUmbrella;
+import Inadex_gui.VistasEquipos.VistaOccultCampo;
+import Inadex_gui.VistasEquipos.VistaOtakuCampo;
+import Inadex_gui.VistasEquipos.VistaRoyalCampo;
+import Inadex_gui.VistasEquipos.VistaWildCampo;
+import Inadex_gui.VistasEquipos.VistaRaimonCampo;
 import Modelos.Jugador;
 import Servicios.Servicios;
 import java.util.ArrayList;
+import Inadex_gui.VistaLogin;
 import javax.swing.JButton;
 import javax.swing.JTable;
 /**
@@ -23,7 +33,17 @@ public class VistaMenu extends javax.swing.JFrame {
     VistaMusica controladorMusica = new VistaMusica();
     ControladorRaimon raimon = new ControladorRaimon(servicios);
     private ArrayList<Jugador> jugadores;
-    private VistaRaimon vistaR = new VistaRaimon(jugadores);
+   public VistaRaimonCampo vistaRaimonCampo   = new VistaRaimonCampo();   
+   public ZeusVistaCampo vistazeuscampo = new ZeusVistaCampo();
+   public RaimonOGVista VistaRaimonOGCampo = new RaimonOGVista();
+   public VistaCampoBrain VistaCampoBrain = new VistaCampoBrain();
+   public VistaCampoStreetSallys VistaCampoStreetSallys = new VistaCampoStreetSallys();
+   public VistaCampoUmbrella VistaCampoUmbrella = new VistaCampoUmbrella();
+   public VistaOccultCampo VistaOccultCampo = new VistaOccultCampo();
+   public VistaOtakuCampo VistaOtakuCampo = new VistaOtakuCampo();
+   public VistaRoyalCampo VistaRoyalCampo = new VistaRoyalCampo();
+   public InazumaKidsVista InazumaKidsVista = new InazumaKidsVista();
+   public VistaWildCampo VistaWildCampo = new VistaWildCampo();
 
     /**
      * Creates new form Menu
@@ -50,21 +70,31 @@ public class VistaMenu extends javax.swing.JFrame {
         jDialog1 = new javax.swing.JDialog();
         jPopupMenu1 = new javax.swing.JPopupMenu();
         jLabel1 = new javax.swing.JLabel();
-        Fondo = new javax.swing.JPanel();
-        Otaku = new javax.swing.JButton();
-        Occult = new javax.swing.JButton();
-        Brain = new javax.swing.JButton();
-        Shuriken = new javax.swing.JButton();
-        Street_Sallys = new javax.swing.JButton();
-        Wild = new javax.swing.JButton();
-        Inazuma_KFC = new javax.swing.JButton();
-        Umbrella = new javax.swing.JButton();
-        RaimonOG = new javax.swing.JButton();
-        Raimon = new javax.swing.JButton();
-        Farm = new javax.swing.JButton();
-        Royal_Academy = new javax.swing.JButton();
-        Zeus = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        BackToLogin = new javax.swing.JButton();
+        Raimon = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        Umbrella = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        Brain = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        Sallys = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        Royal = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        Otaku = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        IKFC = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        Wilds = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        RaimonOG = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
+        Zeus = new javax.swing.JPanel();
+        asss = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -82,324 +112,275 @@ public class VistaMenu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 102, 255));
 
-        Fondo.setBackground(new java.awt.Color(0, 102, 255));
+        jScrollPane2.setBackground(new java.awt.Color(0, 102, 255));
 
-        Otaku.setBackground(new java.awt.Color(255, 102, 0));
-        Otaku.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        Otaku.setForeground(new java.awt.Color(255, 255, 255));
-        Otaku.setText("Otaku");
-        Otaku.setToolTipText("");
-        Otaku.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Otaku.addActionListener(new java.awt.event.ActionListener() {
+        jPanel1.setBackground(new java.awt.Color(0, 102, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo_red_2.png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, -1, -1));
+
+        BackToLogin.setBackground(new java.awt.Color(255, 102, 0));
+        BackToLogin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BackToLogin.setForeground(new java.awt.Color(255, 255, 255));
+        BackToLogin.setText("Volver al Inicio de Sesion");
+        BackToLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OtakuActionPerformed(evt);
+                BackToLoginActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BackToLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, 40));
+
+        Raimon.setBackground(new java.awt.Color(0, 0, 204));
+        Raimon.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+        Raimon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RaimonMouseClicked(evt);
             }
         });
 
-        Occult.setBackground(new java.awt.Color(255, 102, 0));
-        Occult.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        Occult.setForeground(new java.awt.Color(255, 255, 255));
-        Occult.setText("Occult");
-        Occult.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Occult.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OccultActionPerformed(evt);
-            }
-        });
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Raimon.png"))); // NOI18N
 
-        Brain.setBackground(new java.awt.Color(255, 102, 0));
-        Brain.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        Brain.setForeground(new java.awt.Color(255, 255, 255));
-        Brain.setText("Brain");
-        Brain.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Brain.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BrainActionPerformed(evt);
-            }
-        });
-
-        Shuriken.setBackground(new java.awt.Color(255, 102, 0));
-        Shuriken.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        Shuriken.setForeground(new java.awt.Color(255, 255, 255));
-        Shuriken.setText("Shuriiken");
-        Shuriken.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Shuriken.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ShurikenActionPerformed(evt);
-            }
-        });
-
-        Street_Sallys.setBackground(new java.awt.Color(255, 102, 0));
-        Street_Sallys.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        Street_Sallys.setForeground(new java.awt.Color(255, 255, 255));
-        Street_Sallys.setText("Street Sally`s");
-        Street_Sallys.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Street_Sallys.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Street_SallysActionPerformed(evt);
-            }
-        });
-
-        Wild.setBackground(new java.awt.Color(255, 102, 0));
-        Wild.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        Wild.setForeground(new java.awt.Color(255, 255, 255));
-        Wild.setText("Wild");
-        Wild.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Wild.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                WildActionPerformed(evt);
-            }
-        });
-
-        Inazuma_KFC.setBackground(new java.awt.Color(255, 102, 0));
-        Inazuma_KFC.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        Inazuma_KFC.setForeground(new java.awt.Color(255, 255, 255));
-        Inazuma_KFC.setText("Inazuma Kids FC");
-        Inazuma_KFC.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Inazuma_KFC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Inazuma_KFCActionPerformed(evt);
-            }
-        });
-
-        Umbrella.setBackground(new java.awt.Color(255, 102, 0));
-        Umbrella.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        Umbrella.setForeground(new java.awt.Color(255, 255, 255));
-        Umbrella.setText("Umbrella");
-        Umbrella.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Umbrella.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UmbrellaActionPerformed(evt);
-            }
-        });
-
-        RaimonOG.setBackground(new java.awt.Color(255, 102, 0));
-        RaimonOG.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        RaimonOG.setForeground(new java.awt.Color(255, 255, 255));
-        RaimonOG.setText("Raimon OG");
-        RaimonOG.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        RaimonOG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RaimonOGActionPerformed(evt);
-            }
-        });
-
-        Raimon.setBackground(new java.awt.Color(255, 102, 0));
-        Raimon.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        Raimon.setForeground(new java.awt.Color(255, 255, 255));
-        Raimon.setText("Raimon");
-        Raimon.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Raimon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RaimonActionPerformed(evt);
-            }
-        });
-
-        Farm.setBackground(new java.awt.Color(255, 102, 0));
-        Farm.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        Farm.setForeground(new java.awt.Color(255, 255, 255));
-        Farm.setText("Farm");
-        Farm.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Farm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FarmActionPerformed(evt);
-            }
-        });
-
-        Royal_Academy.setBackground(new java.awt.Color(255, 102, 0));
-        Royal_Academy.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        Royal_Academy.setForeground(new java.awt.Color(255, 255, 255));
-        Royal_Academy.setText("Royal Academy");
-        Royal_Academy.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Royal_Academy.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Royal_AcademyActionPerformed(evt);
-            }
-        });
-
-        Zeus.setBackground(new java.awt.Color(255, 102, 0));
-        Zeus.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        Zeus.setForeground(new java.awt.Color(255, 255, 255));
-        Zeus.setText("Zeus");
-        Zeus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Zeus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ZeusActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo_red_2.png"))); // NOI18N
-
-        javax.swing.GroupLayout FondoLayout = new javax.swing.GroupLayout(Fondo);
-        Fondo.setLayout(FondoLayout);
-        FondoLayout.setHorizontalGroup(
-            FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FondoLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Zeus, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(FondoLayout.createSequentialGroup()
-                        .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(RaimonOG, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Street_Sallys, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Brain, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Royal_Academy, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(117, 117, 117)
-                        .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Shuriken, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Wild, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Umbrella, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Raimon, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
-                .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Otaku, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Occult, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Inazuma_KFC, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Farm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40))
-            .addGroup(FondoLayout.createSequentialGroup()
-                .addGap(461, 461, 461)
+        javax.swing.GroupLayout RaimonLayout = new javax.swing.GroupLayout(Raimon);
+        Raimon.setLayout(RaimonLayout);
+        RaimonLayout.setHorizontalGroup(
+            RaimonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RaimonLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
                 .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
-        FondoLayout.setVerticalGroup(
-            FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FondoLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Wild, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Royal_Academy, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Otaku, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(63, 63, 63)
-                .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Brain, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Shuriken, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Occult, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(51, 51, 51)
-                .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Street_Sallys, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Umbrella, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Inazuma_KFC, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
-                .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RaimonOG, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Raimon, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Farm, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62)
-                .addComponent(Zeus, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+        RaimonLayout.setVerticalGroup(
+            RaimonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RaimonLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addContainerGap(52, Short.MAX_VALUE))
         );
+
+        jPanel1.add(Raimon, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 160, 190));
+
+        Umbrella.setBackground(new java.awt.Color(0, 0, 204));
+        Umbrella.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Umbrella (2).png"))); // NOI18N
+
+        javax.swing.GroupLayout UmbrellaLayout = new javax.swing.GroupLayout(Umbrella);
+        Umbrella.setLayout(UmbrellaLayout);
+        UmbrellaLayout.setHorizontalGroup(
+            UmbrellaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(UmbrellaLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel11)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+        UmbrellaLayout.setVerticalGroup(
+            UmbrellaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(UmbrellaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11)
+                .addContainerGap(60, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(Umbrella, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 830, 160, -1));
+
+        Brain.setBackground(new java.awt.Color(0, 0, 204));
+        Brain.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Brainwashing.png"))); // NOI18N
+
+        javax.swing.GroupLayout BrainLayout = new javax.swing.GroupLayout(Brain);
+        Brain.setLayout(BrainLayout);
+        BrainLayout.setHorizontalGroup(
+            BrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BrainLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel12)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+        BrainLayout.setVerticalGroup(
+            BrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BrainLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12)
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(Brain, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 600, 160, 180));
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Selecciona un equipo para ver sus Jugadores:");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
+
+        Sallys.setBackground(new java.awt.Color(0, 0, 204));
+        Sallys.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Street_Sally.png"))); // NOI18N
+
+        javax.swing.GroupLayout SallysLayout = new javax.swing.GroupLayout(Sallys);
+        Sallys.setLayout(SallysLayout);
+        SallysLayout.setHorizontalGroup(
+            SallysLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SallysLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel14)
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+        SallysLayout.setVerticalGroup(
+            SallysLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SallysLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel14)
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(Sallys, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 596, 160, 180));
+
+        Royal.setBackground(new java.awt.Color(0, 0, 204));
+        Royal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Royal_Academy.png"))); // NOI18N
+
+        javax.swing.GroupLayout RoyalLayout = new javax.swing.GroupLayout(Royal);
+        Royal.setLayout(RoyalLayout);
+        RoyalLayout.setHorizontalGroup(
+            RoyalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RoyalLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel15)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+        RoyalLayout.setVerticalGroup(
+            RoyalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RoyalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel15)
+                .addContainerGap(56, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(Royal, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, 160, -1));
+
+        Otaku.setBackground(new java.awt.Color(0, 0, 204));
+        Otaku.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Otaku.png"))); // NOI18N
+
+        javax.swing.GroupLayout OtakuLayout = new javax.swing.GroupLayout(Otaku);
+        Otaku.setLayout(OtakuLayout);
+        OtakuLayout.setHorizontalGroup(
+            OtakuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(OtakuLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel16)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+        OtakuLayout.setVerticalGroup(
+            OtakuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(OtakuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel16)
+                .addContainerGap(60, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(Otaku, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 840, 160, -1));
+
+        IKFC.setBackground(new java.awt.Color(0, 0, 204));
+        IKFC.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Inazuma_KFC.png"))); // NOI18N
+
+        javax.swing.GroupLayout IKFCLayout = new javax.swing.GroupLayout(IKFC);
+        IKFC.setLayout(IKFCLayout);
+        IKFCLayout.setHorizontalGroup(
+            IKFCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(IKFCLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel17)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+        IKFCLayout.setVerticalGroup(
+            IKFCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(IKFCLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel17)
+                .addContainerGap(60, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(IKFC, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 1080, 160, -1));
+
+        Wilds.setBackground(new java.awt.Color(0, 0, 204));
+        Wilds.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Wild.png"))); // NOI18N
+
+        javax.swing.GroupLayout WildsLayout = new javax.swing.GroupLayout(Wilds);
+        Wilds.setLayout(WildsLayout);
+        WildsLayout.setHorizontalGroup(
+            WildsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(WildsLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel18)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+        WildsLayout.setVerticalGroup(
+            WildsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(WildsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel18)
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(Wilds, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 1090, 160, 180));
+
+        RaimonOG.setBackground(new java.awt.Color(0, 0, 204));
+        RaimonOG.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+        RaimonOG.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Raimon_OB_emblem_29.png"))); // NOI18N
+        RaimonOG.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -20, 180, -1));
+
+        jPanel1.add(RaimonOG, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 1350, 160, 200));
+
+        Zeus.setBackground(new java.awt.Color(0, 0, 204));
+        Zeus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+        Zeus.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        asss.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Zeus_emblem_29 (2).png"))); // NOI18N
+        Zeus.add(asss, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -20, -1, -1));
+
+        jPanel1.add(Zeus, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 1350, 160, 200));
+
+        jScrollPane2.setViewportView(jPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Fondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 654, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Fondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1608, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Royal_AcademyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Royal_AcademyActionPerformed
+    private void BackToLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToLoginActionPerformed
         // TODO add your handling code here:
-        controladorMusica.playSound("src/resources_audio/Jude_Royal.wav");
-        controladorMusica.playSound("src/resources_audio/OK.wav");
+         VistaLogin login = new VistaLogin();
+    login.setVisible(true);
+    login.setLocationRelativeTo(null); // Centra la ventana
+    this.dispose(); // Cierra la ventana actual
+    }//GEN-LAST:event_BackToLoginActionPerformed
 
-    }//GEN-LAST:event_Royal_AcademyActionPerformed
-
-    private void BrainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BrainActionPerformed
+    private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RaimonMouseClicked
         // TODO add your handling code here:
-        controladorMusica.playSound("src/resources_audio/OK.wav");
+           
+    }//GEN-LAST:event_RaimonMouseClicked
 
-    }//GEN-LAST:event_BrainActionPerformed
-
-    private void ZeusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZeusActionPerformed
-        // TODO add your handling code here:
-        controladorMusica.playSound("src/resources_audio/OK.wav");
-        controladorMusica.playSound("src/resources_audio/Byron_Zeus.wav");
-    }//GEN-LAST:event_ZeusActionPerformed
-
-    private void Street_SallysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Street_SallysActionPerformed
-        // TODO add your handling code here:
-        controladorMusica.playSound("src/resources_audio/OK.wav");
-
-    }//GEN-LAST:event_Street_SallysActionPerformed
-
-    private void RaimonOGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RaimonOGActionPerformed
-        // TODO add your handling code here:
-        controladorMusica.playSound("src/resources_audio/OK.wav");
-
-    }//GEN-LAST:event_RaimonOGActionPerformed
-
-    private void WildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WildActionPerformed
-        // TODO add your handling code here:
-        controladorMusica.playSound("src/resources_audio/OK.wav");
-
-        
-    }//GEN-LAST:event_WildActionPerformed
-
-    private void ShurikenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShurikenActionPerformed
-        // TODO add your handling code here:
-        controladorMusica.playSound("src/resources_audio/OK.wav");
-
-    }//GEN-LAST:event_ShurikenActionPerformed
-
-    private void UmbrellaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UmbrellaActionPerformed
-        // TODO add your handling code here:
-        controladorMusica.playSound("src/resources_audio/OK.wav");
-
-    }//GEN-LAST:event_UmbrellaActionPerformed
-
-    private void RaimonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RaimonActionPerformed
-        // TODO add your handling code here:
-        controladorMusica.playSound("src/resources_audio/OK.wav");
-        raimon.cargarJugadores();
-        vistaR.setLocationRelativeTo(null);
-        ArrayList<Jugador> jugadores = new ControladorRaimon(servicios).cargarJugadores();
-        new VistaRaimon(jugadores);
-        
-        vistaR.setTitle("Raimon");
-        
-
-    }//GEN-LAST:event_RaimonActionPerformed
-
-    private void OtakuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OtakuActionPerformed
-        // TODO add your handling code here:
-        controladorMusica.playSound("src/resources_audio/OK.wav");
-
-    }//GEN-LAST:event_OtakuActionPerformed
-
-    private void OccultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OccultActionPerformed
-        // TODO add your handling code here:
-        controladorMusica.playSound("src/resources_audio/OK.wav");
-
-    }//GEN-LAST:event_OccultActionPerformed
-
-    private void Inazuma_KFCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Inazuma_KFCActionPerformed
-        // TODO add your handling code here:
-        controladorMusica.playSound("src/resources_audio/OK.wav");
-
-    }//GEN-LAST:event_Inazuma_KFCActionPerformed
-
-    public JButton getRaimon() {
-        return Raimon;
-    }
-
-    public void setRaimon(JButton Raimon) {
-        this.Raimon = Raimon;
-    }
-
-    private void FarmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FarmActionPerformed
-        // TODO add your handling code here:
-        controladorMusica.playSound("src/resources_audio/OK.wav");
-
-    }//GEN-LAST:event_FarmActionPerformed
+    
 
     
     /**
@@ -408,27 +389,37 @@ public class VistaMenu extends javax.swing.JFrame {
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Brain;
-    private javax.swing.JButton Farm;
-    private javax.swing.JPanel Fondo;
-    private javax.swing.JButton Inazuma_KFC;
-    private javax.swing.JButton Occult;
-    private javax.swing.JButton Otaku;
-    private javax.swing.JButton Raimon;
-    private javax.swing.JButton RaimonOG;
-    private javax.swing.JButton Royal_Academy;
-    private javax.swing.JButton Shuriken;
-    private javax.swing.JButton Street_Sallys;
-    private javax.swing.JButton Umbrella;
-    private javax.swing.JButton Wild;
-    private javax.swing.JButton Zeus;
+    private javax.swing.JButton BackToLogin;
+    private javax.swing.JPanel Brain;
+    private javax.swing.JPanel IKFC;
+    private javax.swing.JPanel Otaku;
+    private javax.swing.JPanel Raimon;
+    private javax.swing.JPanel RaimonOG;
+    private javax.swing.JPanel Royal;
+    private javax.swing.JPanel Sallys;
+    private javax.swing.JPanel Umbrella;
+    private javax.swing.JPanel Wilds;
+    private javax.swing.JPanel Zeus;
+    private javax.swing.JLabel asss;
     private javax.swing.JColorChooser jColorChooser1;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JOptionPane jOptionPane1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,7 +5,7 @@
 package Inadex_gui;
 import Controladores.ControladorBorrar;
 import  Servicios.Servicios;
-import jakarta.ws.rs.DELETE;
+ 
 import java.lang.annotation.Annotation;
 import javax.swing.JComboBox;
 

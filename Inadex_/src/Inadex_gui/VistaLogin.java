@@ -33,6 +33,7 @@ public class VistaLogin extends javax.swing.JFrame {
     private static ControladorLogin usuario_login ;     
     private static ControladorLogin pass_login;
     private VistaSign_In sign_In;
+    private javax.swing.JButton AutoComplete_Button;
     VistaDelete vDelete = new VistaDelete();
     ControladorLogin controlador = new ControladorLogin();
     
@@ -70,6 +71,7 @@ public class VistaLogin extends javax.swing.JFrame {
         Delete = new javax.swing.JButton();
         Update = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -151,6 +153,17 @@ public class VistaLogin extends javax.swing.JFrame {
 
         jLabel2.setText("Pre Alpha 0.1");
 
+        jButton1.setBackground(new java.awt.Color(255, 102, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Autocompletar Login");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AutoComplete_ButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -160,31 +173,33 @@ public class VistaLogin extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(107, 107, 107)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jlabel1)
-                                    .addComponent(Contrasena_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Usuario_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(491, Short.MAX_VALUE)
+                                .addComponent(jLabel2))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(224, 224, 224)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Login_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(SignIn_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
-                                        .addComponent(jLabel2)))))
+                                .addGap(107, 107, 107)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(Login_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(SignIn_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel3)
+                                        .addComponent(jlabel1)
+                                        .addComponent(Contrasena_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Usuario_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(15, 15, 15))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(Update, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(128, 128, 128)
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(128, 128, 128)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,14 +216,17 @@ public class VistaLogin extends javax.swing.JFrame {
                         .addComponent(jlabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(Usuario_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
+                        .addGap(27, 27, 27)
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Contrasena_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43)
-                        .addComponent(Login_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(SignIn_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Login_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(25, 25, 25)
+                        .addComponent(SignIn_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42))
                     .addComponent(jLabel2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -229,6 +247,15 @@ public class VistaLogin extends javax.swing.JFrame {
 
 
 
+ 
+// Método para guardar los datos en el archivo después de un login exitoso
+private void guardarDatosAutocompletar(String usuario, String contrasena) {
+    try (FileWriter writer = new FileWriter("src/AutoCompleteData.txt")) {
+        writer.write(usuario + "," + contrasena);
+    } catch (IOException e) {
+        JOptionPane.showMessageDialog(this, "Error al guardar los datos: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+}
 
     public void setContrasena_Text(javax.swing.JTextField contrasena_Text) {
         Contrasena_Text = contrasena_Text;
@@ -259,7 +286,6 @@ public class VistaLogin extends javax.swing.JFrame {
         musica = new VistaMusica();
         menu = new VistaMenu();
         menu.setVisible(true);
-        menu.setSize(1295, 900);
         menu.setTitle("Inadex");
         menu.setResizable(false);
         menu.setLocationRelativeTo(null);
@@ -271,7 +297,10 @@ public class VistaLogin extends javax.swing.JFrame {
     // Intenta realizar el inicio de sesión
     boolean loginExitoso = controlador.login(usuario, contrasena);
     if (loginExitoso) {
-        
+                guardarDatosAutocompletar(usuario, contrasena);
+                this.dispose(); 
+
+
     }  else {
         menu.dispose();
         JOptionPane.showMessageDialog(null, "Nombre de usuario o contraseña incorrectos", "Error de inicio de sesión", JOptionPane.ERROR_MESSAGE);
@@ -408,6 +437,36 @@ public void EscribirFichero() throws SQLException, IOException {
         });
        dispose();
     }//GEN-LAST:event_UpdateActionPerformed
+
+    private void AutoComplete_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AutoComplete_ButtonActionPerformed
+        // TODO add your handling code here
+        
+        /**Explicacion del codigo: este metodo se activa la presionar el boton de autocompletar, fuciona tal que al pulsar un bo
+        ton se autocompletan los campos de texto con el ultimo usuario que registraste
+        se realiza con un ifelse sencillo que usa la funcion de xscanner para scanear los datos del txt 
+        si existe se autocompletaran los campos de texto sustituyendo cada **/
+        
+         try {
+        File file = new File("src/AutoCompleteData.txt");
+        if (file.exists()) {
+            Scanner scanner = new Scanner(file);
+            if (scanner.hasNextLine()) {
+                String[] data = scanner.nextLine().split(",");
+                if (data.length == 2) {
+                    Usuario_Text.setText(data[0]); // Rellenar el campo de usuario
+                    Contrasena_Text.setText(data[1]); // Rellenar el campo de contraseña
+                }
+            }
+            scanner.close();
+        } else {
+            JOptionPane.showMessageDialog(this, "Archivo de autocompletar no encontrado.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Error al leer el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+        
+        
+    }//GEN-LAST:event_AutoComplete_ButtonActionPerformed
   
     //Este metodo sirve para reproducir musica de fondo en bucle
     
@@ -426,6 +485,7 @@ public void EscribirFichero() throws SQLException, IOException {
     private javax.swing.JButton SignIn_Button;
     private javax.swing.JButton Update;
     private javax.swing.JTextField Usuario_Text;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
