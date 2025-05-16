@@ -1,29 +1,78 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Inadex_gui;
-import java.awt.Graphics;
-import java.awt.Image;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
+import Fuentes.Press_Start_2P.Fuentes;
 
-public class VistaDetalles extends javax.swing.JPanel {
 
-    private Image backgroundImage;
+/**
+ *
+ * @author zenca
+ */
+public class VistaDetalles extends javax.swing.JFrame {
+    private Fuentes tipoFuente;  
 
+    /**
+     * Creates new form VistaDetalles
+     */
     public VistaDetalles() {
-        setBackgroundImage();
         initComponents();
+           tipoFuente = new Fuentes();
+        // Ejemplo: cambia la fuente de un JLabel (puedes cambiarlo por cualquier otro JLabel)
+   
+  
+    name.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 20));
+    name.setForeground(java.awt.Color.WHITE);
+
+    image.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    image.setForeground(java.awt.Color.WHITE);
+
+    pe.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    pe.setForeground(java.awt.Color.WHITE);
+
+    pt.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    pt.setForeground(java.awt.Color.WHITE);
+
+    tiro.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    tiro.setForeground(java.awt.Color.WHITE);
+
+    fisico.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    fisico.setForeground(java.awt.Color.WHITE);
+
+    control.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    control.setForeground(java.awt.Color.WHITE);
+
+    defensa.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    defensa.setForeground(java.awt.Color.WHITE);
+
+    rapidez.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    rapidez.setForeground(java.awt.Color.WHITE);
+
+    aguante.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    aguante.setForeground(java.awt.Color.WHITE);
+
+    valor.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    valor.setForeground(java.awt.Color.WHITE);
+
+    sm1.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    sm1.setForeground(java.awt.Color.WHITE);
+
+    sm2.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    sm2.setForeground(java.awt.Color.WHITE);
+
+    sm3.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    sm3.setForeground(java.awt.Color.WHITE);
+
+    sm4.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    sm4.setForeground(java.awt.Color.WHITE);
+
+    jLabel1.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    jLabel1.setForeground(java.awt.Color.WHITE);
+
+    jLabel2.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    jLabel2.setForeground(java.awt.Color.WHITE);
     }
-
-     private void setBackgroundImage() {
-        // Establecer la imagen de fondo en jLabel1
-       jLabel1.setIcon(new ImageIcon(getClass().getResource("/Img/BackgroundDetails.PNG")));
-    }
-
-    
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -34,24 +83,147 @@ public class VistaDetalles extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel2 = new javax.swing.JPanel();
+        image = new javax.swing.JLabel();
+        name = new javax.swing.JLabel();
+        pe = new javax.swing.JLabel();
+        pt = new javax.swing.JLabel();
+        tiro = new javax.swing.JLabel();
+        fisico = new javax.swing.JLabel();
+        control = new javax.swing.JLabel();
+        defensa = new javax.swing.JLabel();
+        rapidez = new javax.swing.JLabel();
+        aguante = new javax.swing.JLabel();
+        valor = new javax.swing.JLabel();
+        sm1 = new javax.swing.JLabel();
+        sm2 = new javax.swing.JLabel();
+        sm3 = new javax.swing.JLabel();
+        sm4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/BackgroundDetails.PNG"))); // NOI18N
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        image.setText("jLabel18");
+        jPanel2.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, -1, -1));
+
+        name.setText("jLabel3");
+        jPanel2.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, -1, -1));
+
+        pe.setText("pe");
+        jPanel2.add(pe, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, -1, -1));
+
+        pt.setText("pt");
+        jPanel2.add(pt, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 220, -1, -1));
+
+        tiro.setText("jLabel7");
+        jPanel2.add(tiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, -1, -1));
+
+        fisico.setText("jLabel8");
+        jPanel2.add(fisico, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, -1, -1));
+
+        control.setText("jLabel9");
+        jPanel2.add(control, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 430, -1, -1));
+
+        defensa.setText("jLabel10");
+        jPanel2.add(defensa, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 490, -1, -1));
+
+        rapidez.setText("jLabel11");
+        jPanel2.add(rapidez, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 540, -1, -1));
+
+        aguante.setText("jLabel12");
+        jPanel2.add(aguante, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 610, -1, -1));
+
+        valor.setText("jLabel13");
+        jPanel2.add(valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 670, -1, -1));
+
+        sm1.setText("jLabel14");
+        jPanel2.add(sm1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 350, -1, -1));
+
+        sm2.setText("jLabel15");
+        jPanel2.add(sm2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, -1, -1));
+
+        sm3.setText("jLabel16");
+        jPanel2.add(sm3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 470, -1, -1));
+
+        sm4.setText("jLabel17");
+        jPanel2.add(sm4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 530, -1, -1));
+
+        jLabel1.setText("99");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 80, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/BackgroundDetails.PNG"))); // NOI18N
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(VistaDetalles.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(VistaDetalles.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(VistaDetalles.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(VistaDetalles.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new VistaDetalles().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel aguante;
+    private javax.swing.JLabel control;
+    private javax.swing.JLabel defensa;
+    private javax.swing.JLabel fisico;
+    private javax.swing.JLabel image;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel name;
+    private javax.swing.JLabel pe;
+    private javax.swing.JLabel pt;
+    private javax.swing.JLabel rapidez;
+    private javax.swing.JLabel sm1;
+    private javax.swing.JLabel sm2;
+    private javax.swing.JLabel sm3;
+    private javax.swing.JLabel sm4;
+    private javax.swing.JLabel tiro;
+    private javax.swing.JLabel valor;
     // End of variables declaration//GEN-END:variables
 }
