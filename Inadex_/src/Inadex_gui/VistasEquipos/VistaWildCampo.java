@@ -31,10 +31,10 @@ public class VistaWildCampo extends javax.swing.JFrame {
         jLabel67 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
+        _179 = new javax.swing.JLabel();
+        _172 = new javax.swing.JLabel();
+        _183 = new javax.swing.JLabel();
+        _175 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jPanel59 = new javax.swing.JPanel();
         jLabel75 = new javax.swing.JLabel();
@@ -44,37 +44,37 @@ public class VistaWildCampo extends javax.swing.JFrame {
         jLabel77 = new javax.swing.JLabel();
         jPanel62 = new javax.swing.JPanel();
         jLabel78 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        _184 = new javax.swing.JLabel();
         jPanel46 = new javax.swing.JPanel();
         jLabel62 = new javax.swing.JLabel();
         jPanel47 = new javax.swing.JPanel();
         jLabel63 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        _185 = new javax.swing.JLabel();
         jPanel48 = new javax.swing.JPanel();
         jLabel64 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        _182 = new javax.swing.JLabel();
         jPanel49 = new javax.swing.JPanel();
         jLabel65 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        _181 = new javax.swing.JLabel();
         jPanel58 = new javax.swing.JPanel();
         jLabel74 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        _186 = new javax.swing.JLabel();
+        _176 = new javax.swing.JLabel();
         jPanel50 = new javax.swing.JPanel();
         jLabel66 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        _177 = new javax.swing.JLabel();
         jPanel52 = new javax.swing.JPanel();
         jLabel68 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        _178 = new javax.swing.JLabel();
         jPanel53 = new javax.swing.JPanel();
         jLabel69 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        _173 = new javax.swing.JLabel();
         jPanel56 = new javax.swing.JPanel();
         jLabel72 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        _174 = new javax.swing.JLabel();
         jPanel57 = new javax.swing.JPanel();
         jLabel73 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        _171 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel54 = new javax.swing.JPanel();
         jLabel70 = new javax.swing.JLabel();
@@ -123,17 +123,17 @@ public class VistaWildCampo extends javax.swing.JFrame {
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Wild.png"))); // NOI18N
         jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 783, -1, 130));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Mouseman.png"))); // NOI18N
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, 130));
+        _179.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Mouseman.png"))); // NOI18N
+        jPanel2.add(_179, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, 130));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Bullford.png"))); // NOI18N
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 315, -1, 130));
+        _172.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Bullford.png"))); // NOI18N
+        jPanel2.add(_172, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 315, -1, 130));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Panda.png"))); // NOI18N
-        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, -1, 130));
+        _183.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Panda.png"))); // NOI18N
+        jPanel2.add(_183, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, -1, 130));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Raccoon.png"))); // NOI18N
-        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 612, -1, 130));
+        _175.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Raccoon.png"))); // NOI18N
+        jPanel2.add(_175, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 612, -1, 130));
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
@@ -147,7 +147,7 @@ public class VistaWildCampo extends javax.swing.JFrame {
         jLabel75.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel75.setForeground(new java.awt.Color(255, 255, 255));
         jLabel75.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel75.setText("Chameleon");
+        jLabel75.setText("Mouseman");
 
         javax.swing.GroupLayout jPanel59Layout = new javax.swing.GroupLayout(jPanel59);
         jPanel59.setLayout(jPanel59Layout);
@@ -156,9 +156,9 @@ public class VistaWildCampo extends javax.swing.JFrame {
             .addGap(0, 124, Short.MAX_VALUE)
             .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel59Layout.createSequentialGroup()
-                    .addGap(0, 25, Short.MAX_VALUE)
+                    .addGap(0, 26, Short.MAX_VALUE)
                     .addComponent(jLabel75)
-                    .addGap(0, 24, Short.MAX_VALUE)))
+                    .addGap(0, 25, Short.MAX_VALUE)))
         );
         jPanel59Layout.setVerticalGroup(
             jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -270,8 +270,8 @@ public class VistaWildCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 3, 160, 920));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Cheetah.png"))); // NOI18N
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, -1, 130));
+        _184.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Cheetah.png"))); // NOI18N
+        jPanel1.add(_184, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, -1, 130));
 
         jPanel46.setBackground(new java.awt.Color(224, 101, 101));
         jPanel46.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -337,8 +337,8 @@ public class VistaWildCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, -1, 30));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Gorilla.png"))); // NOI18N
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
+        _185.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Gorilla.png"))); // NOI18N
+        jPanel1.add(_185, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
 
         jPanel48.setBackground(new java.awt.Color(224, 101, 101));
         jPanel48.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -372,8 +372,8 @@ public class VistaWildCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, -1, 30));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Eagle.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, -1, 130));
+        _182.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Eagle.png"))); // NOI18N
+        jPanel1.add(_182, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, -1, 130));
 
         jPanel49.setBackground(new java.awt.Color(224, 101, 101));
         jPanel49.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -407,8 +407,8 @@ public class VistaWildCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 590, -1, 30));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Chicken.png"))); // NOI18N
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, -1, 140));
+        _181.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Chicken.png"))); // NOI18N
+        jPanel1.add(_181, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, -1, 140));
 
         jPanel58.setBackground(new java.awt.Color(224, 101, 101));
         jPanel58.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -442,11 +442,11 @@ public class VistaWildCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 590, 120, -1));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Snake.png"))); // NOI18N
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, -1, 130));
+        _186.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Snake.png"))); // NOI18N
+        jPanel1.add(_186, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, -1, 130));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Lion.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 550, -1, -1));
+        _176.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Lion.png"))); // NOI18N
+        jPanel1.add(_176, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 550, -1, -1));
 
         jPanel50.setBackground(new java.awt.Color(224, 101, 101));
         jPanel50.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -480,8 +480,8 @@ public class VistaWildCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 780, -1, 30));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Monkey.png"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 460, -1, 130));
+        _177.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Monkey.png"))); // NOI18N
+        jPanel1.add(_177, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 460, -1, 130));
 
         jPanel52.setBackground(new java.awt.Color(224, 101, 101));
         jPanel52.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -515,8 +515,8 @@ public class VistaWildCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 790, -1, 30));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Chameleon.png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 460, -1, 130));
+        _178.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Chameleon.png"))); // NOI18N
+        jPanel1.add(_178, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 460, -1, 130));
 
         jPanel53.setBackground(new java.awt.Color(224, 101, 101));
         jPanel53.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -550,8 +550,8 @@ public class VistaWildCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 880, -1, 30));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Toad.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 660, -1, -1));
+        _173.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Toad.png"))); // NOI18N
+        jPanel1.add(_173, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 660, -1, -1));
 
         jPanel56.setBackground(new java.awt.Color(224, 101, 101));
         jPanel56.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -585,8 +585,8 @@ public class VistaWildCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Fishman.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 650, -1, 130));
+        _174.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Fishman.png"))); // NOI18N
+        jPanel1.add(_174, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 650, -1, 130));
 
         jPanel57.setBackground(new java.awt.Color(224, 101, 101));
         jPanel57.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -620,8 +620,8 @@ public class VistaWildCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 260, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Boar.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 750, -1, -1));
+        _171.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/wilds/Boar.png"))); // NOI18N
+        jPanel1.add(_171, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 750, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/campo (1).png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -740,21 +740,24 @@ public class VistaWildCampo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel _171;
+    private javax.swing.JLabel _172;
+    private javax.swing.JLabel _173;
+    private javax.swing.JLabel _174;
+    private javax.swing.JLabel _175;
+    private javax.swing.JLabel _176;
+    private javax.swing.JLabel _177;
+    private javax.swing.JLabel _178;
+    private javax.swing.JLabel _179;
+    private javax.swing.JLabel _181;
+    private javax.swing.JLabel _182;
+    private javax.swing.JLabel _183;
+    private javax.swing.JLabel _184;
+    private javax.swing.JLabel _185;
+    private javax.swing.JLabel _186;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
@@ -763,7 +766,6 @@ public class VistaWildCampo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
@@ -773,8 +775,6 @@ public class VistaWildCampo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
     private javax.swing.JLabel jLabel78;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel46;

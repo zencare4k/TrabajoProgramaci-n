@@ -30,12 +30,12 @@ public class VistaOccultCampo extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel32 = new javax.swing.JPanel();
         jLabel48 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        _62 = new javax.swing.JLabel();
+        _61 = new javax.swing.JLabel();
+        _59 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        _50 = new javax.swing.JLabel();
         jPanel33 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
         jPanel34 = new javax.swing.JPanel();
@@ -44,7 +44,7 @@ public class VistaOccultCampo extends javax.swing.JFrame {
         jLabel51 = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        _56 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
         jPanel22 = new javax.swing.JPanel();
@@ -63,18 +63,18 @@ public class VistaOccultCampo extends javax.swing.JFrame {
         jLabel44 = new javax.swing.JLabel();
         jPanel29 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        _64 = new javax.swing.JLabel();
+        _60 = new javax.swing.JLabel();
         jPanel31 = new javax.swing.JPanel();
         jLabel47 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        _58 = new javax.swing.JLabel();
+        _55 = new javax.swing.JLabel();
+        _57 = new javax.swing.JLabel();
+        _51 = new javax.swing.JLabel();
+        _54 = new javax.swing.JLabel();
+        _53 = new javax.swing.JLabel();
+        _52 = new javax.swing.JLabel();
+        _49 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel30 = new javax.swing.JPanel();
         jLabel46 = new javax.swing.JLabel();
@@ -118,14 +118,14 @@ public class VistaOccultCampo extends javax.swing.JFrame {
 
         jPanel2.add(jPanel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Noir.png"))); // NOI18N
-        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, -1, -1));
+        _62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Noir.png"))); // NOI18N
+        jPanel2.add(_62, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, -1, -1));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Dollman.png"))); // NOI18N
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 580, -1, -1));
+        _61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Dollman.png"))); // NOI18N
+        jPanel2.add(_61, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 580, -1, -1));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Ghost.png"))); // NOI18N
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
+        _59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Ghost.png"))); // NOI18N
+        jPanel2.add(_59, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Occult.png"))); // NOI18N
         jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 780, -1, -1));
@@ -135,8 +135,8 @@ public class VistaOccultCampo extends javax.swing.JFrame {
         jLabel17.setText("Banquillo");
         jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, -1, -1));
 
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Zombie.png"))); // NOI18N
-        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+        _50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Zombie.png"))); // NOI18N
+        jPanel2.add(_50, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
 
         jPanel33.setBackground(new java.awt.Color(224, 101, 101));
         jPanel33.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -268,8 +268,8 @@ public class VistaOccultCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Mummy.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, -1, -1));
+        _56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Mummy.png"))); // NOI18N
+        jPanel1.add(_56, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, -1, -1));
 
         jPanel21.setBackground(new java.awt.Color(224, 101, 101));
         jPanel21.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -559,11 +559,11 @@ public class VistaOccultCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 720, -1, -1));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Talisman.png"))); // NOI18N
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, -1, -1));
+        _64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Talisman.png"))); // NOI18N
+        jPanel1.add(_64, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, -1, -1));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Blood.png"))); // NOI18N
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, -1, -1));
+        _60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Blood.png"))); // NOI18N
+        jPanel1.add(_60, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, -1, -1));
 
         jPanel31.setBackground(new java.awt.Color(224, 101, 101));
         jPanel31.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -597,29 +597,29 @@ public class VistaOccultCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 870, -1, -1));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Wolfy.png"))); // NOI18N
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, -1, -1));
+        _58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Wolfy.png"))); // NOI18N
+        jPanel1.add(_58, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Jiangshi.png"))); // NOI18N
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 380, -1, -1));
+        _55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Jiangshi.png"))); // NOI18N
+        jPanel1.add(_55, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 380, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Grave.png"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, -1, -1));
+        _57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Grave.png"))); // NOI18N
+        jPanel1.add(_57, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, -1, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Styx.png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 590, -1, -1));
+        _51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Styx.png"))); // NOI18N
+        jPanel1.add(_51, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 590, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Creepy.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 590, -1, -1));
+        _54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Creepy.png"))); // NOI18N
+        jPanel1.add(_54, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 590, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Undead.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 590, -1, -1));
+        _53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Undead.png"))); // NOI18N
+        jPanel1.add(_53, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 590, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Franky.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, -1, -1));
+        _52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Franky.png"))); // NOI18N
+        jPanel1.add(_52, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Mask.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 750, -1, -1));
+        _49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Mask.png"))); // NOI18N
+        jPanel1.add(_49, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 750, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/campo (1).png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -706,23 +706,28 @@ public class VistaOccultCampo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel _49;
+    private javax.swing.JLabel _50;
+    private javax.swing.JLabel _51;
+    private javax.swing.JLabel _52;
+    private javax.swing.JLabel _53;
+    private javax.swing.JLabel _54;
+    private javax.swing.JLabel _55;
+    private javax.swing.JLabel _56;
+    private javax.swing.JLabel _57;
+    private javax.swing.JLabel _58;
+    private javax.swing.JLabel _59;
+    private javax.swing.JLabel _60;
+    private javax.swing.JLabel _61;
+    private javax.swing.JLabel _62;
+    private javax.swing.JLabel _64;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -733,13 +738,8 @@ public class VistaOccultCampo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;

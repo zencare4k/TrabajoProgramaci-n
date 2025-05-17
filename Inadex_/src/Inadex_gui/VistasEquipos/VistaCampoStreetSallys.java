@@ -37,47 +37,44 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
         jLabel56 = new javax.swing.JLabel();
         jPanel37 = new javax.swing.JPanel();
         jLabel54 = new javax.swing.JLabel();
+        _155 = new javax.swing.JLabel();
+        jPanel30 = new javax.swing.JPanel();
+        jLabel46 = new javax.swing.JLabel();
         jPanel32 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
         jPanel31 = new javax.swing.JPanel();
         jLabel48 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        _154 = new javax.swing.JLabel();
+        _142 = new javax.swing.JLabel();
         jPanel36 = new javax.swing.JPanel();
         jLabel53 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jPanel34 = new javax.swing.JPanel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        _146 = new javax.swing.JLabel();
+        _151 = new javax.swing.JLabel();
+        _152 = new javax.swing.JLabel();
         jPanel33 = new javax.swing.JPanel();
         jLabel50 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        _164 = new javax.swing.JLabel();
+        _153 = new javax.swing.JLabel();
+        _145 = new javax.swing.JLabel();
         jPanel35 = new javax.swing.JPanel();
         jLabel52 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        _150 = new javax.swing.JLabel();
+        _147 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jPanel27 = new javax.swing.JPanel();
-        jLabel43 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jPanel28 = new javax.swing.JPanel();
         jLabel44 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
+        _149 = new javax.swing.JLabel();
         jPanel29 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jPanel30 = new javax.swing.JPanel();
-        jLabel46 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
+        _143 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
+        _148 = new javax.swing.JLabel();
+        jPanel42 = new javax.swing.JPanel();
+        jLabel59 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -226,12 +223,12 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
         jPanel37.setLayout(jPanel37Layout);
         jPanel37Layout.setHorizontalGroup(
             jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 116, Short.MAX_VALUE)
+            .addGap(0, 126, Short.MAX_VALUE)
             .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel37Layout.createSequentialGroup()
-                    .addGap(0, 31, Short.MAX_VALUE)
+                    .addGap(0, 36, Short.MAX_VALUE)
                     .addComponent(jLabel54)
-                    .addGap(0, 31, Short.MAX_VALUE)))
+                    .addGap(0, 36, Short.MAX_VALUE)))
         );
         jPanel37Layout.setVerticalGroup(
             jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -243,7 +240,42 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        getContentPane().add(jPanel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 650, -1, -1));
+        getContentPane().add(jPanel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 650, 130, -1));
+
+        _155.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Baughan.png"))); // NOI18N
+        getContentPane().add(_155, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, -1, -1));
+
+        jPanel30.setBackground(new java.awt.Color(224, 101, 101));
+        jPanel30.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel46.setBackground(new java.awt.Color(255, 255, 51));
+        jLabel46.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel46.setText("Baughan");
+
+        javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
+        jPanel30.setLayout(jPanel30Layout);
+        jPanel30Layout.setHorizontalGroup(
+            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 112, Short.MAX_VALUE)
+            .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel30Layout.createSequentialGroup()
+                    .addGap(0, 27, Short.MAX_VALUE)
+                    .addComponent(jLabel46)
+                    .addGap(0, 27, Short.MAX_VALUE)))
+        );
+        jPanel30Layout.setVerticalGroup(
+            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 26, Short.MAX_VALUE)
+            .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel30Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel46)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        getContentPane().add(jPanel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, -1, -1));
 
         jPanel32.setBackground(new java.awt.Color(224, 101, 101));
         jPanel32.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -309,11 +341,11 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
 
         getContentPane().add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 380, -1, 30));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Prentice.png"))); // NOI18N
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 90, -1, -1));
+        _154.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Prentice.png"))); // NOI18N
+        getContentPane().add(_154, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 90, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Yuma.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 770, -1, -1));
+        _142.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Yuma.png"))); // NOI18N
+        getContentPane().add(_142, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 770, -1, -1));
 
         jPanel36.setBackground(new java.awt.Color(224, 101, 101));
         jPanel36.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -347,49 +379,14 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
 
         getContentPane().add(jPanel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 630, -1, 30));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Fielding.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 680, -1, -1));
+        _146.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Fielding.png"))); // NOI18N
+        getContentPane().add(_146, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 680, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Sally.png"))); // NOI18N
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, -1, -1));
+        _151.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Squirrel.png"))); // NOI18N
+        getContentPane().add(_151, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 500, -1, -1));
 
-        jPanel34.setBackground(new java.awt.Color(224, 101, 101));
-        jPanel34.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jLabel51.setBackground(new java.awt.Color(255, 255, 51));
-        jLabel51.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel51.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel51.setText("Samantha");
-
-        javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
-        jPanel34.setLayout(jPanel34Layout);
-        jPanel34Layout.setHorizontalGroup(
-            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 112, Short.MAX_VALUE)
-            .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel34Layout.createSequentialGroup()
-                    .addGap(0, 23, Short.MAX_VALUE)
-                    .addComponent(jLabel51)
-                    .addGap(0, 23, Short.MAX_VALUE)))
-        );
-        jPanel34Layout.setVerticalGroup(
-            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 26, Short.MAX_VALUE)
-            .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel34Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel51)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        getContentPane().add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, -1, 30));
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Squirrel.png"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 500, -1, -1));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Sandstone.png"))); // NOI18N
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
+        _152.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Sandstone.png"))); // NOI18N
+        getContentPane().add(_152, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
 
         jPanel33.setBackground(new java.awt.Color(224, 101, 101));
         jPanel33.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -423,14 +420,14 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
 
         getContentPane().add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, -1, 30));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Jones.png"))); // NOI18N
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, -1));
+        _164.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Jones.png"))); // NOI18N
+        getContentPane().add(_164, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, -1));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Riversong.png"))); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 250, -1, -1));
+        _153.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Riversong.png"))); // NOI18N
+        getContentPane().add(_153, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 250, -1, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Lovely.png"))); // NOI18N
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 680, -1, -1));
+        _145.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Lovely.png"))); // NOI18N
+        getContentPane().add(_145, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 680, -1, -1));
 
         jPanel35.setBackground(new java.awt.Color(224, 101, 101));
         jPanel35.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -464,11 +461,11 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
 
         getContentPane().add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Sheldon.png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 530, -1, -1));
+        _150.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Sheldon.png"))); // NOI18N
+        getContentPane().add(_150, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 530, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Knuckles.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 530, -1, -1));
+        _147.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Knuckles.png"))); // NOI18N
+        getContentPane().add(_147, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 530, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/campo (1).png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -481,43 +478,8 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
         jLabel18.setText("Banquillo");
         jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 40, -1, -1));
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Tunk.png"))); // NOI18N
-        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
-
-        jPanel27.setBackground(new java.awt.Color(224, 101, 101));
-        jPanel27.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jLabel43.setBackground(new java.awt.Color(255, 255, 51));
-        jLabel43.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel43.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel43.setText("Tunk");
-
-        javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
-        jPanel27.setLayout(jPanel27Layout);
-        jPanel27Layout.setHorizontalGroup(
-            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
-            .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel27Layout.createSequentialGroup()
-                    .addGap(0, 38, Short.MAX_VALUE)
-                    .addComponent(jLabel43)
-                    .addGap(0, 38, Short.MAX_VALUE)))
-        );
-        jPanel27Layout.setVerticalGroup(
-            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 26, Short.MAX_VALUE)
-            .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel27Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel43)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, 30));
-
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Street_Sally.png"))); // NOI18N
-        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 770, -1, -1));
+        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 790, -1, -1));
 
         jPanel28.setBackground(new java.awt.Color(224, 101, 101));
         jPanel28.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -526,13 +488,13 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
         jLabel44.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel44.setForeground(new java.awt.Color(255, 255, 255));
         jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel44.setText("Most");
+        jLabel44.setText("Holmes");
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
         jPanel28.setLayout(jPanel28Layout);
         jPanel28Layout.setHorizontalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 112, Short.MAX_VALUE)
+            .addGap(0, 130, Short.MAX_VALUE)
             .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel28Layout.createSequentialGroup()
                     .addGap(0, 39, Short.MAX_VALUE)
@@ -549,10 +511,10 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        jPanel3.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, 30));
+        jPanel3.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, 30));
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Caperock.png"))); // NOI18N
-        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, -1, -1));
+        _149.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Stager.png"))); // NOI18N
+        jPanel3.add(_149, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
 
         jPanel29.setBackground(new java.awt.Color(224, 101, 101));
         jPanel29.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -561,7 +523,7 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
         jLabel45.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel45.setForeground(new java.awt.Color(255, 255, 255));
         jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel45.setText("Caperock");
+        jLabel45.setText("Stager");
 
         javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
         jPanel29.setLayout(jPanel29Layout);
@@ -570,9 +532,9 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
             .addGap(0, 108, Short.MAX_VALUE)
             .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel29Layout.createSequentialGroup()
-                    .addGap(0, 22, Short.MAX_VALUE)
+                    .addGap(0, 32, Short.MAX_VALUE)
                     .addComponent(jLabel45)
-                    .addGap(0, 22, Short.MAX_VALUE)))
+                    .addGap(0, 32, Short.MAX_VALUE)))
         );
         jPanel29Layout.setVerticalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -584,45 +546,10 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        jPanel3.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, -1, 30));
+        jPanel3.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, -1, 30));
 
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Molehill.png"))); // NOI18N
-        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, -1, -1));
-
-        jPanel30.setBackground(new java.awt.Color(224, 101, 101));
-        jPanel30.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jLabel46.setBackground(new java.awt.Color(255, 255, 51));
-        jLabel46.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel46.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel46.setText("Molehill");
-
-        javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
-        jPanel30.setLayout(jPanel30Layout);
-        jPanel30Layout.setHorizontalGroup(
-            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 108, Short.MAX_VALUE)
-            .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel30Layout.createSequentialGroup()
-                    .addGap(0, 27, Short.MAX_VALUE)
-                    .addComponent(jLabel46)
-                    .addGap(0, 27, Short.MAX_VALUE)))
-        );
-        jPanel30Layout.setVerticalGroup(
-            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 26, Short.MAX_VALUE)
-            .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel30Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel46)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 660, -1, 30));
-
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Most.png"))); // NOI18N
-        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, -1, -1));
+        _143.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Holmes.png"))); // NOI18N
+        jPanel3.add(_143, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
         jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
@@ -634,7 +561,42 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
         jLabel47.setForeground(new java.awt.Color(255, 255, 255));
         jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel47.setText("Banquillo");
-        jPanel3.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
+        jPanel3.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
+
+        _148.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/streetsallys/Crumb.png"))); // NOI18N
+        jPanel3.add(_148, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, -1, 150));
+
+        jPanel42.setBackground(new java.awt.Color(224, 101, 101));
+        jPanel42.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel59.setBackground(new java.awt.Color(255, 255, 51));
+        jLabel59.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel59.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel59.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel59.setText("Crumb");
+
+        javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
+        jPanel42.setLayout(jPanel42Layout);
+        jPanel42Layout.setHorizontalGroup(
+            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 108, Short.MAX_VALUE)
+            .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel42Layout.createSequentialGroup()
+                    .addGap(0, 31, Short.MAX_VALUE)
+                    .addComponent(jLabel59)
+                    .addGap(0, 32, Short.MAX_VALUE)))
+        );
+        jPanel42Layout.setVerticalGroup(
+            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 26, Short.MAX_VALUE)
+            .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel42Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel59)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanel3.add(jPanel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 650, -1, 30));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 0, 160, 920));
 
@@ -677,30 +639,31 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel _142;
+    private javax.swing.JLabel _143;
+    private javax.swing.JLabel _145;
+    private javax.swing.JLabel _146;
+    private javax.swing.JLabel _147;
+    private javax.swing.JLabel _148;
+    private javax.swing.JLabel _149;
+    private javax.swing.JLabel _150;
+    private javax.swing.JLabel _151;
+    private javax.swing.JLabel _152;
+    private javax.swing.JLabel _153;
+    private javax.swing.JLabel _154;
+    private javax.swing.JLabel _155;
+    private javax.swing.JLabel _164;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
@@ -708,12 +671,8 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
     private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
@@ -721,7 +680,6 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel31;
     private javax.swing.JPanel jPanel32;
     private javax.swing.JPanel jPanel33;
-    private javax.swing.JPanel jPanel34;
     private javax.swing.JPanel jPanel35;
     private javax.swing.JPanel jPanel36;
     private javax.swing.JPanel jPanel37;
@@ -729,5 +687,6 @@ public class VistaCampoStreetSallys extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel39;
     private javax.swing.JPanel jPanel40;
     private javax.swing.JPanel jPanel41;
+    private javax.swing.JPanel jPanel42;
     // End of variables declaration//GEN-END:variables
 }

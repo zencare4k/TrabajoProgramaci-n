@@ -31,54 +31,51 @@ public class RaimonOGVista extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jPanel31 = new javax.swing.JPanel();
         jLabel47 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
+        _98 = new javax.swing.JLabel();
         jPanel32 = new javax.swing.JPanel();
         jLabel48 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel34 = new javax.swing.JPanel();
-        jLabel50 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        _105 = new javax.swing.JLabel();
+        _104 = new javax.swing.JLabel();
         jPanel35 = new javax.swing.JPanel();
         jLabel51 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        _96 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jPanel33 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        _110 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
         jPanel22 = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        _100 = new javax.swing.JLabel();
         jPanel23 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
         jPanel24 = new javax.swing.JPanel();
         jLabel40 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        _106 = new javax.swing.JLabel();
         jPanel25 = new javax.swing.JPanel();
         jLabel41 = new javax.swing.JLabel();
-        jPanel26 = new javax.swing.JPanel();
-        jLabel42 = new javax.swing.JLabel();
         jPanel27 = new javax.swing.JPanel();
         jLabel43 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        _102 = new javax.swing.JLabel();
         jPanel28 = new javax.swing.JPanel();
         jLabel44 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        _107 = new javax.swing.JLabel();
         jPanel29 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jPanel30 = new javax.swing.JPanel();
         jLabel46 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        _99 = new javax.swing.JLabel();
+        _108 = new javax.swing.JLabel();
+        _109 = new javax.swing.JLabel();
+        _103 = new javax.swing.JLabel();
+        _101 = new javax.swing.JLabel();
+        _97 = new javax.swing.JLabel();
+        jPanel34 = new javax.swing.JPanel();
+        jLabel50 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -123,8 +120,13 @@ public class RaimonOGVista extends javax.swing.JFrame {
 
         jPanel2.add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 110, 30));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Foreman.png"))); // NOI18N
-        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
+        _98.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Foreman.png"))); // NOI18N
+        _98.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _98MouseClicked(evt);
+            }
+        });
+        jPanel2.add(_98, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
 
         jPanel32.setBackground(new java.awt.Color(224, 101, 101));
         jPanel32.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -158,46 +160,21 @@ public class RaimonOGVista extends javax.swing.JFrame {
 
         jPanel2.add(jPanel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Poe.png"))); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
+        _105.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Poe.png"))); // NOI18N
+        _105.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _105MouseClicked(evt);
+            }
+        });
+        jPanel2.add(_105, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
-        jPanel34.setBackground(new java.awt.Color(224, 101, 101));
-        jPanel34.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jLabel50.setBackground(new java.awt.Color(255, 255, 51));
-        jLabel50.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel50.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel50.setText("MacHines");
-
-        javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
-        jPanel34.setLayout(jPanel34Layout);
-        jPanel34Layout.setHorizontalGroup(
-            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 144, Short.MAX_VALUE)
-            .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel34Layout.createSequentialGroup()
-                    .addGap(0, 39, Short.MAX_VALUE)
-                    .addComponent(jLabel50)
-                    .addGap(0, 40, Short.MAX_VALUE)))
-        );
-        jPanel34Layout.setVerticalGroup(
-            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 26, Short.MAX_VALUE)
-            .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel34Layout.createSequentialGroup()
-                    .addGap(0, 3, Short.MAX_VALUE)
-                    .addComponent(jLabel50)
-                    .addGap(0, 3, Short.MAX_VALUE)))
-        );
-
-        jPanel2.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 590, -1, 30));
-
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Heart.png"))); // NOI18N
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
-
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_MacHines.png"))); // NOI18N
-        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, -1, -1));
+        _104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Heart.png"))); // NOI18N
+        _104.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _104MouseClicked(evt);
+            }
+        });
+        jPanel2.add(_104, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
         jPanel35.setBackground(new java.awt.Color(224, 101, 101));
         jPanel35.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -229,10 +206,15 @@ public class RaimonOGVista extends javax.swing.JFrame {
                     .addGap(0, 5, Short.MAX_VALUE)))
         );
 
-        jPanel2.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 740, -1, -1));
+        jPanel2.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 610, -1, -1));
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Steaky.png"))); // NOI18N
-        jPanel2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 620, -1, -1));
+        _96.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Steaky.png"))); // NOI18N
+        _96.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _96MouseClicked(evt);
+            }
+        });
+        jPanel2.add(_96, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, -1, -1));
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
@@ -273,8 +255,13 @@ public class RaimonOGVista extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 0, 160, 920));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Sweet.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, -1, -1));
+        _110.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Sweet.png"))); // NOI18N
+        _110.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _110MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_110, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, -1, -1));
 
         jPanel21.setBackground(new java.awt.Color(224, 101, 101));
         jPanel21.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -372,8 +359,13 @@ public class RaimonOGVista extends javax.swing.JFrame {
 
         jPanel1.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 510, -1, 30));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Nathaniel.png"))); // NOI18N
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 530, -1, 130));
+        _100.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Nathaniel.png"))); // NOI18N
+        _100.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _100MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_100, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 530, -1, 130));
 
         jPanel23.setBackground(new java.awt.Color(224, 101, 101));
         jPanel23.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -439,8 +431,13 @@ public class RaimonOGVista extends javax.swing.JFrame {
 
         jPanel1.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 410, -1, 40));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Barista.png"))); // NOI18N
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, -1, -1));
+        _106.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Barista.png"))); // NOI18N
+        _106.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _106MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_106, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, -1, -1));
 
         jPanel25.setBackground(new java.awt.Color(224, 101, 101));
         jPanel25.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -472,39 +469,7 @@ public class RaimonOGVista extends javax.swing.JFrame {
                     .addGap(0, 3, Short.MAX_VALUE)))
         );
 
-        jPanel1.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 720, -1, 30));
-
-        jPanel26.setBackground(new java.awt.Color(224, 101, 101));
-        jPanel26.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jLabel42.setBackground(new java.awt.Color(255, 255, 51));
-        jLabel42.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel42.setText("Hairtown");
-
-        javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
-        jPanel26.setLayout(jPanel26Layout);
-        jPanel26Layout.setHorizontalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 137, Short.MAX_VALUE)
-            .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel26Layout.createSequentialGroup()
-                    .addGap(0, 37, Short.MAX_VALUE)
-                    .addComponent(jLabel42)
-                    .addGap(0, 38, Short.MAX_VALUE)))
-        );
-        jPanel26Layout.setVerticalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 26, Short.MAX_VALUE)
-            .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel26Layout.createSequentialGroup()
-                    .addGap(0, 3, Short.MAX_VALUE)
-                    .addComponent(jLabel42)
-                    .addGap(0, 3, Short.MAX_VALUE)))
-        );
-
-        jPanel1.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 810, -1, 30));
+        jPanel1.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 710, -1, 30));
 
         jPanel27.setBackground(new java.awt.Color(224, 101, 101));
         jPanel27.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -536,10 +501,15 @@ public class RaimonOGVista extends javax.swing.JFrame {
                     .addGap(0, 3, Short.MAX_VALUE)))
         );
 
-        jPanel1.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 890, -1, 30));
+        jPanel1.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 890, -1, 30));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Tailor.png"))); // NOI18N
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 280, -1, -1));
+        _102.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Tailor.png"))); // NOI18N
+        _102.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _102MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_102, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 280, -1, -1));
 
         jPanel28.setBackground(new java.awt.Color(224, 101, 101));
         jPanel28.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -573,8 +543,13 @@ public class RaimonOGVista extends javax.swing.JFrame {
 
         jPanel1.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 800, -1, 30));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Builder.png"))); // NOI18N
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, -1, -1));
+        _107.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Builder.png"))); // NOI18N
+        _107.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _107MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_107, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 80, -1, -1));
 
         jPanel29.setBackground(new java.awt.Color(224, 101, 101));
         jPanel29.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -622,12 +597,12 @@ public class RaimonOGVista extends javax.swing.JFrame {
         jPanel30.setLayout(jPanel30Layout);
         jPanel30Layout.setHorizontalGroup(
             jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 146, Short.MAX_VALUE)
+            .addGap(0, 106, Short.MAX_VALUE)
             .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel30Layout.createSequentialGroup()
-                    .addGap(0, 35, Short.MAX_VALUE)
+                    .addGap(0, 15, Short.MAX_VALUE)
                     .addComponent(jLabel46)
-                    .addGap(0, 36, Short.MAX_VALUE)))
+                    .addGap(0, 16, Short.MAX_VALUE)))
         );
         jPanel30Layout.setVerticalGroup(
             jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -639,25 +614,87 @@ public class RaimonOGVista extends javax.swing.JFrame {
                     .addGap(0, 3, Short.MAX_VALUE)))
         );
 
-        jPanel1.add(jPanel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, 30));
+        jPanel1.add(jPanel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 110, 30));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Hairtown.png"))); // NOI18N
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 680, -1, -1));
+        _99.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Butler.png"))); // NOI18N
+        _99.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _99MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_99, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 590, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Butler.png"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 600, -1, -1));
+        _108.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Hillman.png"))); // NOI18N
+        _108.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _108MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_108, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 760, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Hillman.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 760, -1, -1));
+        _109.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Island.png"))); // NOI18N
+        _109.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _109MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_109, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 680, -1, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Island.png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 680, -1, -1));
+        _103.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Gladstone.png"))); // NOI18N
+        _103.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _103MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_103, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Gladstone.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
+        _101.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Suffolk.png"))); // NOI18N
+        _101.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _101MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_101, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 390, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Suffolk.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 390, -1, -1));
+        _97.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_MacHines.png"))); // NOI18N
+        _97.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _97MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_97, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 670, -1, -1));
+
+        jPanel34.setBackground(new java.awt.Color(224, 101, 101));
+        jPanel34.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel50.setBackground(new java.awt.Color(255, 255, 51));
+        jLabel50.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel50.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel50.setText("MacHines");
+
+        javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
+        jPanel34.setLayout(jPanel34Layout);
+        jPanel34Layout.setHorizontalGroup(
+            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 144, Short.MAX_VALUE)
+            .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel34Layout.createSequentialGroup()
+                    .addGap(0, 39, Short.MAX_VALUE)
+                    .addComponent(jLabel50)
+                    .addGap(0, 40, Short.MAX_VALUE)))
+        );
+        jPanel34Layout.setVerticalGroup(
+            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 26, Short.MAX_VALUE)
+            .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel34Layout.createSequentialGroup()
+                    .addGap(0, 3, Short.MAX_VALUE)
+                    .addComponent(jLabel50)
+                    .addGap(0, 3, Short.MAX_VALUE)))
+        );
+
+        jPanel1.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 800, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/campo (1).png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -675,6 +712,66 @@ public class RaimonOGVista extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void _106MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__106MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__106MouseClicked
+
+    private void _107MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__107MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__107MouseClicked
+
+    private void _103MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__103MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__103MouseClicked
+
+    private void _101MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__101MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__101MouseClicked
+
+    private void _102MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__102MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__102MouseClicked
+
+    private void _110MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__110MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__110MouseClicked
+
+    private void _109MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__109MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__109MouseClicked
+
+    private void _108MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__108MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__108MouseClicked
+
+    private void _97MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__97MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__97MouseClicked
+
+    private void _99MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__99MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__99MouseClicked
+
+    private void _100MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__100MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__100MouseClicked
+
+    private void _96MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__96MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__96MouseClicked
+
+    private void _98MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__98MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__98MouseClicked
+
+    private void _104MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__104MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__104MouseClicked
+
+    private void _105MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__105MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__105MouseClicked
 
     /**
      * @param args the command line arguments
@@ -712,28 +809,31 @@ public class RaimonOGVista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel _100;
+    private javax.swing.JLabel _101;
+    private javax.swing.JLabel _102;
+    private javax.swing.JLabel _103;
+    private javax.swing.JLabel _104;
+    private javax.swing.JLabel _105;
+    private javax.swing.JLabel _106;
+    private javax.swing.JLabel _107;
+    private javax.swing.JLabel _108;
+    private javax.swing.JLabel _109;
+    private javax.swing.JLabel _110;
+    private javax.swing.JLabel _96;
+    private javax.swing.JLabel _97;
+    private javax.swing.JLabel _98;
+    private javax.swing.JLabel _99;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
@@ -741,13 +841,8 @@ public class RaimonOGVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
@@ -756,7 +851,6 @@ public class RaimonOGVista extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel25;
-    private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
     private javax.swing.JPanel jPanel29;

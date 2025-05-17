@@ -106,11 +106,11 @@ public class VistaDetalles extends javax.swing.JFrame {
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        image.setText("jLabel18");
+        image.setText("Image");
         jPanel2.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, -1, -1));
 
-        name.setText("jLabel3");
-        jPanel2.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, -1, -1));
+        name.setText("Nombre");
+        jPanel2.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, -1, -1));
 
         pe.setText("pe");
         jPanel2.add(pe, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, -1, -1));
@@ -118,37 +118,37 @@ public class VistaDetalles extends javax.swing.JFrame {
         pt.setText("pt");
         jPanel2.add(pt, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 220, -1, -1));
 
-        tiro.setText("jLabel7");
+        tiro.setText("Tiro");
         jPanel2.add(tiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, -1, -1));
 
-        fisico.setText("jLabel8");
+        fisico.setText("Fisico");
         jPanel2.add(fisico, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, -1, -1));
 
-        control.setText("jLabel9");
+        control.setText("Control");
         jPanel2.add(control, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 430, -1, -1));
 
-        defensa.setText("jLabel10");
+        defensa.setText("Defensa");
         jPanel2.add(defensa, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 490, -1, -1));
 
-        rapidez.setText("jLabel11");
-        jPanel2.add(rapidez, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 540, -1, -1));
+        rapidez.setText("Rapidez");
+        jPanel2.add(rapidez, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 540, -1, -1));
 
-        aguante.setText("jLabel12");
-        jPanel2.add(aguante, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 610, -1, -1));
+        aguante.setText("Aguante");
+        jPanel2.add(aguante, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 610, -1, -1));
 
-        valor.setText("jLabel13");
-        jPanel2.add(valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 670, -1, -1));
+        valor.setText("Valor");
+        jPanel2.add(valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 670, -1, -1));
 
-        sm1.setText("jLabel14");
+        sm1.setText("SM1");
         jPanel2.add(sm1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 350, -1, -1));
 
-        sm2.setText("jLabel15");
+        sm2.setText("SM2");
         jPanel2.add(sm2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, -1, -1));
 
-        sm3.setText("jLabel16");
+        sm3.setText("SM3");
         jPanel2.add(sm3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 470, -1, -1));
 
-        sm4.setText("jLabel17");
+        sm4.setText("SM4");
         jPanel2.add(sm4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 530, -1, -1));
 
         jLabel1.setText("99");

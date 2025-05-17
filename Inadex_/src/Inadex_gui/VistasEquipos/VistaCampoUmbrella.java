@@ -35,51 +35,54 @@ public class VistaCampoUmbrella extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         jPanel17 = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        _156 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jLabel34 = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        _204 = new javax.swing.JLabel();
         jPanel22 = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
         jPanel23 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
         jPanel26 = new javax.swing.JPanel();
         jLabel42 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        _166 = new javax.swing.JLabel();
         jPanel24 = new javax.swing.JPanel();
         jLabel40 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        _160 = new javax.swing.JLabel();
         jPanel25 = new javax.swing.JPanel();
         jLabel41 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        _165 = new javax.swing.JLabel();
+        _168 = new javax.swing.JLabel();
+        _162 = new javax.swing.JLabel();
+        _158 = new javax.swing.JLabel();
+        _161 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        _170 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        _167 = new javax.swing.JLabel();
         jPanel27 = new javax.swing.JPanel();
         jLabel43 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jPanel28 = new javax.swing.JPanel();
         jLabel44 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
+        _159 = new javax.swing.JLabel();
         jPanel29 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
+        _163 = new javax.swing.JLabel();
         jPanel30 = new javax.swing.JPanel();
         jLabel46 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
+        _164 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jPanel31 = new javax.swing.JPanel();
+        jLabel48 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -215,8 +218,8 @@ public class VistaCampoUmbrella extends javax.swing.JFrame {
 
         getContentPane().add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 620, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Ingram.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 760, -1, -1));
+        _156.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Ingram.png"))); // NOI18N
+        getContentPane().add(_156, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 760, -1, -1));
 
         jPanel18.setBackground(new java.awt.Color(224, 101, 101));
         jPanel18.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -314,8 +317,8 @@ public class VistaCampoUmbrella extends javax.swing.JFrame {
 
         getContentPane().add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Porter.png"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, -1, -1));
+        _204.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Porter.png"))); // NOI18N
+        getContentPane().add(_204, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, -1, -1));
 
         jPanel22.setBackground(new java.awt.Color(224, 101, 101));
         jPanel22.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -421,8 +424,8 @@ public class VistaCampoUmbrella extends javax.swing.JFrame {
 
         getContentPane().add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, -1, -1));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Rhymes.png"))); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, -1, -1));
+        _166.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Rhymes.png"))); // NOI18N
+        getContentPane().add(_166, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, -1, -1));
 
         jPanel24.setBackground(new java.awt.Color(224, 101, 101));
         jPanel24.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -456,8 +459,8 @@ public class VistaCampoUmbrella extends javax.swing.JFrame {
 
         getContentPane().add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Strike.png"))); // NOI18N
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 660, -1, -1));
+        _160.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Strike.png"))); // NOI18N
+        getContentPane().add(_160, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 660, -1, -1));
 
         jPanel25.setBackground(new java.awt.Color(224, 101, 101));
         jPanel25.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -491,26 +494,26 @@ public class VistaCampoUmbrella extends javax.swing.JFrame {
 
         getContentPane().add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 790, -1, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Chaney.png"))); // NOI18N
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 480, -1, -1));
+        _165.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Chaney.png"))); // NOI18N
+        getContentPane().add(_165, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 480, -1, -1));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Morefield.png"))); // NOI18N
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 310, -1, -1));
+        _168.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Morefield.png"))); // NOI18N
+        getContentPane().add(_168, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 310, -1, -1));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Scott.png"))); // NOI18N
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 240, -1, -1));
+        _162.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Scott.png"))); // NOI18N
+        getContentPane().add(_162, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 240, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Sefton.png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 660, -1, -1));
+        _158.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Sefton.png"))); // NOI18N
+        getContentPane().add(_158, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 660, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Chops.png"))); // NOI18N
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 500, -1, -1));
+        _161.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Chops.png"))); // NOI18N
+        getContentPane().add(_161, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 500, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Edmonds.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Cyborg.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, -1, -1));
+        _170.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Cyborg.png"))); // NOI18N
+        getContentPane().add(_170, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/campo (1).png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -523,8 +526,8 @@ public class VistaCampoUmbrella extends javax.swing.JFrame {
         jLabel18.setText("Banquillo");
         jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 40, -1, -1));
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Tunk.png"))); // NOI18N
-        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+        _167.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Tunk.png"))); // NOI18N
+        jPanel3.add(_167, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         jPanel27.setBackground(new java.awt.Color(224, 101, 101));
         jPanel27.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -593,8 +596,8 @@ public class VistaCampoUmbrella extends javax.swing.JFrame {
 
         jPanel3.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, -1, 30));
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Caperock.png"))); // NOI18N
-        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
+        _159.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Caperock.png"))); // NOI18N
+        jPanel3.add(_159, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
 
         jPanel29.setBackground(new java.awt.Color(224, 101, 101));
         jPanel29.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -628,8 +631,8 @@ public class VistaCampoUmbrella extends javax.swing.JFrame {
 
         jPanel3.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 540, -1, 30));
 
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Molehill.png"))); // NOI18N
-        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, -1, -1));
+        _163.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Molehill.png"))); // NOI18N
+        jPanel3.add(_163, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, -1, -1));
 
         jPanel30.setBackground(new java.awt.Color(224, 101, 101));
         jPanel30.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -663,8 +666,8 @@ public class VistaCampoUmbrella extends javax.swing.JFrame {
 
         jPanel3.add(jPanel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 710, -1, 30));
 
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Most.png"))); // NOI18N
-        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
+        _164.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Most.png"))); // NOI18N
+        jPanel3.add(_164, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
 
         jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
@@ -677,6 +680,41 @@ public class VistaCampoUmbrella extends javax.swing.JFrame {
         jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel47.setText("Banquillo");
         jPanel3.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
+
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/umbrella/Molehill.png"))); // NOI18N
+        jPanel3.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, -1, -1));
+
+        jPanel31.setBackground(new java.awt.Color(224, 101, 101));
+        jPanel31.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel48.setBackground(new java.awt.Color(255, 255, 51));
+        jLabel48.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel48.setText("Molehill");
+
+        javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
+        jPanel31.setLayout(jPanel31Layout);
+        jPanel31Layout.setHorizontalGroup(
+            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 108, Short.MAX_VALUE)
+            .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel31Layout.createSequentialGroup()
+                    .addGap(0, 27, Short.MAX_VALUE)
+                    .addComponent(jLabel48)
+                    .addGap(0, 27, Short.MAX_VALUE)))
+        );
+        jPanel31Layout.setVerticalGroup(
+            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 26, Short.MAX_VALUE)
+            .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel31Layout.createSequentialGroup()
+                    .addGap(0, 3, Short.MAX_VALUE)
+                    .addComponent(jLabel48)
+                    .addGap(0, 3, Short.MAX_VALUE)))
+        );
+
+        jPanel3.add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 710, -1, 30));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 0, 160, 920));
 
@@ -719,18 +757,25 @@ public class VistaCampoUmbrella extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel _156;
+    private javax.swing.JLabel _158;
+    private javax.swing.JLabel _159;
+    private javax.swing.JLabel _160;
+    private javax.swing.JLabel _161;
+    private javax.swing.JLabel _162;
+    private javax.swing.JLabel _163;
+    private javax.swing.JLabel _164;
+    private javax.swing.JLabel _165;
+    private javax.swing.JLabel _166;
+    private javax.swing.JLabel _167;
+    private javax.swing.JLabel _168;
+    private javax.swing.JLabel _170;
+    private javax.swing.JLabel _204;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -741,7 +786,6 @@ public class VistaCampoUmbrella extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -750,11 +794,7 @@ public class VistaCampoUmbrella extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel48;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
@@ -773,5 +813,6 @@ public class VistaCampoUmbrella extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
+    private javax.swing.JPanel jPanel31;
     // End of variables declaration//GEN-END:variables
 }

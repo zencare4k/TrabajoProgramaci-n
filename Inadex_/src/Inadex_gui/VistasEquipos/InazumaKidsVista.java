@@ -31,54 +31,54 @@ public class InazumaKidsVista extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jPanel31 = new javax.swing.JPanel();
         jLabel47 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
+        _45 = new javax.swing.JLabel();
         jPanel32 = new javax.swing.JPanel();
         jLabel48 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        _34 = new javax.swing.JLabel();
         jPanel34 = new javax.swing.JPanel();
         jLabel50 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        _44 = new javax.swing.JLabel();
+        _47 = new javax.swing.JLabel();
         jPanel35 = new javax.swing.JPanel();
         jLabel51 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        _40 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jPanel33 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        _35 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
         jPanel22 = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        _39 = new javax.swing.JLabel();
         jPanel23 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
         jPanel24 = new javax.swing.JPanel();
         jLabel40 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        _46 = new javax.swing.JLabel();
         jPanel25 = new javax.swing.JPanel();
         jLabel41 = new javax.swing.JLabel();
         jPanel26 = new javax.swing.JPanel();
         jLabel42 = new javax.swing.JLabel();
         jPanel27 = new javax.swing.JPanel();
         jLabel43 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        _43 = new javax.swing.JLabel();
         jPanel28 = new javax.swing.JPanel();
         jLabel44 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        _48 = new javax.swing.JLabel();
         jPanel29 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jPanel30 = new javax.swing.JPanel();
         jLabel46 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        _36 = new javax.swing.JLabel();
+        _37 = new javax.swing.JLabel();
+        _33 = new javax.swing.JLabel();
+        _38 = new javax.swing.JLabel();
+        _41 = new javax.swing.JLabel();
+        _42 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -91,7 +91,7 @@ public class InazumaKidsVista extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Inazuma_KFC.png"))); // NOI18N
-        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 790, -1, -1));
+        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 790, -1, -1));
 
         jPanel31.setBackground(new java.awt.Color(224, 101, 101));
         jPanel31.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -100,13 +100,13 @@ public class InazumaKidsVista extends javax.swing.JFrame {
         jLabel47.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel47.setForeground(new java.awt.Color(255, 255, 255));
         jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel47.setText("Samford");
+        jLabel47.setText("Grantham");
 
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
         jPanel31.setLayout(jPanel31Layout);
         jPanel31Layout.setHorizontalGroup(
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 133, Short.MAX_VALUE)
+            .addGap(0, 141, Short.MAX_VALUE)
             .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel31Layout.createSequentialGroup()
                     .addGap(0, 37, Short.MAX_VALUE)
@@ -125,8 +125,13 @@ public class InazumaKidsVista extends javax.swing.JFrame {
 
         jPanel2.add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, 40));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Plank.png"))); // NOI18N
-        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, -1));
+        _45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Plank.png"))); // NOI18N
+        _45.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _45MouseClicked(evt);
+            }
+        });
+        jPanel2.add(_45, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, -1));
 
         jPanel32.setBackground(new java.awt.Color(224, 101, 101));
         jPanel32.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -135,7 +140,7 @@ public class InazumaKidsVista extends javax.swing.JFrame {
         jLabel48.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel48.setForeground(new java.awt.Color(255, 255, 255));
         jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel48.setText("Samford");
+        jLabel48.setText("Karl");
 
         javax.swing.GroupLayout jPanel32Layout = new javax.swing.GroupLayout(jPanel32);
         jPanel32.setLayout(jPanel32Layout);
@@ -144,9 +149,9 @@ public class InazumaKidsVista extends javax.swing.JFrame {
             .addGap(0, 129, Short.MAX_VALUE)
             .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel32Layout.createSequentialGroup()
-                    .addGap(0, 35, Short.MAX_VALUE)
+                    .addGap(0, 51, Short.MAX_VALUE)
                     .addComponent(jLabel48)
-                    .addGap(0, 36, Short.MAX_VALUE)))
+                    .addGap(0, 51, Short.MAX_VALUE)))
         );
         jPanel32Layout.setVerticalGroup(
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,8 +165,13 @@ public class InazumaKidsVista extends javax.swing.JFrame {
 
         jPanel2.add(jPanel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Grantham.png"))); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
+        _34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Grantham.png"))); // NOI18N
+        _34.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _34MouseClicked(evt);
+            }
+        });
+        jPanel2.add(_34, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
         jPanel34.setBackground(new java.awt.Color(224, 101, 101));
         jPanel34.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -170,7 +180,7 @@ public class InazumaKidsVista extends javax.swing.JFrame {
         jLabel50.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel50.setForeground(new java.awt.Color(255, 255, 255));
         jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel50.setText("Ingham");
+        jLabel50.setText("Cake");
 
         javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
         jPanel34.setLayout(jPanel34Layout);
@@ -179,9 +189,9 @@ public class InazumaKidsVista extends javax.swing.JFrame {
             .addGap(0, 129, Short.MAX_VALUE)
             .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel34Layout.createSequentialGroup()
-                    .addGap(0, 39, Short.MAX_VALUE)
+                    .addGap(0, 48, Short.MAX_VALUE)
                     .addComponent(jLabel50)
-                    .addGap(0, 40, Short.MAX_VALUE)))
+                    .addGap(0, 48, Short.MAX_VALUE)))
         );
         jPanel34Layout.setVerticalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -193,13 +203,23 @@ public class InazumaKidsVista extends javax.swing.JFrame {
                     .addGap(0, 7, Short.MAX_VALUE)))
         );
 
-        jPanel2.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 610, -1, -1));
+        jPanel2.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 620, -1, -1));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Karl.png"))); // NOI18N
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
+        _44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Karl.png"))); // NOI18N
+        _44.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _44MouseClicked(evt);
+            }
+        });
+        jPanel2.add(_44, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Cake.png"))); // NOI18N
-        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, -1, -1));
+        _47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Cake.png"))); // NOI18N
+        _47.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _47MouseClicked(evt);
+            }
+        });
+        jPanel2.add(_47, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 490, -1, -1));
 
         jPanel35.setBackground(new java.awt.Color(224, 101, 101));
         jPanel35.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -208,13 +228,13 @@ public class InazumaKidsVista extends javax.swing.JFrame {
         jLabel51.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel51.setForeground(new java.awt.Color(255, 255, 255));
         jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel51.setText("Cartlon");
+        jLabel51.setText("Grumble");
 
         javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
         jPanel35.setLayout(jPanel35Layout);
         jPanel35Layout.setHorizontalGroup(
             jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 125, Short.MAX_VALUE)
+            .addGap(0, 134, Short.MAX_VALUE)
             .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel35Layout.createSequentialGroup()
                     .addGap(0, 38, Short.MAX_VALUE)
@@ -231,10 +251,15 @@ public class InazumaKidsVista extends javax.swing.JFrame {
                     .addGap(0, 5, Short.MAX_VALUE)))
         );
 
-        jPanel2.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 750, -1, -1));
+        jPanel2.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 760, -1, -1));
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Grumble.png"))); // NOI18N
-        jPanel2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 630, -1, -1));
+        _40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Grumble.png"))); // NOI18N
+        _40.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _40MouseClicked(evt);
+            }
+        });
+        jPanel2.add(_40, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 640, -1, -1));
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
@@ -248,7 +273,7 @@ public class InazumaKidsVista extends javax.swing.JFrame {
         jLabel49.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel49.setForeground(new java.awt.Color(255, 255, 255));
         jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel49.setText("Lawerson");
+        jLabel49.setText("Plank");
 
         javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
         jPanel33.setLayout(jPanel33Layout);
@@ -257,9 +282,9 @@ public class InazumaKidsVista extends javax.swing.JFrame {
             .addGap(0, 134, Short.MAX_VALUE)
             .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel33Layout.createSequentialGroup()
-                    .addGap(0, 35, Short.MAX_VALUE)
+                    .addGap(0, 48, Short.MAX_VALUE)
                     .addComponent(jLabel49)
-                    .addGap(0, 36, Short.MAX_VALUE)))
+                    .addGap(0, 49, Short.MAX_VALUE)))
         );
         jPanel33Layout.setVerticalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -275,8 +300,13 @@ public class InazumaKidsVista extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 0, 160, 920));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Izzy.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, -1, -1));
+        _35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Izzy.png"))); // NOI18N
+        _35.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _35MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_35, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, -1, -1));
 
         jPanel21.setBackground(new java.awt.Color(224, 101, 101));
         jPanel21.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -374,8 +404,8 @@ public class InazumaKidsVista extends javax.swing.JFrame {
 
         jPanel1.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 510, 100, 30));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Hall.png"))); // NOI18N
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 530, -1, 130));
+        _39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Hall.png"))); // NOI18N
+        jPanel1.add(_39, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 530, -1, 130));
 
         jPanel23.setBackground(new java.awt.Color(224, 101, 101));
         jPanel23.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -441,8 +471,13 @@ public class InazumaKidsVista extends javax.swing.JFrame {
 
         jPanel1.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 410, -1, 30));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Randall.png"))); // NOI18N
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, -1, -1));
+        _46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Randall.png"))); // NOI18N
+        _46.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _46MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_46, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, -1, -1));
 
         jPanel25.setBackground(new java.awt.Color(224, 101, 101));
         jPanel25.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -540,8 +575,13 @@ public class InazumaKidsVista extends javax.swing.JFrame {
 
         jPanel1.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 880, -1, 30));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Cool.png"))); // NOI18N
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 280, -1, -1));
+        _43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Cool.png"))); // NOI18N
+        _43.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _43MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_43, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 280, -1, -1));
 
         jPanel28.setBackground(new java.awt.Color(224, 101, 101));
         jPanel28.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -575,8 +615,13 @@ public class InazumaKidsVista extends javax.swing.JFrame {
 
         jPanel1.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 800, -1, 30));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Maddie_29.png"))); // NOI18N
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 80, -1, -1));
+        _48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Maddie_29.png"))); // NOI18N
+        _48.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _48MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_48, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 80, -1, -1));
 
         jPanel29.setBackground(new java.awt.Color(224, 101, 101));
         jPanel29.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -643,23 +688,53 @@ public class InazumaKidsVista extends javax.swing.JFrame {
 
         jPanel1.add(jPanel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Silver.png"))); // NOI18N
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 680, -1, -1));
+        _36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Silver.png"))); // NOI18N
+        _36.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _36MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_36, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 680, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Newman.png"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 600, -1, -1));
+        _37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Newman.png"))); // NOI18N
+        _37.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _37MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_37, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 600, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Muller.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 760, -1, -1));
+        _33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Muller.png"))); // NOI18N
+        _33.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _33MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_33, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 760, -1, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Claus.png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 680, -1, -1));
+        _38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Claus.png"))); // NOI18N
+        _38.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _38MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_38, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 680, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Higgins.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
+        _41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Higgins.png"))); // NOI18N
+        _41.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _41MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_41, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Riverside.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, -1, -1));
+        _42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Riverside.png"))); // NOI18N
+        _42.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                _42MouseClicked(evt);
+            }
+        });
+        jPanel1.add(_42, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/campo (1).png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -677,6 +752,66 @@ public class InazumaKidsVista extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void _46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__46MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__46MouseClicked
+
+    private void _48MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__48MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__48MouseClicked
+
+    private void _41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__41MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__41MouseClicked
+
+    private void _42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__42MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__42MouseClicked
+
+    private void _43MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__43MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__43MouseClicked
+
+    private void _35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__35MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__35MouseClicked
+
+    private void _38MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__38MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__38MouseClicked
+
+    private void _33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__33MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__33MouseClicked
+
+    private void _36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__36MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__36MouseClicked
+
+    private void _37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__37MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__37MouseClicked
+
+    private void _34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__34MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__34MouseClicked
+
+    private void _44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__44MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__44MouseClicked
+
+    private void _45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__45MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__45MouseClicked
+
+    private void _47MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__47MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__47MouseClicked
+
+    private void _40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event__40MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event__40MouseClicked
 
     /**
      * @param args the command line arguments
@@ -714,25 +849,30 @@ public class InazumaKidsVista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel _33;
+    private javax.swing.JLabel _34;
+    private javax.swing.JLabel _35;
+    private javax.swing.JLabel _36;
+    private javax.swing.JLabel _37;
+    private javax.swing.JLabel _38;
+    private javax.swing.JLabel _39;
+    private javax.swing.JLabel _40;
+    private javax.swing.JLabel _41;
+    private javax.swing.JLabel _42;
+    private javax.swing.JLabel _43;
+    private javax.swing.JLabel _44;
+    private javax.swing.JLabel _45;
+    private javax.swing.JLabel _46;
+    private javax.swing.JLabel _47;
+    private javax.swing.JLabel _48;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -743,13 +883,8 @@ public class InazumaKidsVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;

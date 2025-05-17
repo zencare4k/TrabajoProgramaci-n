@@ -32,10 +32,10 @@ public class VistaOtakuCampo extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jPanel46 = new javax.swing.JPanel();
         jLabel62 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        _68 = new javax.swing.JLabel();
+        _66 = new javax.swing.JLabel();
+        _73 = new javax.swing.JLabel();
+        _70 = new javax.swing.JLabel();
         jPanel45 = new javax.swing.JPanel();
         jLabel61 = new javax.swing.JLabel();
         jPanel47 = new javax.swing.JPanel();
@@ -46,35 +46,35 @@ public class VistaOtakuCampo extends javax.swing.JFrame {
         jLabel58 = new javax.swing.JLabel();
         jPanel34 = new javax.swing.JPanel();
         jLabel50 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        _65 = new javax.swing.JLabel();
         jPanel35 = new javax.swing.JPanel();
         jLabel51 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        _74 = new javax.swing.JLabel();
         jPanel36 = new javax.swing.JPanel();
         jLabel52 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        _77 = new javax.swing.JLabel();
         jPanel37 = new javax.swing.JPanel();
         jLabel53 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        _79 = new javax.swing.JLabel();
         jPanel38 = new javax.swing.JPanel();
         jLabel54 = new javax.swing.JLabel();
         jPanel39 = new javax.swing.JPanel();
         jLabel55 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        _78 = new javax.swing.JLabel();
         jPanel40 = new javax.swing.JPanel();
         jLabel56 = new javax.swing.JLabel();
         jPanel41 = new javax.swing.JPanel();
         jLabel57 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        _80 = new javax.swing.JLabel();
         jPanel43 = new javax.swing.JPanel();
         jLabel59 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        _76 = new javax.swing.JLabel();
         jPanel44 = new javax.swing.JPanel();
         jLabel60 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        _72 = new javax.swing.JLabel();
+        _75 = new javax.swing.JLabel();
+        _69 = new javax.swing.JLabel();
+        _67 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
 
@@ -125,17 +125,17 @@ public class VistaOtakuCampo extends javax.swing.JFrame {
 
         jPanel2.add(jPanel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, -1, -1));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Vox.png"))); // NOI18N
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 600, -1, -1));
+        _68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Vox.png"))); // NOI18N
+        jPanel2.add(_68, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 600, -1, -1));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Eldorado.png"))); // NOI18N
-        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+        _66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Eldorado.png"))); // NOI18N
+        jPanel2.add(_66, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Signalman.png"))); // NOI18N
-        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+        _73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Signalman.png"))); // NOI18N
+        jPanel2.add(_73, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Formby.png"))); // NOI18N
-        jPanel2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, -1, -1));
+        _70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Formby.png"))); // NOI18N
+        jPanel2.add(_70, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, -1, -1));
 
         jPanel45.setBackground(new java.awt.Color(224, 101, 101));
         jPanel45.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -299,8 +299,8 @@ public class VistaOtakuCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Idol.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 760, -1, -1));
+        _65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Idol.png"))); // NOI18N
+        jPanel1.add(_65, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 760, -1, -1));
 
         jPanel35.setBackground(new java.awt.Color(224, 101, 101));
         jPanel35.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -334,8 +334,8 @@ public class VistaOtakuCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Robot.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, -1, -1));
+        _74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Robot.png"))); // NOI18N
+        jPanel1.add(_74, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, -1, -1));
 
         jPanel36.setBackground(new java.awt.Color(224, 101, 101));
         jPanel36.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -369,8 +369,8 @@ public class VistaOtakuCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, -1, -1));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Custom.png"))); // NOI18N
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, -1));
+        _77.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Custom.png"))); // NOI18N
+        jPanel1.add(_77, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, -1));
 
         jPanel37.setBackground(new java.awt.Color(224, 101, 101));
         jPanel37.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -404,8 +404,8 @@ public class VistaOtakuCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 410, -1, -1));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Artist.png"))); // NOI18N
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, -1, -1));
+        _79.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Artist.png"))); // NOI18N
+        jPanel1.add(_79, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, -1, -1));
 
         jPanel38.setBackground(new java.awt.Color(224, 101, 101));
         jPanel38.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -471,8 +471,8 @@ public class VistaOtakuCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 690, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Gamer.png"))); // NOI18N
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 280, -1, -1));
+        _78.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Gamer.png"))); // NOI18N
+        jPanel1.add(_78, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 280, -1, -1));
 
         jPanel40.setBackground(new java.awt.Color(224, 101, 101));
         jPanel40.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -538,8 +538,8 @@ public class VistaOtakuCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 790, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Arcade.png"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, -1, -1));
+        _80.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Arcade.png"))); // NOI18N
+        jPanel1.add(_80, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, -1, -1));
 
         jPanel43.setBackground(new java.awt.Color(224, 101, 101));
         jPanel43.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -573,8 +573,8 @@ public class VistaOtakuCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 790, -1, -1));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Online.png"))); // NOI18N
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, -1, -1));
+        _76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Online.png"))); // NOI18N
+        jPanel1.add(_76, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, -1, -1));
 
         jPanel44.setBackground(new java.awt.Color(224, 101, 101));
         jPanel44.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -608,17 +608,17 @@ public class VistaOtakuCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 600, -1, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Hero.png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 560, -1, -1));
+        _72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Hero.png"))); // NOI18N
+        jPanel1.add(_72, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 560, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Novel.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 470, -1, -1));
+        _75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Novel.png"))); // NOI18N
+        jPanel1.add(_75, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 470, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Cosplay.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 660, -1, -1));
+        _69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Cosplay.png"))); // NOI18N
+        jPanel1.add(_69, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 660, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Train.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 660, -1, -1));
+        _67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/otaku/Train.png"))); // NOI18N
+        jPanel1.add(_67, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 660, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/campo (1).png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -676,21 +676,25 @@ public class VistaOtakuCampo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel _65;
+    private javax.swing.JLabel _66;
+    private javax.swing.JLabel _67;
+    private javax.swing.JLabel _68;
+    private javax.swing.JLabel _69;
+    private javax.swing.JLabel _70;
+    private javax.swing.JLabel _72;
+    private javax.swing.JLabel _73;
+    private javax.swing.JLabel _74;
+    private javax.swing.JLabel _75;
+    private javax.swing.JLabel _76;
+    private javax.swing.JLabel _77;
+    private javax.swing.JLabel _78;
+    private javax.swing.JLabel _79;
+    private javax.swing.JLabel _80;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
@@ -701,15 +705,11 @@ public class VistaOtakuCampo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel34;

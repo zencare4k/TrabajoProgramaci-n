@@ -31,54 +31,54 @@ public class VistaRoyalCampo extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jPanel31 = new javax.swing.JPanel();
         jLabel47 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
+        _123 = new javax.swing.JLabel();
         jPanel32 = new javax.swing.JPanel();
         jLabel48 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        _121 = new javax.swing.JLabel();
         jPanel34 = new javax.swing.JPanel();
         jLabel50 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        _120 = new javax.swing.JLabel();
+        _122 = new javax.swing.JLabel();
         jPanel35 = new javax.swing.JPanel();
         jLabel51 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        _112 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jPanel33 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        _116 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
         jPanel22 = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        _119 = new javax.swing.JLabel();
         jPanel23 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
         jPanel24 = new javax.swing.JPanel();
         jLabel40 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        _125 = new javax.swing.JLabel();
         jPanel25 = new javax.swing.JPanel();
         jLabel41 = new javax.swing.JLabel();
         jPanel26 = new javax.swing.JPanel();
         jLabel42 = new javax.swing.JLabel();
         jPanel27 = new javax.swing.JPanel();
         jLabel43 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        _118 = new javax.swing.JLabel();
         jPanel28 = new javax.swing.JPanel();
         jLabel44 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        _124 = new javax.swing.JLabel();
         jPanel29 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jPanel30 = new javax.swing.JPanel();
         jLabel46 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        _114 = new javax.swing.JLabel();
+        _115 = new javax.swing.JLabel();
+        _111 = new javax.swing.JLabel();
+        _113 = new javax.swing.JLabel();
+        _117 = new javax.swing.JLabel();
+        _90 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -123,8 +123,8 @@ public class VistaRoyalCampo extends javax.swing.JFrame {
 
         jPanel2.add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 180, 110, 30));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Lawrenson.png"))); // NOI18N
-        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
+        _123.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Lawrenson.png"))); // NOI18N
+        jPanel2.add(_123, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
 
         jPanel32.setBackground(new java.awt.Color(224, 101, 101));
         jPanel32.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -158,8 +158,8 @@ public class VistaRoyalCampo extends javax.swing.JFrame {
 
         jPanel2.add(jPanel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, -1, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Tomlinson.png"))); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
+        _121.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Tomlinson.png"))); // NOI18N
+        jPanel2.add(_121, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
         jPanel34.setBackground(new java.awt.Color(224, 101, 101));
         jPanel34.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -193,11 +193,11 @@ public class VistaRoyalCampo extends javax.swing.JFrame {
 
         jPanel2.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 610, -1, -1));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Potts.png"))); // NOI18N
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
+        _120.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Potts.png"))); // NOI18N
+        jPanel2.add(_120, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
 
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Ingham.png"))); // NOI18N
-        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, -1, -1));
+        _122.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Ingham.png"))); // NOI18N
+        jPanel2.add(_122, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, -1, -1));
 
         jPanel35.setBackground(new java.awt.Color(224, 101, 101));
         jPanel35.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -231,8 +231,8 @@ public class VistaRoyalCampo extends javax.swing.JFrame {
 
         jPanel2.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 750, -1, -1));
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Carlton.png"))); // NOI18N
-        jPanel2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 630, -1, -1));
+        _112.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Carlton.png"))); // NOI18N
+        jPanel2.add(_112, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 630, -1, -1));
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
@@ -273,8 +273,8 @@ public class VistaRoyalCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 0, 160, 920));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Master.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, -1, -1));
+        _116.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Master.png"))); // NOI18N
+        jPanel1.add(_116, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, -1, -1));
 
         jPanel21.setBackground(new java.awt.Color(224, 101, 101));
         jPanel21.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -372,8 +372,8 @@ public class VistaRoyalCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 510, -1, -1));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Waldon.png"))); // NOI18N
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 530, -1, 130));
+        _119.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Waldon.png"))); // NOI18N
+        jPanel1.add(_119, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 530, -1, 130));
 
         jPanel23.setBackground(new java.awt.Color(224, 101, 101));
         jPanel23.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -439,8 +439,8 @@ public class VistaRoyalCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 410, -1, -1));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Hatch.png"))); // NOI18N
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, -1, -1));
+        _125.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Hatch.png"))); // NOI18N
+        jPanel1.add(_125, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, -1, -1));
 
         jPanel25.setBackground(new java.awt.Color(224, 101, 101));
         jPanel25.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -538,8 +538,8 @@ public class VistaRoyalCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 890, -1, 30));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Swing.png"))); // NOI18N
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 280, -1, -1));
+        _118.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Swing.png"))); // NOI18N
+        jPanel1.add(_118, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 280, -1, -1));
 
         jPanel28.setBackground(new java.awt.Color(224, 101, 101));
         jPanel28.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -573,8 +573,8 @@ public class VistaRoyalCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 800, -1, -1));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Dave.png"))); // NOI18N
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, -1, -1));
+        _124.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Dave.png"))); // NOI18N
+        jPanel1.add(_124, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, -1, -1));
 
         jPanel29.setBackground(new java.awt.Color(224, 101, 101));
         jPanel29.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -641,23 +641,23 @@ public class VistaRoyalCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Simmons.png"))); // NOI18N
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 680, -1, -1));
+        _114.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Simmons.png"))); // NOI18N
+        jPanel1.add(_114, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 680, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Martin.png"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 600, -1, -1));
+        _115.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Martin.png"))); // NOI18N
+        jPanel1.add(_115, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 600, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/King.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 760, -1, -1));
+        _111.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/King.png"))); // NOI18N
+        jPanel1.add(_111, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 760, -1, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Drent.png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 680, -1, -1));
+        _113.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Drent.png"))); // NOI18N
+        jPanel1.add(_113, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 680, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Bloom.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
+        _117.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Bloom.png"))); // NOI18N
+        jPanel1.add(_117, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Jude.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, -1, -1));
+        _90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/royal/Jude.png"))); // NOI18N
+        jPanel1.add(_90, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/campo (1).png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -712,25 +712,30 @@ public class VistaRoyalCampo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel _111;
+    private javax.swing.JLabel _112;
+    private javax.swing.JLabel _113;
+    private javax.swing.JLabel _114;
+    private javax.swing.JLabel _115;
+    private javax.swing.JLabel _116;
+    private javax.swing.JLabel _117;
+    private javax.swing.JLabel _118;
+    private javax.swing.JLabel _119;
+    private javax.swing.JLabel _120;
+    private javax.swing.JLabel _121;
+    private javax.swing.JLabel _122;
+    private javax.swing.JLabel _123;
+    private javax.swing.JLabel _124;
+    private javax.swing.JLabel _125;
+    private javax.swing.JLabel _90;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -741,13 +746,8 @@ public class VistaRoyalCampo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;

@@ -36,24 +36,24 @@ public class ZeusVistaCampo extends javax.swing.JFrame {
         jPanel17 = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        _193 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jLabel34 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
+        _192 = new javax.swing.JLabel();
+        _200 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        _187 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        _202 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        _194 = new javax.swing.JLabel();
+        _188 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
@@ -62,22 +62,22 @@ public class ZeusVistaCampo extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        _199 = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        _197 = new javax.swing.JLabel();
         jPanel15 = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
         jLabel32 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        _198 = new javax.swing.JLabel();
+        _196 = new javax.swing.JLabel();
+        _201 = new javax.swing.JLabel();
+        _191 = new javax.swing.JLabel();
+        _190 = new javax.swing.JLabel();
+        _189 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
+        _195 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -215,8 +215,8 @@ public class ZeusVistaCampo extends javax.swing.JFrame {
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Zeus_emblem_29 (2).png"))); // NOI18N
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 780, 180, 140));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Chronos.png"))); // NOI18N
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 490, -1, -1));
+        _193.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Chronos.png"))); // NOI18N
+        jPanel1.add(_193, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 490, -1, -1));
 
         jPanel18.setBackground(new java.awt.Color(224, 101, 101));
         jPanel18.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -250,19 +250,19 @@ public class ZeusVistaCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 470, -1, -1));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Heracles.png"))); // NOI18N
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 340, -1, -1));
+        _192.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Heracles.png"))); // NOI18N
+        jPanel1.add(_192, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 340, -1, -1));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Achilles.png"))); // NOI18N
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 200, -1, 130));
+        _200.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Achilles.png"))); // NOI18N
+        jPanel1.add(_200, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 200, -1, 130));
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Banquillo");
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 40, -1, -1));
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Icarus.png"))); // NOI18N
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 50, -1, 130));
+        _187.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Icarus.png"))); // NOI18N
+        jPanel1.add(_187, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 50, -1, 130));
 
         jPanel10.setBackground(new java.awt.Color(224, 101, 101));
         jPanel10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -356,8 +356,8 @@ public class ZeusVistaCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 880, -1, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Poseidon.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 760, -1, -1));
+        _202.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Poseidon.png"))); // NOI18N
+        jPanel1.add(_202, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 760, -1, -1));
 
         jPanel14.setBackground(new java.awt.Color(224, 101, 101));
         jPanel14.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -391,11 +391,11 @@ public class ZeusVistaCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, -1, 30));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Artemis.png"))); // NOI18N
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, -1, -1));
+        _194.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Artemis.png"))); // NOI18N
+        jPanel1.add(_194, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Apollo.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, -1, -1));
+        _188.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Apollo.png"))); // NOI18N
+        jPanel1.add(_188, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, -1, -1));
 
         jPanel8.setBackground(new java.awt.Color(224, 101, 101));
         jPanel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -525,8 +525,8 @@ public class ZeusVistaCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 450, -1, 30));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Demeter.png"))); // NOI18N
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, -1, 130));
+        _199.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Demeter.png"))); // NOI18N
+        jPanel1.add(_199, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, -1, 130));
 
         jPanel13.setBackground(new java.awt.Color(224, 101, 101));
         jPanel13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -560,8 +560,8 @@ public class ZeusVistaCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, -1, 30));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Hermes.png"))); // NOI18N
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, -1, 120));
+        _197.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Hermes.png"))); // NOI18N
+        jPanel1.add(_197, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, -1, 120));
 
         jPanel15.setBackground(new java.awt.Color(224, 101, 101));
         jPanel15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -627,29 +627,29 @@ public class ZeusVistaCampo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, -1, 30));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Athena.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, -1, 120));
+        _198.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Athena.png"))); // NOI18N
+        jPanel1.add(_198, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, -1, 120));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Hera.png"))); // NOI18N
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, -1, -1));
+        _196.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Hera.png"))); // NOI18N
+        jPanel1.add(_196, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Byron_29.png"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, -1, -1));
+        _201.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Byron_29.png"))); // NOI18N
+        jPanel1.add(_201, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Dionysus.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 650, -1, 130));
+        _191.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Dionysus.png"))); // NOI18N
+        jPanel1.add(_191, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 650, -1, 130));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Ares.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 640, -1, 130));
+        _190.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Ares.png"))); // NOI18N
+        jPanel1.add(_190, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 640, -1, 130));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Hephestus.png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 500, -1, 130));
+        _189.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Hephestus.png"))); // NOI18N
+        jPanel1.add(_189, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 500, -1, 130));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/campo (1).png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Medusa.png"))); // NOI18N
-        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 620, -1, -1));
+        _195.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Zeus/29_Medusa.png"))); // NOI18N
+        jPanel1.add(_195, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 620, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -701,28 +701,34 @@ public class ZeusVistaCampo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel _187;
+    private javax.swing.JLabel _188;
+    private javax.swing.JLabel _189;
+    private javax.swing.JLabel _190;
+    private javax.swing.JLabel _191;
+    private javax.swing.JLabel _192;
+    private javax.swing.JLabel _193;
+    private javax.swing.JLabel _194;
+    private javax.swing.JLabel _195;
+    private javax.swing.JLabel _196;
+    private javax.swing.JLabel _197;
+    private javax.swing.JLabel _198;
+    private javax.swing.JLabel _199;
+    private javax.swing.JLabel _200;
+    private javax.swing.JLabel _201;
+    private javax.swing.JLabel _202;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -730,12 +736,6 @@ public class ZeusVistaCampo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;

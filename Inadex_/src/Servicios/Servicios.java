@@ -204,36 +204,6 @@ public boolean borrarUsuarios() {
     *Conseguir jugadores 
     *
     */
-   
-      public ArrayList<Jugador> getJugadores() {
-        ArrayList<Jugador> jugadores = new ArrayList<>();
-        String sql = "SELECT Nombre_J, PT, PE, Tiro, Aguante, Fisico, Control, Defensa, Rapidez, Valor, Elemento, Posicion FROM jugador WHERE Id_J BETWEEN 81 AND 94";
-
-        try (
-            Statement stmt = conexion.createStatement();
-            ResultSet rs = stmt.executeQuery(sql)
-        ) {
-            while (rs.next()) {
-                Jugador jugador = new Jugador(
-                    rs.getString("Nombre_J"),
-                    rs.getInt("PT"),
-                    rs.getInt("PE"),
-                    rs.getInt("Tiro"),
-                    rs.getInt("Aguante"),
-                    rs.getInt("Fisico"),
-                    rs.getInt("Control"),
-                    rs.getInt("Defensa"),
-                    rs.getInt("Rapidez"),
-                    rs.getInt("Valor"),
-                    rs.getString("Elemento"),
-                    rs.getString("Posicion")
-                );
-                jugadores.add(jugador);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return jugadores;
-    }
+    
+    
 }

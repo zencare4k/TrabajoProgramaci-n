@@ -18,7 +18,7 @@ import Inadex_gui.VistaUpdate;
  */
 public class main {
     public static void main(String[] args) {
-         VistaMusica musica = new VistaMusica();
+        VistaMusica musica = new VistaMusica();
         VistaLogin vista = new VistaLogin();
         musica.playSound("src/resources_audio/Mark_inazuma.wav");
         musica.playSound("src/resources_audio/Login_Background.wav");
@@ -34,3 +34,4 @@ public class main {
     }
             
 
+ 

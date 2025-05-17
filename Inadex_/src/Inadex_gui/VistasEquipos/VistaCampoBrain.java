@@ -36,25 +36,25 @@ public class VistaCampoBrain extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jPanel17 = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        _3 = new javax.swing.JLabel();
+        _14 = new javax.swing.JLabel();
         jPanel18 = new javax.swing.JPanel();
         jLabel34 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
+        _9 = new javax.swing.JLabel();
+        _8 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        _2 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        _1 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        _16 = new javax.swing.JLabel();
+        _7 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
@@ -63,20 +63,20 @@ public class VistaCampoBrain extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        _15 = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        _12 = new javax.swing.JLabel();
         jPanel15 = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
         jLabel32 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        _10 = new javax.swing.JLabel();
+        _6 = new javax.swing.JLabel();
+        _11 = new javax.swing.JLabel();
+        _5 = new javax.swing.JLabel();
+        _13 = new javax.swing.JLabel();
+        _4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -215,11 +215,11 @@ public class VistaCampoBrain extends javax.swing.JFrame {
 
         jPanel1.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 320, -1, -1));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Waters.png"))); // NOI18N
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 620, -1, -1));
+        _3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Waters.png"))); // NOI18N
+        jPanel1.add(_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 620, -1, -1));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Mooney.png"))); // NOI18N
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 480, -1, -1));
+        _14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Mooney.png"))); // NOI18N
+        jPanel1.add(_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 480, -1, -1));
 
         jPanel18.setBackground(new java.awt.Color(224, 101, 101));
         jPanel18.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -253,19 +253,19 @@ public class VistaCampoBrain extends javax.swing.JFrame {
 
         jPanel1.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 460, -1, -1));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Oughtry.png"))); // NOI18N
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 330, -1, -1));
+        _9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Oughtry.png"))); // NOI18N
+        jPanel1.add(_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 330, -1, -1));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Stiller.png"))); // NOI18N
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 200, -1, 130));
+        _8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Stiller.png"))); // NOI18N
+        jPanel1.add(_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 200, -1, 130));
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Banquillo");
         jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 30, -1, -1));
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Under.png"))); // NOI18N
-        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 50, -1, 130));
+        _2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Under.png"))); // NOI18N
+        jPanel1.add(_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 50, -1, 130));
 
         jPanel10.setBackground(new java.awt.Color(224, 101, 101));
         jPanel10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -359,8 +359,8 @@ public class VistaCampoBrain extends javax.swing.JFrame {
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 880, -1, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Feldt.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 760, -1, -1));
+        _1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Feldt.png"))); // NOI18N
+        jPanel1.add(_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 760, -1, -1));
 
         jPanel14.setBackground(new java.awt.Color(224, 101, 101));
         jPanel14.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -394,11 +394,11 @@ public class VistaCampoBrain extends javax.swing.JFrame {
 
         jPanel1.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, -1, 30));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Turner.png"))); // NOI18N
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 80, -1, -1));
+        _16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Turner.png"))); // NOI18N
+        jPanel1.add(_16, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 80, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Leading.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 630, -1, -1));
+        _7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Leading.png"))); // NOI18N
+        jPanel1.add(_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 630, -1, -1));
 
         jPanel8.setBackground(new java.awt.Color(224, 101, 101));
         jPanel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -528,8 +528,8 @@ public class VistaCampoBrain extends javax.swing.JFrame {
 
         jPanel1.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 760, -1, 30));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Seller.png"))); // NOI18N
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, -1, 130));
+        _15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Seller.png"))); // NOI18N
+        jPanel1.add(_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, -1, 130));
 
         jPanel13.setBackground(new java.awt.Color(224, 101, 101));
         jPanel13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -563,8 +563,8 @@ public class VistaCampoBrain extends javax.swing.JFrame {
 
         jPanel1.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 490, -1, 30));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Kind.png"))); // NOI18N
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, -1, 120));
+        _12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Kind.png"))); // NOI18N
+        jPanel1.add(_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, -1, 120));
 
         jPanel15.setBackground(new java.awt.Color(224, 101, 101));
         jPanel15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -630,23 +630,23 @@ public class VistaCampoBrain extends javax.swing.JFrame {
 
         jPanel1.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 490, -1, 30));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Tell.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 370, -1, 120));
+        _10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Tell.png"))); // NOI18N
+        jPanel1.add(_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 370, -1, 120));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Marvel.png"))); // NOI18N
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 640, -1, -1));
+        _6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Marvel.png"))); // NOI18N
+        jPanel1.add(_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 640, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Rock.png"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, -1, -1));
+        _11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Rock.png"))); // NOI18N
+        jPanel1.add(_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Stronger.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 620, -1, 130));
+        _5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Stronger.png"))); // NOI18N
+        jPanel1.add(_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 620, -1, 130));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Buster.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, 130));
+        _13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Buster.png"))); // NOI18N
+        jPanel1.add(_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, 130));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Good.png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 630, -1, 130));
+        _4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/brainwashing/Good.png"))); // NOI18N
+        jPanel1.add(_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 630, -1, 130));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/campo (1).png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -701,18 +701,25 @@ public class VistaCampoBrain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel _1;
+    private javax.swing.JLabel _10;
+    private javax.swing.JLabel _11;
+    private javax.swing.JLabel _12;
+    private javax.swing.JLabel _13;
+    private javax.swing.JLabel _14;
+    private javax.swing.JLabel _15;
+    private javax.swing.JLabel _16;
+    private javax.swing.JLabel _2;
+    private javax.swing.JLabel _3;
+    private javax.swing.JLabel _4;
+    private javax.swing.JLabel _5;
+    private javax.swing.JLabel _6;
+    private javax.swing.JLabel _7;
+    private javax.swing.JLabel _8;
+    private javax.swing.JLabel _9;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -722,7 +729,6 @@ public class VistaCampoBrain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -730,12 +736,6 @@ public class VistaCampoBrain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
