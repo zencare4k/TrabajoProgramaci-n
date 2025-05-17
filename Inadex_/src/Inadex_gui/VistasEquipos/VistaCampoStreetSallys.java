@@ -10,13 +10,46 @@ package Inadex_gui.VistasEquipos;
  */
 public class VistaCampoStreetSallys extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VistaCampoStreetSallys
-     */
-    public VistaCampoStreetSallys() {
-        initComponents();
-    }
+private Controladores.ControladoresEquipos.controladorStreetS controlador = new Controladores.ControladoresEquipos.controladorStreetS();
 
+public VistaCampoStreetSallys() {
+    initComponents();
+    setLabelNames();
+    addJugadorListeners();
+    setLocationRelativeTo(null); // Centra la ventana
+}
+
+private void setLabelNames() {
+    _142.setName("_142");
+    _143.setName("_143");
+    _145.setName("_145");
+    _146.setName("_146");
+    _147.setName("_147");
+    _148.setName("_148");
+    _149.setName("_149");
+    _150.setName("_150");
+    _151.setName("_151");
+    _152.setName("_152");
+    _153.setName("_153");
+    _154.setName("_154");
+    _155.setName("_155");
+    _164.setName("_164");
+}
+
+private void addJugadorListeners() {
+    javax.swing.JLabel[] jugadores = {
+        _142, _143, _145, _146, _147, _148, _149, _150, _151, _152, _153, _154, _155, _164
+    };
+    for (javax.swing.JLabel label : jugadores) {
+        label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                controlador.mostrarDetallesJugador(label);
+            }
+        });
+    }
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -10,12 +10,48 @@ package Inadex_gui.VistasEquipos;
  */
 public class VistaCampoBrain extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VistaCampoBrain
-     */
-    public VistaCampoBrain() {
-        initComponents();
+ private Controladores.ControladoresEquipos.ControladorBrain controlador = new Controladores.ControladoresEquipos.ControladorBrain();
+
+public VistaCampoBrain() {
+    initComponents();
+    setLabelNames();
+    addJugadorListeners();
+}
+
+private void setLabelNames() {
+    _1.setName("_1");
+    _2.setName("_2");
+    _3.setName("_3");
+    _4.setName("_4");
+    _5.setName("_5");
+    _6.setName("_6");
+    _7.setName("_7");
+    _8.setName("_8");
+    _9.setName("_9");
+    _10.setName("_10");
+    _11.setName("_11");
+    _12.setName("_12");
+    _13.setName("_13");
+    _14.setName("_14");
+    _15.setName("_15");
+    _16.setName("_16");
+}
+
+private void addJugadorListeners() {
+    javax.swing.JLabel[] jugadores = {
+        _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, _16
+    };
+    for (javax.swing.JLabel label : jugadores) {
+        label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                controlador.mostrarDetallesJugador(label);
+            }
+        });
     }
+}
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,6 +63,7 @@ public class VistaCampoBrain extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         jPanel20 = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
@@ -83,6 +120,18 @@ public class VistaCampoBrain extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton1.setBackground(new java.awt.Color(255, 102, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Volver");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 100, 40));
 
         jPanel20.setBackground(new java.awt.Color(224, 101, 101));
         jPanel20.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -665,6 +714,10 @@ public class VistaCampoBrain extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -717,6 +770,7 @@ public class VistaCampoBrain extends javax.swing.JFrame {
     private javax.swing.JLabel _7;
     private javax.swing.JLabel _8;
     private javax.swing.JLabel _9;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel18;

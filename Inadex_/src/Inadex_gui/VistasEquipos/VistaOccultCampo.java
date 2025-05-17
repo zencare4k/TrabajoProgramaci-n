@@ -9,13 +9,46 @@ package Inadex_gui.VistasEquipos;
  * @author zenca
  */
 public class VistaOccultCampo extends javax.swing.JFrame {
+private Controladores.ControladoresEquipos.ControladorOccult controlador = new Controladores.ControladoresEquipos.ControladorOccult();
 
-    /**
-     * Creates new form VistaOccultCampo
-     */
-    public VistaOccultCampo() {
-        initComponents();
+public VistaOccultCampo() {
+    initComponents();
+    setLabelNames();
+    addJugadorListeners();
+}
+
+private void setLabelNames() {
+    _49.setName("_49");
+    _50.setName("_50");
+    _51.setName("_51");
+    _52.setName("_52");
+    _53.setName("_53");
+    _54.setName("_54");
+    _55.setName("_55");
+    _56.setName("_56");
+    _57.setName("_57");
+    _58.setName("_58");
+    _59.setName("_59");
+    _60.setName("_60");
+    _61.setName("_61");
+    _62.setName("_62");
+    _64.setName("_64");
+}
+
+private void addJugadorListeners() {
+    javax.swing.JLabel[] jugadores = {
+        _49, _50, _51, _52, _53, _54, _55, _56, _57, _58, _59, _60, _61, _62, _64
+    };
+    for (javax.swing.JLabel label : jugadores) {
+        label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                controlador.mostrarDetallesJugador(label);
+            }
+        });
     }
+}
 
     /**
      * This method is called from within the constructor to initialize the form.

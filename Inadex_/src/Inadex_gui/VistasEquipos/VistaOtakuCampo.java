@@ -10,13 +10,47 @@ package Inadex_gui.VistasEquipos;
  */
 public class VistaOtakuCampo extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VistaOtakuCampo
-     */
-    public VistaOtakuCampo() {
-        initComponents();
-    }
+   private Controladores.ControladoresEquipos.controladorOtaku controlador = new Controladores.ControladoresEquipos.controladorOtaku();
 
+public VistaOtakuCampo() {
+    initComponents();
+    setLabelNames();
+    addJugadorListeners();
+    setLocationRelativeTo(null); // <-- Esto centra la ventana
+
+}
+
+private void setLabelNames() {
+    _66.setName("_66");
+    _67.setName("_67");
+    _68.setName("_68");
+    _69.setName("_69");
+    _70.setName("_70");
+    _72.setName("_72");
+    _73.setName("_73");
+    _74.setName("_74");
+    _75.setName("_75");
+    _76.setName("_76");
+    _77.setName("_77");
+    _78.setName("_78");
+    _79.setName("_79");
+    _80.setName("_80");
+}
+
+private void addJugadorListeners() {
+    javax.swing.JLabel[] jugadores = {
+        _66, _67, _68, _69, _70, _72, _73, _74, _75, _76, _77, _78, _79, _80
+    };
+    for (javax.swing.JLabel label : jugadores) {
+        label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                controlador.mostrarDetallesJugador(label);
+            }
+        });
+    }
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -7,6 +7,7 @@ package Servicios;
 import Controladores.ControladorLogin;
 import Inadex_gui.VistaMenu;
 import Modelos.Jugador;
+import Modelos.Tecnica;
 import java.util.List;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -206,4 +207,66 @@ public boolean borrarUsuarios() {
     */
     
     
+public Jugador getJugadorPorId(int id) {
+    Jugador jugador = null;
+    try {
+        Conectar();
+        String sql = "SELECT * FROM jugador WHERE Id_J = ?";
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setInt(1, id);
+        ResultSet rs = ps.executeQuery();
+        if (rs.next()) {
+            jugador = new Jugador(
+                rs.getInt("Id_J"),
+                rs.getString("Nombre_J"),
+                rs.getInt("PT"),
+                rs.getInt("PE"),
+                rs.getInt("Tiro"),
+                rs.getInt("Aguante"),
+                rs.getInt("Fisico"),
+                rs.getInt("Control"),
+                rs.getInt("Defensa"),
+                rs.getInt("Rapidez"),
+                rs.getInt("Valor"),
+                rs.getString("Elemento"),
+                rs.getString("Posicion")
+            );
+        }
+        rs.close();
+        ps.close();
+        CerrarConexion();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    return jugador;
+}
+
+public java.util.List<Tecnica> getTecnicasPorJugador(int idJugador) {
+    java.util.List<Tecnica> tecnicas = new java.util.ArrayList<>();
+    try {
+        Conectar();
+        String sql = "SELECT t.id, t.nombre, t.TP, t.elemento, t.tipo " +
+                     "FROM jugador_tecnica jt " +
+                     "JOIN tecnicas t ON jt.tecnica_id = t.id " +
+                     "WHERE jt.jugador_id = ? LIMIT 4";
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setInt(1, idJugador);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) {
+            tecnicas.add(new Tecnica(
+                rs.getInt("id"),
+                rs.getString("nombre"),
+                rs.getInt("TP"),
+                rs.getString("elemento"),
+                rs.getString("tipo")
+            ));
+        }
+        rs.close();
+        ps.close();
+        CerrarConexion();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    return tecnicas;
+}
 }

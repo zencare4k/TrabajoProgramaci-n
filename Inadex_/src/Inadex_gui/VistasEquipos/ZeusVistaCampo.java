@@ -9,14 +9,57 @@ package Inadex_gui.VistasEquipos;
  * @author zenca
  */
 public class ZeusVistaCampo extends javax.swing.JFrame {
+private Controladores.ControladoresEquipos.ControladorZeus controlador = new Controladores.ControladoresEquipos.ControladorZeus();
 
     /**
      * Creates new form ZeusVistaCampo
      */
     public ZeusVistaCampo() {
         initComponents();
-    }
+         setLabelNames();
+        addJugadorListeners();
+        setLocationRelativeTo(null); // <-- Esto centra la ventana
 
+
+    }
+private void addJugadorListeners() {
+    javax.swing.JLabel[] jugadores = {
+        _187, _188, _189, _190, _191, _192, _193, _194, _195, _196, _197, _198, _199, _200, _201, _202
+    };
+    for (javax.swing.JLabel label : jugadores) {
+        label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                controlador.mostrarDetallesJugador(label);
+            }
+        });
+    }
+}
+private void setLabelNames() {
+    _187.setName("_187");
+    _188.setName("_188");
+    _189.setName("_189");
+    _190.setName("_190");
+    _191.setName("_191");
+    _192.setName("_192");
+    _193.setName("_193");
+    _194.setName("_194");
+    _195.setName("_195");
+    _196.setName("_196");
+    _197.setName("_197");
+    _198.setName("_198");
+    _199.setName("_199");
+    _200.setName("_200");
+    _201.setName("_201");
+    _202.setName("_202");
+}
+
+// Ayuda: Si tus variables se llaman _187, _188, etc., puedes obtener el id así:
+private String getIdFromLabelVariable(javax.swing.JLabel label) {
+    // Devuelve el número del nombre de la variable (por ejemplo, "_187" -> "187")
+    return label.toString().replaceAll("\\D+", "");
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

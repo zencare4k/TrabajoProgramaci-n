@@ -10,12 +10,42 @@ package Inadex_gui.VistasEquipos;
  */
 public class VistaCampoShuriken extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VistaCampoShuriken
-     */
-    public VistaCampoShuriken() {
-        initComponents();
+    private Controladores.ControladoresEquipos.ControladorShuriken controlador = new Controladores.ControladoresEquipos.ControladorShuriken();
+
+public VistaCampoShuriken() {
+    initComponents();
+    setLabelNames();
+    addJugadorListeners();
+    setLocationRelativeTo(null); // Centrar ventana
+}
+
+private void setLabelNames() {
+    _126.setName("_126");
+    _127.setName("_127");
+    _128.setName("_128");
+    _129.setName("_129");
+    _130.setName("_130");
+    _131.setName("_131");
+    _132.setName("_132");
+    _134.setName("_134");
+    _135.setName("_135");
+    _140.setName("_140");
+}
+
+private void addJugadorListeners() {
+    javax.swing.JLabel[] jugadores = {
+        _126, _127, _128, _129, _130, _131, _132, _134, _135, _140
+    };
+    for (javax.swing.JLabel label : jugadores) {
+        label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                controlador.mostrarDetallesJugador(label);
+            }
+        });
     }
+}
 
     /**
      * This method is called from within the constructor to initialize the form.

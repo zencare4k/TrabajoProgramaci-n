@@ -10,13 +10,49 @@ package Inadex_gui.VistasEquipos;
  */
 public class VistaRoyalCampo extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VistaRoyalCampo
-     */
-    public VistaRoyalCampo() {
-        initComponents();
-    }
+   private Controladores.ControladoresEquipos.controladorRoyal controlador = new Controladores.ControladoresEquipos.controladorRoyal();
 
+public VistaRoyalCampo() {
+    initComponents();
+    setLabelNames();
+    addJugadorListeners();
+        setLocationRelativeTo(null); // <-- Esto centra la ventana
+
+}
+
+private void setLabelNames() {
+    _111.setName("_111");
+    _112.setName("_112");
+    _113.setName("_113");
+    _114.setName("_114");
+    _115.setName("_115");
+    _116.setName("_116");
+    _117.setName("_117");
+    _118.setName("_118");
+    _119.setName("_119");
+    _120.setName("_120");
+    _121.setName("_121");
+    _122.setName("_122");
+    _123.setName("_123");
+    _124.setName("_124");
+    _125.setName("_125");
+    _90.setName("_90");
+}
+
+private void addJugadorListeners() {
+    javax.swing.JLabel[] jugadores = {
+        _111, _112, _113, _114, _115, _116, _117, _118, _119, _120, _121, _122, _123, _124, _125, _90
+    };
+    for (javax.swing.JLabel label : jugadores) {
+        label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                controlador.mostrarDetallesJugador(label);
+            }
+        });
+    }
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

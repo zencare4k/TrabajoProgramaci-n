@@ -10,13 +10,46 @@ package Inadex_gui.VistasEquipos;
  */
 public class RaimonOGVista extends javax.swing.JFrame {
 
-    /**
-     * Creates new form RaimonOGVista
-     */
-    public RaimonOGVista() {
-        initComponents();
-    }
+   private Controladores.ControladoresEquipos.ControladorRaimonOG controlador = new Controladores.ControladoresEquipos.ControladorRaimonOG();
 
+public RaimonOGVista() {
+    initComponents();
+    setLabelNames();
+    addJugadorListeners();
+        setLocationRelativeTo(null); // <-- Esto centra la ventana
+
+}
+
+private void setLabelNames() {
+    _98.setName("_98");
+    _99.setName("_99");
+    _100.setName("_100");
+    _101.setName("_101");
+    _102.setName("_102");
+    _103.setName("_103");
+    _104.setName("_104");
+    _105.setName("_105");
+    _106.setName("_106");
+    _107.setName("_107");
+    _108.setName("_108");
+    _109.setName("_109");
+    _110.setName("_110");
+}
+
+private void addJugadorListeners() {
+    javax.swing.JLabel[] jugadores = {
+        _98, _99, _100, _101, _102, _103, _104, _105, _106, _107, _108, _109, _110
+    };
+    for (javax.swing.JLabel label : jugadores) {
+        label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                controlador.mostrarDetallesJugador(label);
+            }
+        });
+    }
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

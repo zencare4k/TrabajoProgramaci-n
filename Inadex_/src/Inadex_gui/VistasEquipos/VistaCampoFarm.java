@@ -10,13 +10,50 @@ package Inadex_gui.VistasEquipos;
  */
 public class VistaCampoFarm extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VistaCampoFarm
-     */
-    public VistaCampoFarm() {
-        initComponents();
-    }
+  // ...existing code...
 
+private Controladores.ControladoresEquipos.ControladorFarm controlador = new Controladores.ControladoresEquipos.ControladorFarm();
+
+public VistaCampoFarm() {
+    initComponents();
+    setLabelNames();
+    addJugadorListeners();
+}
+
+private void setLabelNames() {
+    _17.setName("_17");
+    _18.setName("_18");
+    _19.setName("_19");
+    _20.setName("_20");
+    _21.setName("_21");
+    _22.setName("_22");
+    _23.setName("_23");
+    _24.setName("_24");
+    _25.setName("_25");
+    _26.setName("_26");
+    _27.setName("_27");
+    _28.setName("_28");
+    _29.setName("_29");
+    _30.setName("_30");
+    _31.setName("_31");
+    _32.setName("_32");
+}
+
+private void addJugadorListeners() {
+    javax.swing.JLabel[] jugadores = {
+        _17, _18, _19, _20, _21, _22, _23, _24, _25, _26, _27, _28, _29, _30, _31, _32
+    };
+    for (javax.swing.JLabel label : jugadores) {
+        label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                controlador.mostrarDetallesJugador(label);
+            }
+        });
+    }
+}
+// ...existing code...
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

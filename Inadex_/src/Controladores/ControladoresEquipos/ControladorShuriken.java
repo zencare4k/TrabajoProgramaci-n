@@ -1,13 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Controladores.ControladoresEquipos;
 
-/**
- *
- * @author zenca
- */
+import Inadex_gui.VistaDetalles;
+import Modelos.Jugador;
+import Modelos.Tecnica;
+import Servicios.Servicios;
+import java.util.List;
+import javax.swing.JLabel;
+
 public class ControladorShuriken {
-    
+    private Servicios servicios = new Servicios();
+
+    public void mostrarDetallesJugador(JLabel label) {
+        try {
+            String nombre = label.getName(); // "_126", etc.
+            int id = Integer.parseInt(nombre.substring(1));
+            Jugador jugador = servicios.getJugadorPorId(id);
+            List<Tecnica> tecnicas = servicios.getTecnicasPorJugador(id);
+
+            VistaDetalles detalles = new VistaDetalles();
+            detalles.setDatosJugador(jugador, tecnicas, label.getIcon());
+            detalles.setLocationRelativeTo(null); // Centrar ventana
+            detalles.setVisible(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

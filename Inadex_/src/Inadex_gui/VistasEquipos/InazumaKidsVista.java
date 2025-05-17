@@ -10,12 +10,49 @@ package Inadex_gui.VistasEquipos;
  */
 public class InazumaKidsVista extends javax.swing.JFrame {
 
-    /**
-     * Creates new form InazumaKidsVista
-     */
-    public InazumaKidsVista() {
-        initComponents();
+   private Controladores.ControladoresEquipos.ControladorIKFC controlador = new Controladores.ControladoresEquipos.ControladorIKFC();
+
+public InazumaKidsVista() {
+    initComponents();
+    setLabelNames();
+    addJugadorListeners();
+    setLocationRelativeTo(null); // <-- Esto centra la ventana
+
+}
+
+private void setLabelNames() {
+    _33.setName("_33");
+    _34.setName("_34");
+    _35.setName("_35");
+    _36.setName("_36");
+    _37.setName("_37");
+    _38.setName("_38");
+    _39.setName("_39");
+    _40.setName("_40");
+    _41.setName("_41");
+    _42.setName("_42");
+    _43.setName("_43");
+    _44.setName("_44");
+    _45.setName("_45");
+    _46.setName("_46");
+    _47.setName("_47");
+    _48.setName("_48");
+}
+
+private void addJugadorListeners() {
+    javax.swing.JLabel[] jugadores = {
+        _33, _34, _35, _36, _37, _38, _39, _40, _41, _42, _43, _44, _45, _46, _47, _48
+    };
+    for (javax.swing.JLabel label : jugadores) {
+        label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                controlador.mostrarDetallesJugador(label);
+            }
+        });
     }
+}
 
     /**
      * This method is called from within the constructor to initialize the form.

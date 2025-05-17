@@ -10,13 +10,44 @@ package Inadex_gui.VistasEquipos;
  */
 public class VistaRaimonCampo extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VistaRaimonCampo
-     */
-    public VistaRaimonCampo() {
-        initComponents();
-    }
+private Controladores.ControladoresEquipos.ControladorRaimon controlador = new Controladores.ControladoresEquipos.ControladorRaimon();
 
+public VistaRaimonCampo() {
+    initComponents();
+    setLabelNames();
+    addJugadorListeners();
+    setLocationRelativeTo(null);
+}
+
+private void setLabelNames() {
+    _81.setName("_81");
+    _82.setName("_82");
+    _83.setName("_83");
+    _85.setName("_85");
+    _86.setName("_86");
+    _88.setName("_88");
+    _89.setName("_89");
+    _90.setName("_90");
+    _91.setName("_91");
+    _92.setName("_92");
+    _93.setName("_93");
+    _94.setName("_94");
+}
+
+private void addJugadorListeners() {
+    javax.swing.JLabel[] jugadores = {
+        _81, _82, _83, _85, _86, _88, _89, _90, _91, _92, _93, _94
+    };
+    for (javax.swing.JLabel label : jugadores) {
+        label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                controlador.mostrarDetallesJugador(label);
+            }
+        });
+    }
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

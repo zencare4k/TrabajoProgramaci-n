@@ -18,10 +18,11 @@ public class VistaDetalles extends javax.swing.JFrame {
      */
     public VistaDetalles() {
         initComponents();
+        setLocationRelativeTo(null);  
+
            tipoFuente = new Fuentes();
-        // Ejemplo: cambia la fuente de un JLabel (puedes cambiarlo por cualquier otro JLabel)
-   
-  
+    
+  //Fuente
     name.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 20));
     name.setForeground(java.awt.Color.WHITE);
 
@@ -73,7 +74,25 @@ public class VistaDetalles extends javax.swing.JFrame {
     jLabel2.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
     jLabel2.setForeground(java.awt.Color.WHITE);
     }
+//DatosDeJugadores 
+ public void setDatosJugador(Modelos.Jugador jugador, java.util.List<Modelos.Tecnica> tecnicas, javax.swing.Icon icono) {
+    name.setText(jugador.getNombreJugador());
+    pt.setText(String.valueOf(jugador.getPT()));
+    pe.setText(String.valueOf(jugador.getPE()));
+    tiro.setText(String.valueOf(jugador.getTiro()));
+    aguante.setText(String.valueOf(jugador.getAguante()));
+    fisico.setText(String.valueOf(jugador.getFisico()));
+    control.setText(String.valueOf(jugador.getControl()));
+    defensa.setText(String.valueOf(jugador.getDefensa()));
+    rapidez.setText(String.valueOf(jugador.getRapidez()));
+    valor.setText(String.valueOf(jugador.getValor()));
+    image.setIcon(icono);
 
+    sm1.setText(tecnicas.size() > 0 ? tecnicas.get(0).getNombre() : "");
+    sm2.setText(tecnicas.size() > 1 ? tecnicas.get(1).getNombre() : "");
+    sm3.setText(tecnicas.size() > 2 ? tecnicas.get(2).getNombre() : "");
+    sm4.setText(tecnicas.size() > 3 ? tecnicas.get(3).getNombre() : "");
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -84,6 +103,7 @@ public class VistaDetalles extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         image = new javax.swing.JLabel();
         name = new javax.swing.JLabel();
         pe = new javax.swing.JLabel();
@@ -106,8 +126,18 @@ public class VistaDetalles extends javax.swing.JFrame {
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        image.setText("Image");
-        jPanel2.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, -1, -1));
+        jButton1.setBackground(new java.awt.Color(255, 102, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Volver");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 100, 40));
+        jPanel2.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 160, 140));
 
         name.setText("Nombre");
         jPanel2.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, -1, -1));
@@ -171,6 +201,10 @@ public class VistaDetalles extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -212,6 +246,7 @@ public class VistaDetalles extends javax.swing.JFrame {
     private javax.swing.JLabel defensa;
     private javax.swing.JLabel fisico;
     private javax.swing.JLabel image;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;

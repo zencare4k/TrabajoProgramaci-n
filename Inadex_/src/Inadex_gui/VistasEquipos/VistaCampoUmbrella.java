@@ -10,13 +10,46 @@ package Inadex_gui.VistasEquipos;
  */
 public class VistaCampoUmbrella extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VistaCampoUmbrella
-     */
-    public VistaCampoUmbrella() {
-        initComponents();
-    }
+  private Controladores.ControladoresEquipos.ControladorUnbrella controlador = new Controladores.ControladoresEquipos.ControladorUnbrella();
 
+public VistaCampoUmbrella() {
+    initComponents();
+    setLabelNames();
+    addJugadorListeners();
+    setLocationRelativeTo(null);
+}
+
+private void setLabelNames() {
+    _156.setName("_156");
+    _158.setName("_158");
+    _159.setName("_159");
+    _160.setName("_160");
+    _161.setName("_161");
+    _162.setName("_162");
+    _163.setName("_163");
+    _164.setName("_164");
+    _165.setName("_165");
+    _166.setName("_166");
+    _167.setName("_167");
+    _168.setName("_168");
+    _170.setName("_170");
+    _204.setName("_204");
+}
+
+private void addJugadorListeners() {
+    javax.swing.JLabel[] jugadores = {
+        _156, _158, _159, _160, _161, _162, _163, _164, _165, _166, _167, _168, _170, _204
+    };
+    for (javax.swing.JLabel label : jugadores) {
+        label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                controlador.mostrarDetallesJugador(label);
+            }
+        });
+    }
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

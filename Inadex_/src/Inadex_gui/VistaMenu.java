@@ -31,7 +31,6 @@ public class VistaMenu extends javax.swing.JFrame {
     private VistaMenu vistam;
 
     VistaMusica controladorMusica = new VistaMusica();
-    ControladorRaimon raimon = new ControladorRaimon(servicios);
     private ArrayList<Jugador> jugadores;
    public VistaRaimonCampo vistaRaimonCampo   = new VistaRaimonCampo();   
    public ZeusVistaCampo vistazeuscampo = new ZeusVistaCampo();
@@ -52,8 +51,22 @@ public class VistaMenu extends javax.swing.JFrame {
     public VistaMenu() {
 
         initComponents();
+        setLocationRelativeTo(null); // <-- Esto centra la ventana
+Raimon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+    Raimon.addMouseListener(new java.awt.event.MouseAdapter() {
+        @Override
+        public void mouseClicked(java.awt.event.MouseEvent evt) {
+            VistaRaimonCampo vista = new VistaRaimonCampo();
+            vista.setLocationRelativeTo(null); // Centra la ventana
+            vista.setVisible(true);
+        }
+    });
     }
-
+private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {
+    Inadex_gui.VistasEquipos.VistaRaimonCampo vista = new Inadex_gui.VistasEquipos.VistaRaimonCampo();
+    vista.setLocationRelativeTo(null); // Centra la ventana
+    vista.setVisible(true);
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -76,25 +89,35 @@ public class VistaMenu extends javax.swing.JFrame {
         BackToLogin = new javax.swing.JButton();
         Raimon = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         Umbrella = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         Brain = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         Sallys = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         Royal = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         Otaku = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         IKFC = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         Wilds = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
         RaimonOG = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
         Zeus = new javax.swing.JPanel();
         asss = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -133,13 +156,12 @@ public class VistaMenu extends javax.swing.JFrame {
 
         Raimon.setBackground(new java.awt.Color(0, 0, 204));
         Raimon.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
-        Raimon.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                RaimonMouseClicked(evt);
-            }
-        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Raimon.png"))); // NOI18N
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Instituto Raimon");
 
         javax.swing.GroupLayout RaimonLayout = new javax.swing.GroupLayout(Raimon);
         Raimon.setLayout(RaimonLayout);
@@ -148,14 +170,20 @@ public class VistaMenu extends javax.swing.JFrame {
             .addGroup(RaimonLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jLabel2)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RaimonLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(31, 31, 31))
         );
         RaimonLayout.setVerticalGroup(
             RaimonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RaimonLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addContainerGap())
         );
 
         jPanel1.add(Raimon, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 160, 190));
@@ -165,6 +193,10 @@ public class VistaMenu extends javax.swing.JFrame {
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Umbrella (2).png"))); // NOI18N
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Instituto Umbrella");
+
         javax.swing.GroupLayout UmbrellaLayout = new javax.swing.GroupLayout(Umbrella);
         Umbrella.setLayout(UmbrellaLayout);
         UmbrellaLayout.setHorizontalGroup(
@@ -173,13 +205,18 @@ public class VistaMenu extends javax.swing.JFrame {
                 .addGap(15, 15, 15)
                 .addComponent(jLabel11)
                 .addContainerGap(13, Short.MAX_VALUE))
+            .addGroup(UmbrellaLayout.createSequentialGroup()
+                .addComponent(jLabel8)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         UmbrellaLayout.setVerticalGroup(
             UmbrellaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(UmbrellaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel11)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addContainerGap())
         );
 
         jPanel1.add(Umbrella, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 830, 160, -1));
@@ -189,13 +226,19 @@ public class VistaMenu extends javax.swing.JFrame {
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Brainwashing.png"))); // NOI18N
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Instituto Brain");
+
         javax.swing.GroupLayout BrainLayout = new javax.swing.GroupLayout(Brain);
         Brain.setLayout(BrainLayout);
         BrainLayout.setHorizontalGroup(
             BrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BrainLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(jLabel12)
+                .addGroup(BrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel6))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
         BrainLayout.setVerticalGroup(
@@ -203,7 +246,9 @@ public class VistaMenu extends javax.swing.JFrame {
             .addGroup(BrainLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel12)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.add(Brain, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 600, 160, 180));
@@ -218,13 +263,21 @@ public class VistaMenu extends javax.swing.JFrame {
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Street_Sally.png"))); // NOI18N
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Street Sallys");
+
         javax.swing.GroupLayout SallysLayout = new javax.swing.GroupLayout(Sallys);
         Sallys.setLayout(SallysLayout);
         SallysLayout.setHorizontalGroup(
             SallysLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SallysLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(jLabel14)
+                .addGroup(SallysLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SallysLayout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(8, 8, 8)))
                 .addContainerGap(14, Short.MAX_VALUE))
         );
         SallysLayout.setVerticalGroup(
@@ -232,7 +285,9 @@ public class VistaMenu extends javax.swing.JFrame {
             .addGroup(SallysLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel14)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addContainerGap())
         );
 
         jPanel1.add(Sallys, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 596, 160, 180));
@@ -242,13 +297,19 @@ public class VistaMenu extends javax.swing.JFrame {
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Royal_Academy.png"))); // NOI18N
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Royal Academy");
+
         javax.swing.GroupLayout RoyalLayout = new javax.swing.GroupLayout(Royal);
         Royal.setLayout(RoyalLayout);
         RoyalLayout.setHorizontalGroup(
             RoyalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RoyalLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel15)
+                .addGap(11, 11, 11)
+                .addGroup(RoyalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel15))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
         RoyalLayout.setVerticalGroup(
@@ -256,15 +317,21 @@ public class VistaMenu extends javax.swing.JFrame {
             .addGroup(RoyalLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel15)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addContainerGap())
         );
 
-        jPanel1.add(Royal, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, 160, -1));
+        jPanel1.add(Royal, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 160, -1));
 
         Otaku.setBackground(new java.awt.Color(0, 0, 204));
         Otaku.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Otaku.png"))); // NOI18N
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Instituto Otaku");
 
         javax.swing.GroupLayout OtakuLayout = new javax.swing.GroupLayout(Otaku);
         Otaku.setLayout(OtakuLayout);
@@ -273,14 +340,20 @@ public class VistaMenu extends javax.swing.JFrame {
             .addGroup(OtakuLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jLabel16)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OtakuLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel9)
+                .addContainerGap())
         );
         OtakuLayout.setVerticalGroup(
             OtakuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(OtakuLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel16)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addComponent(jLabel9)
+                .addContainerGap())
         );
 
         jPanel1.add(Otaku, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 840, 160, -1));
@@ -290,13 +363,19 @@ public class VistaMenu extends javax.swing.JFrame {
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Inazuma_KFC.png"))); // NOI18N
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Inazuma KFC");
+
         javax.swing.GroupLayout IKFCLayout = new javax.swing.GroupLayout(IKFC);
         IKFC.setLayout(IKFCLayout);
         IKFCLayout.setHorizontalGroup(
             IKFCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(IKFCLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(jLabel17)
+                .addGroup(IKFCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel17))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
         IKFCLayout.setVerticalGroup(
@@ -304,7 +383,9 @@ public class VistaMenu extends javax.swing.JFrame {
             .addGroup(IKFCLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel17)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addComponent(jLabel10)
+                .addContainerGap())
         );
 
         jPanel1.add(IKFC, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 1080, 160, -1));
@@ -314,24 +395,32 @@ public class VistaMenu extends javax.swing.JFrame {
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Wild.png"))); // NOI18N
 
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setText("Instituto Wilds");
+
         javax.swing.GroupLayout WildsLayout = new javax.swing.GroupLayout(Wilds);
         Wilds.setLayout(WildsLayout);
         WildsLayout.setHorizontalGroup(
             WildsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(WildsLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel18)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addGap(13, 13, 13)
+                .addGroup(WildsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel19)
+                    .addComponent(jLabel18))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         WildsLayout.setVerticalGroup(
             WildsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(WildsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel18)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel19)
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
-        jPanel1.add(Wilds, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 1090, 160, 180));
+        jPanel1.add(Wilds, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 1090, 160, 190));
 
         RaimonOG.setBackground(new java.awt.Color(0, 0, 204));
         RaimonOG.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
@@ -340,6 +429,11 @@ public class VistaMenu extends javax.swing.JFrame {
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Raimon_OB_emblem_29.png"))); // NOI18N
         RaimonOG.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -20, 180, -1));
 
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("Raimon Original");
+        RaimonOG.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
+
         jPanel1.add(RaimonOG, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 1350, 160, 200));
 
         Zeus.setBackground(new java.awt.Color(0, 0, 204));
@@ -347,7 +441,12 @@ public class VistaMenu extends javax.swing.JFrame {
         Zeus.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         asss.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Zeus_emblem_29 (2).png"))); // NOI18N
-        Zeus.add(asss, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -20, -1, -1));
+        Zeus.add(asss, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, -1, -1));
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("Instituto Zeus");
+        Zeus.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
         jPanel1.add(Zeus, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 1350, 160, 200));
 
@@ -375,14 +474,39 @@ public class VistaMenu extends javax.swing.JFrame {
     this.dispose(); // Cierra la ventana actual
     }//GEN-LAST:event_BackToLoginActionPerformed
 
-    private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RaimonMouseClicked
-        // TODO add your handling code here:
-           
-    }//GEN-LAST:event_RaimonMouseClicked
-
     
 
-    
+       public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(VistaCampoUmbrella.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(VistaCampoUmbrella.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(VistaCampoUmbrella.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(VistaCampoUmbrella.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new VistaMenu().setVisible(true);
+            }
+        });
+    }
     /**
      * @param args the command line arguments
      */
@@ -405,6 +529,7 @@ public class VistaMenu extends javax.swing.JFrame {
     private javax.swing.JDialog jDialog1;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -413,9 +538,18 @@ public class VistaMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JOptionPane jOptionPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;
