@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Inadex_gui.VistasEquipos;
+import Inadex_gui.VistaMenu;
 
 /**
  *
@@ -716,6 +717,8 @@ private void addJugadorListeners() {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+                  dispose();
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

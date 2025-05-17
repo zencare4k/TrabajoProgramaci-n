@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Inadex_gui.VistasEquipos;
+import Inadex_gui.VistaMenu;
 
 /**
  *
@@ -10,12 +11,47 @@ package Inadex_gui.VistasEquipos;
  */
 public class VistaWildCampo extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VistaWildCampo
-     */
-    public VistaWildCampo() {
-        initComponents();
+private Controladores.ControladoresEquipos.ControladorWilds controlador = new Controladores.ControladoresEquipos.ControladorWilds();
+
+public VistaWildCampo() {
+    initComponents();
+    setLabelNames();
+    addJugadorListeners();
+    setLocationRelativeTo(null); // Centra la ventana
+}
+
+private void setLabelNames() {
+    _171.setName("_171");
+    _172.setName("_172");
+    _173.setName("_173");
+    _174.setName("_174");
+    _175.setName("_175");
+    _176.setName("_176");
+    _177.setName("_177");
+    _178.setName("_178");
+    _179.setName("_179");
+    _181.setName("_181");
+    _182.setName("_182");
+    _183.setName("_183");
+    _184.setName("_184");
+    _185.setName("_185");
+    _186.setName("_186");
+}
+
+private void addJugadorListeners() {
+    javax.swing.JLabel[] jugadores = {
+        _171, _172, _173, _174, _175, _176, _177, _178, _179, _181, _182, _183, _184, _185, _186
+    };
+    for (javax.swing.JLabel label : jugadores) {
+        label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                controlador.mostrarDetallesJugador(label);
+            }
+        });
     }
+}
 
     /**
      * This method is called from within the constructor to initialize the form.

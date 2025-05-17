@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Inadex_gui.VistasEquipos;
+import Inadex_gui.VistaMenu;
+
 
 /**
  *

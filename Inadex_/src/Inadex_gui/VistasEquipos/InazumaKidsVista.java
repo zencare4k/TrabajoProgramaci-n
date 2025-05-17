@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Inadex_gui.VistasEquipos;
-
+import Inadex_gui.VistaMenu;
 /**
  *
  * @author zenca
@@ -113,6 +113,7 @@ private void addJugadorListeners() {
         _36 = new javax.swing.JLabel();
         _37 = new javax.swing.JLabel();
         _33 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         _38 = new javax.swing.JLabel();
         _41 = new javax.swing.JLabel();
         _42 = new javax.swing.JLabel();
@@ -749,6 +750,23 @@ private void addJugadorListeners() {
         });
         jPanel1.add(_33, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 760, -1, -1));
 
+        jButton2.setBackground(new java.awt.Color(255, 102, 0));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Volver");
+        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 100, 40));
+
         _38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/inazuma_kfc/29_Claus.png"))); // NOI18N
         _38.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -850,6 +868,15 @@ private void addJugadorListeners() {
         // TODO add your handling code here:
     }//GEN-LAST:event__40MouseClicked
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+          dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -902,6 +929,7 @@ private void addJugadorListeners() {
     private javax.swing.JLabel _46;
     private javax.swing.JLabel _47;
     private javax.swing.JLabel _48;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel16;

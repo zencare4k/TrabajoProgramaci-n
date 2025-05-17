@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Inadex_gui.VistasEquipos;
+import Inadex_gui.VistaMenu;
 
 /**
  *
@@ -105,6 +106,7 @@ private void addJugadorListeners() {
         _108 = new javax.swing.JLabel();
         _109 = new javax.swing.JLabel();
         _103 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         _101 = new javax.swing.JLabel();
         _97 = new javax.swing.JLabel();
         jPanel34 = new javax.swing.JPanel();
@@ -681,6 +683,18 @@ private void addJugadorListeners() {
         });
         jPanel1.add(_103, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
 
+        jButton1.setBackground(new java.awt.Color(255, 102, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Volver");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 100, 40));
+
         _101.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/InazumaEleven/29_Suffolk.png"))); // NOI18N
         _101.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -806,6 +820,12 @@ private void addJugadorListeners() {
         // TODO add your handling code here:
     }//GEN-LAST:event__105MouseClicked
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+                  dispose();
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -857,6 +877,7 @@ private void addJugadorListeners() {
     private javax.swing.JLabel _97;
     private javax.swing.JLabel _98;
     private javax.swing.JLabel _99;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel16;
