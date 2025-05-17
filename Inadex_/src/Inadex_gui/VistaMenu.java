@@ -632,6 +632,8 @@ public class VistaMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_UmbrellaMouseClicked
 private void BackToLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToLoginActionPerformed
     VistaLogin login = new VistaLogin();
+         VistaMusica musica = new VistaMusica();
+                musica.playSound("src/resources_audio/OK.wav");
     login.setLocationRelativeTo(null); // Centra la ventana de login
     login.setVisible(true);
     this.dispose(); // Cierra la ventana actual

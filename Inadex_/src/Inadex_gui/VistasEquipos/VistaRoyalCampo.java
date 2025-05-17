@@ -4,7 +4,7 @@
  */
 package Inadex_gui.VistasEquipos;
 import Inadex_gui.VistaMenu;
-
+import Inadex_gui.VistaMusica;
 /**
  *
  * @author zenca

@@ -4,7 +4,7 @@
  */
 package Inadex_gui.VistasEquipos;
 import Inadex_gui.VistaMenu;
-
+import Inadex_gui.VistaMusica;
 /**
  *
  * @author zenca
@@ -718,6 +718,8 @@ private void addJugadorListeners() {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+               VistaMusica musica = new VistaMusica();
+                musica.playSound("src/resources_audio/OK.wav");
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 

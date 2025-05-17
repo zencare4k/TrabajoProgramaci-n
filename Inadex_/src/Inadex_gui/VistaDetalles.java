@@ -4,7 +4,7 @@
  */
 package Inadex_gui;
 import Fuentes.Press_Start_2P.Fuentes;
-
+import Inadex_gui.VistaMusica;
 
 /**
  *
@@ -203,6 +203,8 @@ public class VistaDetalles extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 dispose();        // TODO add your handling code here:
+        VistaMusica musica = new VistaMusica();
+                musica.playSound("src/resources_audio/OK.wav");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

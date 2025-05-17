@@ -440,7 +440,7 @@ public void EscribirFichero() throws SQLException, IOException {
 
     private void AutoComplete_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AutoComplete_ButtonActionPerformed
         // TODO add your handling code here
-        
+                musica.playSound("src/resources_audio/OK.wav");
         /**Explicacion del codigo: este metodo se activa la presionar el boton de autocompletar, fuciona tal que al pulsar un bo
         ton se autocompletan los campos de texto con el ultimo usuario que registraste
         se realiza con un ifelse sencillo que usa la funcion de xscanner para scanear los datos del txt 
