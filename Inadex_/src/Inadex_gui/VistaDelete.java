@@ -147,12 +147,12 @@ private void cargarUsuarios() {
 }
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
         // TODO add your handling code here:
-    String usuarioSeleccionado = (String) jComboBox1.getSelectedItem();
+   String usuarioSeleccionado = (String) jComboBox1.getSelectedItem();
     if (usuarioSeleccionado != null) {
         boolean borrado = servicios.borrarUsuario(usuarioSeleccionado);
         if (borrado) {
             javax.swing.JOptionPane.showMessageDialog(this, "Usuario borrado correctamente.");
-            cargarUsuarios(); // Actualiza la lista
+            jComboBox1.removeItem(usuarioSeleccionado); // Elimina el ítem del comboBox
         } else {
             javax.swing.JOptionPane.showMessageDialog(this, "No se pudo borrar el usuario.");
         }
