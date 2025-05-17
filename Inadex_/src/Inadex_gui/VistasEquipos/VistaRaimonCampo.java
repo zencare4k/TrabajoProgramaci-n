@@ -95,6 +95,7 @@ private void addJugadorListeners() {
         jPanel32 = new javax.swing.JPanel();
         jLabel48 = new javax.swing.JLabel();
         _94 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         _91 = new javax.swing.JLabel();
         jPanel22 = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
@@ -503,6 +504,18 @@ private void addJugadorListeners() {
         _94.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/raimon/Willy.png"))); // NOI18N
         jPanel1.add(_94, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 280, -1, -1));
 
+        jButton1.setBackground(new java.awt.Color(255, 102, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Volver");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 100, 40));
+
         _91.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/raimon/Max.png"))); // NOI18N
         jPanel1.add(_91, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 390, -1, -1));
 
@@ -555,6 +568,10 @@ private void addJugadorListeners() {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -603,6 +620,7 @@ private void addJugadorListeners() {
     private javax.swing.JLabel _92;
     private javax.swing.JLabel _93;
     private javax.swing.JLabel _94;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;

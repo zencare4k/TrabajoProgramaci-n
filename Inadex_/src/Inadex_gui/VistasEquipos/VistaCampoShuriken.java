@@ -103,6 +103,7 @@ private void addJugadorListeners() {
         jLabel5 = new javax.swing.JLabel();
         _128 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         _131 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         _129 = new javax.swing.JLabel();
@@ -451,10 +452,10 @@ private void addJugadorListeners() {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        jPanel1.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, 30));
+        jPanel1.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, -1, 30));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Shuriken/29_Cloak.png"))); // NOI18N
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, -1, -1));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, -1, -1));
 
         _132.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Shuriken/29_Thunder.png"))); // NOI18N
         jPanel1.add(_132, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 510, -1, -1));
@@ -556,7 +557,7 @@ private void addJugadorListeners() {
         jPanel1.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 640, -1, 30));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Shuriken/29_Samurai.png"))); // NOI18N
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, -1, 130));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, 130));
 
         jPanel13.setBackground(new java.awt.Color(224, 101, 101));
         jPanel13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -623,7 +624,7 @@ private void addJugadorListeners() {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        jPanel1.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 160, -1, 30));
+        jPanel1.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, -1, 30));
 
         jPanel16.setBackground(new java.awt.Color(224, 101, 101));
         jPanel16.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -666,6 +667,18 @@ private void addJugadorListeners() {
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Shuriken/29_Code.png"))); // NOI18N
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, -1, -1));
 
+        jButton1.setBackground(new java.awt.Color(255, 102, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Volver");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 100, 40));
+
         _131.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Shuriken/29_Hillfort.png"))); // NOI18N
         jPanel1.add(_131, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 510, -1, 130));
 
@@ -694,6 +707,10 @@ private void addJugadorListeners() {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -741,6 +758,7 @@ private void addJugadorListeners() {
     private javax.swing.JLabel _134;
     private javax.swing.JLabel _135;
     private javax.swing.JLabel _140;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

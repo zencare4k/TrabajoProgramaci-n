@@ -5,21 +5,23 @@
 package Inadex_gui;
 
 import Controladores.ControladoresEquipos.ControladorRaimon;
-import Inadex_gui.VistasEquipos.ZeusVistaCampo;
+import Inadex_gui.VistaLogin;
+import Inadex_gui.VistasEquipos.VistaRaimonCampo;
 import Inadex_gui.VistasEquipos.InazumaKidsVista;
 import Inadex_gui.VistasEquipos.RaimonOGVista;
 import Inadex_gui.VistasEquipos.VistaCampoBrain;
+import Inadex_gui.VistasEquipos.VistaCampoFarm;
+import Inadex_gui.VistasEquipos.VistaCampoShuriken;
 import Inadex_gui.VistasEquipos.VistaCampoStreetSallys;
 import Inadex_gui.VistasEquipos.VistaCampoUmbrella;
 import Inadex_gui.VistasEquipos.VistaOccultCampo;
 import Inadex_gui.VistasEquipos.VistaOtakuCampo;
 import Inadex_gui.VistasEquipos.VistaRoyalCampo;
 import Inadex_gui.VistasEquipos.VistaWildCampo;
-import Inadex_gui.VistasEquipos.VistaRaimonCampo;
+import Inadex_gui.VistasEquipos.ZeusVistaCampo;
 import Modelos.Jugador;
 import Servicios.Servicios;
 import java.util.ArrayList;
-import Inadex_gui.VistaLogin;
 import javax.swing.JButton;
 import javax.swing.JTable;
 /**
@@ -32,41 +34,27 @@ public class VistaMenu extends javax.swing.JFrame {
 
     VistaMusica controladorMusica = new VistaMusica();
     private ArrayList<Jugador> jugadores;
-   public VistaRaimonCampo vistaRaimonCampo   = new VistaRaimonCampo();   
-   public ZeusVistaCampo vistazeuscampo = new ZeusVistaCampo();
-   public RaimonOGVista VistaRaimonOGCampo = new RaimonOGVista();
-   public VistaCampoBrain VistaCampoBrain = new VistaCampoBrain();
-   public VistaCampoStreetSallys VistaCampoStreetSallys = new VistaCampoStreetSallys();
-   public VistaCampoUmbrella VistaCampoUmbrella = new VistaCampoUmbrella();
-   public VistaOccultCampo VistaOccultCampo = new VistaOccultCampo();
-   public VistaOtakuCampo VistaOtakuCampo = new VistaOtakuCampo();
-   public VistaRoyalCampo VistaRoyalCampo = new VistaRoyalCampo();
-   public InazumaKidsVista InazumaKidsVista = new InazumaKidsVista();
-   public VistaWildCampo VistaWildCampo = new VistaWildCampo();
-
-    /**
+     /**
      * Creates new form Menu
      */
     
     public VistaMenu() {
-
         initComponents();
-        setLocationRelativeTo(null); // <-- Esto centra la ventana
-Raimon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-    Raimon.addMouseListener(new java.awt.event.MouseAdapter() {
-        @Override
-        public void mouseClicked(java.awt.event.MouseEvent evt) {
-            VistaRaimonCampo vista = new VistaRaimonCampo();
-            vista.setLocationRelativeTo(null); // Centra la ventana
-            vista.setVisible(true);
-        }
-    });
+        setSize(650, 780);
+            Raimon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            Royal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            Brain.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            Zeus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            Wilds.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            IKFC.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            Otaku.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));            
+            Sallys.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            Umbrella.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+             
+
+
     }
-private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {
-    Inadex_gui.VistasEquipos.VistaRaimonCampo vista = new Inadex_gui.VistasEquipos.VistaRaimonCampo();
-    vista.setLocationRelativeTo(null); // Centra la ventana
-    vista.setVisible(true);
-}
+ 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -112,6 +100,15 @@ private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {
         Wilds = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
+        Farm = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        Shuriken = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        Occult = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
         RaimonOG = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
@@ -156,6 +153,11 @@ private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {
 
         Raimon.setBackground(new java.awt.Color(0, 0, 204));
         Raimon.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+        Raimon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RaimonMouseClicked(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Raimon.png"))); // NOI18N
 
@@ -190,6 +192,11 @@ private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {
 
         Umbrella.setBackground(new java.awt.Color(0, 0, 204));
         Umbrella.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+        Umbrella.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                UmbrellaMouseClicked(evt);
+            }
+        });
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Umbrella (2).png"))); // NOI18N
 
@@ -223,6 +230,11 @@ private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {
 
         Brain.setBackground(new java.awt.Color(0, 0, 204));
         Brain.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+        Brain.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BrainMouseClicked(evt);
+            }
+        });
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Brainwashing.png"))); // NOI18N
 
@@ -260,6 +272,11 @@ private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {
 
         Sallys.setBackground(new java.awt.Color(0, 0, 204));
         Sallys.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+        Sallys.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SallysMouseClicked(evt);
+            }
+        });
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Street_Sally.png"))); // NOI18N
 
@@ -294,6 +311,11 @@ private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {
 
         Royal.setBackground(new java.awt.Color(0, 0, 204));
         Royal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+        Royal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RoyalMouseClicked(evt);
+            }
+        });
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Royal_Academy.png"))); // NOI18N
 
@@ -326,6 +348,11 @@ private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {
 
         Otaku.setBackground(new java.awt.Color(0, 0, 204));
         Otaku.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+        Otaku.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OtakuMouseClicked(evt);
+            }
+        });
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Otaku.png"))); // NOI18N
 
@@ -360,6 +387,11 @@ private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {
 
         IKFC.setBackground(new java.awt.Color(0, 0, 204));
         IKFC.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+        IKFC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IKFCMouseClicked(evt);
+            }
+        });
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Inazuma_KFC.png"))); // NOI18N
 
@@ -392,6 +424,11 @@ private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {
 
         Wilds.setBackground(new java.awt.Color(0, 0, 204));
         Wilds.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+        Wilds.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                WildsMouseClicked(evt);
+            }
+        });
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Wild.png"))); // NOI18N
 
@@ -422,8 +459,70 @@ private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {
 
         jPanel1.add(Wilds, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 1090, 160, 190));
 
+        Farm.setBackground(new java.awt.Color(0, 0, 204));
+        Farm.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+        Farm.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FarmMouseClicked(evt);
+            }
+        });
+        Farm.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Escudo_-_Farm_29.png"))); // NOI18N
+        Farm.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -20, 180, -1));
+
+        jLabel28.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel28.setText("Instituto Farm");
+        Farm.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
+
+        jPanel1.add(Farm, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 1870, 160, 200));
+
+        Shuriken.setBackground(new java.awt.Color(0, 0, 204));
+        Shuriken.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+        Shuriken.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ShurikenMouseClicked(evt);
+            }
+        });
+        Shuriken.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Escudo_-_Shuriken_29.png"))); // NOI18N
+        Shuriken.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -10, 180, -1));
+
+        jLabel26.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setText("Instituto Shuriken");
+        Shuriken.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, -1, -1));
+
+        jPanel1.add(Shuriken, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 1600, 160, 200));
+
+        Occult.setBackground(new java.awt.Color(0, 0, 204));
+        Occult.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+        Occult.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OccultMouseClicked(evt);
+            }
+        });
+        Occult.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Occult.png"))); // NOI18N
+        Occult.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 130, -1));
+
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel24.setText("Instituto Occult");
+        Occult.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
+
+        jPanel1.add(Occult, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 1600, 160, 200));
+
         RaimonOG.setBackground(new java.awt.Color(0, 0, 204));
         RaimonOG.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+        RaimonOG.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RaimonOGMouseClicked(evt);
+            }
+        });
         RaimonOG.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Raimon_OB_emblem_29.png"))); // NOI18N
@@ -438,6 +537,11 @@ private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {
 
         Zeus.setBackground(new java.awt.Color(0, 0, 204));
         Zeus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
+        Zeus.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ZeusMouseClicked(evt);
+            }
+        });
         Zeus.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         asss.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Zeus_emblem_29 (2).png"))); // NOI18N
@@ -460,53 +564,157 @@ private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1608, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 2159, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BackToLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToLoginActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
          VistaLogin login = new VistaLogin();
+    login.setLocationRelativeTo(null); // Centra la ventana de login
     login.setVisible(true);
-    login.setLocationRelativeTo(null); // Centra la ventana
+    this.dispose(); // Cierra la ventan
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
+        
+    }//GEN-LAST:event_jPanel2MouseClicked
+
+    private void RoyalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RoyalMouseClicked
+        // TODO add your handling code here:
+           // TODO add your handling code here:
+        // TODO add your handling code here:
+            Royal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        VistaRoyalCampo vista = new VistaRoyalCampo();
+    vista.setLocationRelativeTo(null); // Centra la ventana
+    vista.setVisible(true);
+    }//GEN-LAST:event_RoyalMouseClicked
+
+    private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RaimonMouseClicked
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+            Raimon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+         VistaRaimonCampo vista = new VistaRaimonCampo();
+    vista.setLocationRelativeTo(null); // Centra la ventana
+    vista.setVisible(true);
+    }//GEN-LAST:event_RaimonMouseClicked
+
+    private void BrainMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BrainMouseClicked
+        // TODO add your handling code here:
+         Brain.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        VistaCampoBrain vista = new VistaCampoBrain();
+    vista.setLocationRelativeTo(null); // Centra la ventana
+    vista.setVisible(true);
+    }//GEN-LAST:event_BrainMouseClicked
+
+    private void SallysMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SallysMouseClicked
+        // TODO add your handling code here:
+         // TODO add your handling code here:
+         Sallys.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        VistaCampoStreetSallys vista = new VistaCampoStreetSallys();
+    vista.setLocationRelativeTo(null); // Centra la ventana
+    vista.setVisible(true);
+    }//GEN-LAST:event_SallysMouseClicked
+
+    private void UmbrellaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UmbrellaMouseClicked
+        // TODO add your handling code here:
+         Umbrella.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        VistaCampoUmbrella vista = new VistaCampoUmbrella();
+    vista.setLocationRelativeTo(null); // Centra la ventana
+    vista.setVisible(true);
+    }//GEN-LAST:event_UmbrellaMouseClicked
+private void BackToLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToLoginActionPerformed
+    VistaLogin login = new VistaLogin();
+    login.setLocationRelativeTo(null); // Centra la ventana de login
+    login.setVisible(true);
     this.dispose(); // Cierra la ventana actual
-    }//GEN-LAST:event_BackToLoginActionPerformed
+}//GEN-LAST:event_BackToLoginActionPerformed
+
+    private void OtakuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OtakuMouseClicked
+        // TODO add your handling code here:
+         Otaku.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        VistaOtakuCampo vista = new VistaOtakuCampo();
+    vista.setLocationRelativeTo(null); // Centra la ventana
+    vista.setVisible(true);
+    }//GEN-LAST:event_OtakuMouseClicked
+
+    private void IKFCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IKFCMouseClicked
+        // TODO add your handling code here:
+         IKFC.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        InazumaKidsVista vista = new InazumaKidsVista();
+    vista.setLocationRelativeTo(null); // Centra la ventana
+    vista.setVisible(true);
+    }//GEN-LAST:event_IKFCMouseClicked
+
+    private void WildsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_WildsMouseClicked
+        // TODO add your handling code here:
+         Wilds.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        VistaWildCampo vista = new VistaWildCampo();
+    vista.setLocationRelativeTo(null); // Centra la ventana
+    vista.setVisible(true);
+    }//GEN-LAST:event_WildsMouseClicked
+
+    private void RaimonOGMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RaimonOGMouseClicked
+        // TODO add your handling code here:
+         RaimonOG.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        RaimonOGVista vista = new RaimonOGVista();
+    vista.setLocationRelativeTo(null); // Centra la ventana
+    vista.setVisible(true);
+    }//GEN-LAST:event_RaimonOGMouseClicked
+
+    private void ZeusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ZeusMouseClicked
+        // TODO add your handling code here:
+         Zeus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        ZeusVistaCampo vista = new ZeusVistaCampo();
+    vista.setLocationRelativeTo(null); // Centra la ventana
+    vista.setVisible(true);
+    }//GEN-LAST:event_ZeusMouseClicked
+
+    private void OccultMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OccultMouseClicked
+        // TODO add your handling code here:
+        Occult.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        VistaOccultCampo vista = new VistaOccultCampo();
+    vista.setLocationRelativeTo(null); // Centra la ventana
+    vista.setVisible(true);
+    }//GEN-LAST:event_OccultMouseClicked
+
+    private void ShurikenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ShurikenMouseClicked
+        // TODO add your handling code here:
+          // TODO add your handling code here:
+        Shuriken.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        VistaCampoShuriken vista = new VistaCampoShuriken();
+    vista.setLocationRelativeTo(null); // Centra la ventana
+    vista.setVisible(true);
+    }//GEN-LAST:event_ShurikenMouseClicked
+
+    private void FarmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FarmMouseClicked
+        // TODO add your handling code here:
+          // TODO add your handling code here:
+          // TODO add your handling code here:
+        Farm.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        VistaCampoFarm vista = new VistaCampoFarm();
+    vista.setLocationRelativeTo(null); // Centra la ventana
+    vista.setVisible(true);
+    }//GEN-LAST:event_FarmMouseClicked
 
     
 
-       public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaCampoUmbrella.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaCampoUmbrella.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaCampoUmbrella.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaCampoUmbrella.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VistaMenu().setVisible(true);
-            }
-        });
-    }
+    
     /**
      * @param args the command line arguments
      */
@@ -515,12 +723,15 @@ private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BackToLogin;
     private javax.swing.JPanel Brain;
+    private javax.swing.JPanel Farm;
     private javax.swing.JPanel IKFC;
+    private javax.swing.JPanel Occult;
     private javax.swing.JPanel Otaku;
     private javax.swing.JPanel Raimon;
     private javax.swing.JPanel RaimonOG;
     private javax.swing.JPanel Royal;
     private javax.swing.JPanel Sallys;
+    private javax.swing.JPanel Shuriken;
     private javax.swing.JPanel Umbrella;
     private javax.swing.JPanel Wilds;
     private javax.swing.JPanel Zeus;
@@ -543,6 +754,12 @@ private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

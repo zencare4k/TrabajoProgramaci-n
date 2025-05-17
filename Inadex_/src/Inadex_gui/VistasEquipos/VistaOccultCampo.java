@@ -108,6 +108,7 @@ private void addJugadorListeners() {
         _53 = new javax.swing.JLabel();
         _52 = new javax.swing.JLabel();
         _49 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel30 = new javax.swing.JPanel();
         jLabel46 = new javax.swing.JLabel();
@@ -654,6 +655,18 @@ private void addJugadorListeners() {
         _49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/occult/Mask.png"))); // NOI18N
         jPanel1.add(_49, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 750, -1, -1));
 
+        jButton1.setBackground(new java.awt.Color(255, 102, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Volver");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 100, 40));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/campo (1).png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -702,6 +715,10 @@ private void addJugadorListeners() {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -754,6 +771,7 @@ private void addJugadorListeners() {
     private javax.swing.JLabel _61;
     private javax.swing.JLabel _62;
     private javax.swing.JLabel _64;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
