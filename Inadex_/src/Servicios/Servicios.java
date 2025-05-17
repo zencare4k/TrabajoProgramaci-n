@@ -109,7 +109,21 @@ public boolean registrarUsuario(String Usuario, String Contrasena, String Correo
     }
     
 }
-    
+    public boolean borrarUsuario(String usuario) {
+    String sql = "DELETE FROM usuarios WHERE Usuario = ?";
+    try {
+        Conectar();
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setString(1, usuario);
+        int filas = ps.executeUpdate();
+        ps.close();
+        CerrarConexion();
+        return filas > 0;
+    } catch (Exception e) {
+        e.printStackTrace();
+        return false;
+    }
+}
 public boolean loginUsuario(String Usuario, String Contrasena) {
     String sent = "SELECT * FROM usuarios WHERE Usuario = ? AND Contrasena = ?";
     if (Usuario.isEmpty() || Contrasena.isEmpty()) {

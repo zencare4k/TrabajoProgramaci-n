@@ -5,7 +5,7 @@
 package Inadex_gui;
 import Controladores.ControladorBorrar;
 import  Servicios.Servicios;
- 
+ import java.util.List;
 import java.lang.annotation.Annotation;
 import javax.swing.JComboBox;
 
@@ -16,6 +16,7 @@ import javax.swing.JComboBox;
 public class VistaDelete extends javax.swing.JFrame {
   public VistaDelete(){
     initComponents();
+     cargarUsuarios();
 }
     private JComboBox<String> comboBox;
     private Servicios servicios = new Servicios();
@@ -39,6 +40,7 @@ public class VistaDelete extends javax.swing.JFrame {
         Delete = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         returnLogin = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,7 +62,7 @@ public class VistaDelete extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Pulsa el botón para borrar a todos los usuarios");
+        jLabel2.setText("Pulsa el botón para borrar al usuario seleccionado:");
 
         returnLogin.setBackground(new java.awt.Color(255, 102, 0));
         returnLogin.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
@@ -70,6 +72,16 @@ public class VistaDelete extends javax.swing.JFrame {
         returnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 returnLoginActionPerformed(evt);
+            }
+        });
+
+        jComboBox1.setBackground(new java.awt.Color(255, 102, 0));
+        jComboBox1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
             }
         });
 
@@ -86,12 +98,15 @@ public class VistaDelete extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(returnLogin))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(86, 86, 86)
-                        .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(49, 49, 49)
+                        .addComponent(jLabel2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel2)))
-                .addContainerGap(60, Short.MAX_VALUE))
+                        .addGap(185, 185, 185)
+                        .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(122, 122, 122)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,11 +115,13 @@ public class VistaDelete extends javax.swing.JFrame {
                 .addComponent(returnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(39, 39, 39)
-                .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(Delete)
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -121,10 +138,27 @@ public class VistaDelete extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-
+private void cargarUsuarios() {
+    jComboBox1.removeAllItems();
+    java.util.List<String> usuarios = servicios.getUsuarios();
+    for (String usuario : usuarios) {
+        jComboBox1.addItem(usuario);
+    }
+}
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
         // TODO add your handling code here:
-   
+    String usuarioSeleccionado = (String) jComboBox1.getSelectedItem();
+    if (usuarioSeleccionado != null) {
+        boolean borrado = servicios.borrarUsuario(usuarioSeleccionado);
+        if (borrado) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Usuario borrado correctamente.");
+            cargarUsuarios(); // Actualiza la lista
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "No se pudo borrar el usuario.");
+        }
+    } else {
+        javax.swing.JOptionPane.showMessageDialog(this, "Selecciona un usuario.");
+    }
     }//GEN-LAST:event_DeleteActionPerformed
 
     private void returnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnLoginActionPerformed
@@ -139,12 +173,17 @@ public class VistaDelete extends javax.swing.JFrame {
 
     }//GEN-LAST:event_returnLoginActionPerformed
 
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Delete;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
