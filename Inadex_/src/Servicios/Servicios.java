@@ -282,13 +282,12 @@ public java.util.List<Tecnica> getTecnicasPorJugador(int idJugador) {
         e.printStackTrace();
     }
     return tecnicas;
-}
-
-public List<JugadorConPosicion> getJugadoresYPosicionesPorEquipo(int idEquipo) {
+}public List<JugadorConPosicion> getJugadoresYPosicionesPorEquipo(int idEquipo) {
     List<JugadorConPosicion> lista = new ArrayList<>();
     try {
         Conectar();
-        String sql = "SELECT j.*, ejp.posX, ejp.posY FROM jugador j " +
+        String sql = "SELECT j.*, ejp.posX, ejp.posY, ejp.nombreX, ejp.nombreY, ejp.Id_E " +
+                     "FROM jugador j " +
                      "JOIN equipo_jugador_posicion ejp ON j.Id_J = ejp.Id_J " +
                      "WHERE ejp.Id_E = ?";
         PreparedStatement ps = conexion.prepareStatement(sql);
@@ -312,7 +311,10 @@ public List<JugadorConPosicion> getJugadoresYPosicionesPorEquipo(int idEquipo) {
             );
             int posX = rs.getInt("posX");
             int posY = rs.getInt("posY");
-            lista.add(new JugadorConPosicion(jugador, posX, posY));
+            int nombreX = rs.getInt("nombreX");
+            int nombreY = rs.getInt("nombreY");
+            int id_E = rs.getInt("Id_E");
+            lista.add(new JugadorConPosicion(jugador, posX, posY, nombreX, nombreY, id_E));
         }
         rs.close();
         ps.close();
@@ -322,6 +324,43 @@ public List<JugadorConPosicion> getJugadoresYPosicionesPorEquipo(int idEquipo) {
     }
     return lista;
 }
+public void actualizarPosicionJugadorCompleta(int idEquipo, int idJugador, int posX, int posY, int nombreX, int nombreY) throws SQLException {
+    try {
+        Conectar();
+        String sql = "UPDATE equipo_jugador_posicion SET posX = ?, posY = ?, nombreX = ?, nombreY = ? WHERE Id_E = ? AND Id_J = ?";
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setInt(1, posX);
+        ps.setInt(2, posY);
+        ps.setInt(3, nombreX);
+        ps.setInt(4, nombreY);
+        ps.setInt(5, idEquipo);
+        ps.setInt(6, idJugador);
+        ps.executeUpdate();
+        ps.close();
+        CerrarConexion();
+    } catch (SQLException e) {
+        e.printStackTrace();
+        throw e;
+    }
+}
+public void actualizarPosicionJugador(int idEquipo, int idJugador, int posX, int posY) throws SQLException {
+    try {
+        Conectar();
+        String sql = "UPDATE equipo_jugador_posicion SET posX = ?, posY = ? WHERE Id_E = ? AND Id_J = ?";
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setInt(1, posX);
+        ps.setInt(2, posY);
+        ps.setInt(3, idEquipo);
+        ps.setInt(4, idJugador);
+        ps.executeUpdate();
+        ps.close();
+        CerrarConexion();
+    } catch (SQLException e) {
+        e.printStackTrace();
+        throw e;
+    }
+}
+ 
 public List<String> getNombresEquipos() {
     List<String> equipos = new ArrayList<>();
     try {

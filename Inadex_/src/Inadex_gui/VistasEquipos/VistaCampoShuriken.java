@@ -10,6 +10,8 @@ import Inadex_gui.VistaMusica;
  * @author zenca
  */
 public class VistaCampoShuriken extends javax.swing.JFrame {
+private javax.swing.JLabel _136;
+private javax.swing.JLabel _137;
 
     private Controladores.ControladoresEquipos.ControladorShuriken controlador = new Controladores.ControladoresEquipos.ControladorShuriken();
 
@@ -31,11 +33,13 @@ private void setLabelNames() {
     _134.setName("_134");
     _135.setName("_135");
     _140.setName("_140");
+    _136.setName("_136");
+_137.setName("_137");
 }
 
 private void addJugadorListeners() {
     javax.swing.JLabel[] jugadores = {
-        _126, _127, _128, _129, _130, _131, _132, _134, _135, _140
+    _126, _127, _128, _129, _130, _131, _132, _134, _135, _140// En variables:
     };
     for (javax.swing.JLabel label : jugadores) {
         label.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -687,7 +691,7 @@ private void addJugadorListeners() {
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, -1, 130));
 
         _129.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Shuriken/29_Crackshot.png"))); // NOI18N
-        jPanel1.add(_129, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 640, -1, 130));
+        jPanel1.add(_129, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 680, 100, 80));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/campo (1).png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
