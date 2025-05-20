@@ -6,6 +6,7 @@ package Inadex_gui;
 
 import Controladores.ControladoresEquipos.ControladorRaimon;
 import Inadex_gui.VistaLogin;
+import Controladores.ControladoresEquipos.ControladorEquipos;
 import Inadex_gui.VistasEquipos.VistaRaimonCampo;
 import Inadex_gui.VistasEquipos.InazumaKidsVista;
 import Inadex_gui.VistasEquipos.RaimonOGVista;
@@ -22,6 +23,7 @@ import Inadex_gui.VistasEquipos.ZeusVistaCampo;
 import Modelos.Jugador;
 import Servicios.Servicios;
 import java.util.ArrayList;
+import Inadex_gui.VistasEquipos.VistaCampoGeneral;
 import javax.swing.JButton;
 import javax.swing.JTable;
 /**
@@ -588,8 +590,11 @@ public class VistaMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
             Royal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        VistaRoyalCampo vista = new VistaRoyalCampo();
+       VistaCampoGeneral vista = new VistaCampoGeneral();
+    Servicios servicios = new Servicios();
+    ControladorEquipos controlador = new ControladorEquipos(vista, servicios);
     vista.setLocationRelativeTo(null); // Centra la ventana
+    
     vista.setVisible(true);
     }//GEN-LAST:event_RoyalMouseClicked
 

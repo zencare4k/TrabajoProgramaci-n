@@ -12,6 +12,16 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Controladores/ControladoresEquipos/ControladorEquipos.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Controlador.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/InazumaKidsVista.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Servicios/Servicios.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/VistaCampoShuriken.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/RaimonOGVista.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Controladores/ControladorUpdate.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Controladores/ControladoresEquipos/ControladorFarm.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaDelete.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/VistaOccultCampo.java</file>
             <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaLogin.java</file>
             <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/VistaRaimonCampo.java</file>
             <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaDetalles.java</file>
@@ -22,14 +32,11 @@
             <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/VistaCampoUmbrella.java</file>
             <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/VistaWildCampo.java</file>
             <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaMenu.java</file>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/InazumaKidsVista.java</file>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/VistaCampoShuriken.java</file>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/RaimonOGVista.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/VistaCampoGeneral.java</file>
             <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/VistaRoyalCampo.java</file>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaDelete.java</file>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/VistaOccultCampo.java</file>
             <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaMusica.java</file>
             <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/VistaCampoBrain.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Modelos/JugadorConPosicion.java</file>
         </group>
     </open-files>
 </project-private>

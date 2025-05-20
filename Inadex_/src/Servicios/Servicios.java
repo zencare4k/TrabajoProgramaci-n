@@ -18,7 +18,7 @@ import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-
+import Modelos.JugadorConPosicion;
 /**
  *
  * @author Carlos
@@ -283,4 +283,83 @@ public java.util.List<Tecnica> getTecnicasPorJugador(int idJugador) {
     }
     return tecnicas;
 }
+
+public List<JugadorConPosicion> getJugadoresYPosicionesPorEquipo(int idEquipo) {
+    List<JugadorConPosicion> lista = new ArrayList<>();
+    try {
+        Conectar();
+        String sql = "SELECT j.*, ejp.posX, ejp.posY FROM jugador j " +
+                     "JOIN equipo_jugador_posicion ejp ON j.Id_J = ejp.Id_J " +
+                     "WHERE ejp.Id_E = ?";
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setInt(1, idEquipo);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) {
+            Jugador jugador = new Jugador(
+                rs.getInt("Id_J"),
+                rs.getString("Nombre_J"),
+                rs.getInt("PT"),
+                rs.getInt("PE"),
+                rs.getInt("Tiro"),
+                rs.getInt("Aguante"),
+                rs.getInt("Fisico"),
+                rs.getInt("Control"),
+                rs.getInt("Defensa"),
+                rs.getInt("Rapidez"),
+                rs.getInt("Valor"),
+                rs.getString("Elemento"),
+                rs.getString("Posicion")
+            );
+            int posX = rs.getInt("posX");
+            int posY = rs.getInt("posY");
+            lista.add(new JugadorConPosicion(jugador, posX, posY));
+        }
+        rs.close();
+        ps.close();
+        CerrarConexion();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    return lista;
 }
+public List<String> getNombresEquipos() {
+    List<String> equipos = new ArrayList<>();
+    try {
+        Conectar();
+        String sql = "SELECT Nombre_E FROM equipo";
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) {
+            equipos.add(rs.getString("Nombre_E"));
+        }
+        rs.close();
+        ps.close();
+        CerrarConexion();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    System.out.println("Equipos encontrados: " + equipos); // <-- Añade esto
+    return equipos;
+}
+
+public int getIdEquipoPorNombre(String nombre) {
+    int idEquipo = -1;
+    try {
+        Conectar();
+        String sql = "SELECT Id_E FROM equipo WHERE Nombre_E = ?";
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setString(1, nombre);
+        ResultSet rs = ps.executeQuery();
+        if (rs.next()) {
+            idEquipo = rs.getInt("Id_E");
+        }
+        rs.close();
+        ps.close();
+        CerrarConexion();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    return idEquipo;
+}
+}
+

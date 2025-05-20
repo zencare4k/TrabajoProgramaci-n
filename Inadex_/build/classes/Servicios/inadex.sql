@@ -1,1 +1,0 @@
-SELECT Id_E FROM inadex.equipo
