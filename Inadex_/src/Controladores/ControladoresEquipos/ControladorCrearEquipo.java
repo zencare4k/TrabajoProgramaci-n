@@ -14,24 +14,40 @@ public class ControladorCrearEquipo {
     }
 
     public void crearEquipo() {
-       String nombre = vista.getNombreEquipo().getText().trim();
-String id = vista.getIDEquipo().getText().trim();
-        // Si tienes JComboBox para elemento y tipo, descomenta y usa estas líneas:
-        // String elemento = (String) vista.getElementoComboBox().getSelectedItem();
-        // String tipo = (String) vista.getTipoComboBox().getSelectedItem();
+    String nombre = vista.getNombreEquipo().getText().trim();
+    String id = vista.getIDEquipo().getText().trim();
 
-        // Validación básica
-        if (nombre.isEmpty() || id.isEmpty()) {
-            JOptionPane.showMessageDialog(vista, "No puede haber campos vacíos.");
-            return;
-        }
-
-        // Si tienes más campos, agrégalos aquí y en el método insertarEquipo
-      boolean exito = servicios.insertarEquipo(Integer.parseInt(id), nombre );
-        if (exito) {
-            JOptionPane.showMessageDialog(vista, "Equipo creado correctamente.");
-        } else {
-            JOptionPane.showMessageDialog(vista, "Error al crear el equipo.");
-        }
+    if (nombre.isEmpty() || id.isEmpty()) {
+        JOptionPane.showMessageDialog(vista, "No puede haber campos vacíos.");
+        return;
     }
+
+    boolean exito = servicios.insertarEquipo(Integer.parseInt(id), nombre);
+    if (exito) {
+        // Crear carpeta dinámica para el equipo
+        String carpeta = getCarpetaEquipo(nombre);
+        java.io.File dir = new java.io.File("src/Img/" + carpeta);
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
+        JOptionPane.showMessageDialog(vista, "Equipo creado correctamente y carpeta creada: " + carpeta);
+    } else {
+        JOptionPane.showMessageDialog(vista, "Error al crear el equipo.");
+    }
+}
+
+// Método para obtener el nombre de la carpeta de forma dinámica
+private String getCarpetaEquipo(String nombreEquipo) {
+    // Normaliza el nombre: minúsculas, reemplaza espacios y caracteres especiales
+    String normalizado = nombreEquipo.trim().toLowerCase()
+        .replace(" ", "_")
+        .replace("-", "_")
+        .replace("á", "a")
+        .replace("é", "e")
+        .replace("í", "i")
+        .replace("ó", "o")
+        .replace("ú", "u")
+        .replace("ñ", "n");
+    return normalizado;
+}
 }
