@@ -4,26 +4,16 @@
  */
 package Inadex_gui;
 
-import Controladores.ControladoresEquipos.ControladorRaimon;
-import Inadex_gui.VistaLogin;
+import Controladores.ControladoresEquipos.ControladorCrearJugador;
+ import Inadex_gui.VistaLogin;
 import Controladores.ControladoresEquipos.ControladorEquipos;
-import Inadex_gui.VistasEquipos.VistaRaimonCampo;
-import Inadex_gui.VistasEquipos.InazumaKidsVista;
-import Inadex_gui.VistasEquipos.RaimonOGVista;
-import Inadex_gui.VistasEquipos.VistaCampoBrain;
-import Inadex_gui.VistasEquipos.VistaCampoFarm;
-import Inadex_gui.VistasEquipos.VistaCampoShuriken;
-import Inadex_gui.VistasEquipos.VistaCampoStreetSallys;
-import Inadex_gui.VistasEquipos.VistaCampoUmbrella;
-import Inadex_gui.VistasEquipos.VistaOccultCampo;
-import Inadex_gui.VistasEquipos.VistaOtakuCampo;
-import Inadex_gui.VistasEquipos.VistaRoyalCampo;
-import Inadex_gui.VistasEquipos.VistaWildCampo;
-import Inadex_gui.VistasEquipos.ZeusVistaCampo;
+ 
+import Inadex_gui.VistasEquipos.VistaCampoGeneral;
 import Modelos.Jugador;
 import Servicios.Servicios;
 import java.util.ArrayList;
 import Inadex_gui.VistasEquipos.VistaCampoGeneral;
+import Inadex_gui.VistasEquipos.VistaCrearJugador;
 import javax.swing.JButton;
 import javax.swing.JTable;
 /**
@@ -33,7 +23,7 @@ import javax.swing.JTable;
 public class VistaMenu extends javax.swing.JFrame {
      private Servicios servicios;
     private VistaMenu vistam;
-
+    private VistaCampoGeneral Royal = new VistaCampoGeneral();
     VistaMusica controladorMusica = new VistaMusica();
     private ArrayList<Jugador> jugadores;
      /**
@@ -43,15 +33,9 @@ public class VistaMenu extends javax.swing.JFrame {
     public VistaMenu() {
         initComponents();
         setSize(650, 780);
-            Raimon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            
             Royal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-            Brain.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-            Zeus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-            Wilds.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-            IKFC.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-            Otaku.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));            
-            Sallys.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-            Umbrella.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+           
              
 
 
@@ -77,46 +61,9 @@ public class VistaMenu extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         BackToLogin = new javax.swing.JButton();
-        Raimon = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        Umbrella = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        Brain = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        Sallys = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        Royal = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        Otaku = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        IKFC = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        Wilds = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        Farm = new javax.swing.JPanel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        Shuriken = new javax.swing.JPanel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        Occult = new javax.swing.JPanel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        RaimonOG = new javax.swing.JPanel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        Zeus = new javax.swing.JPanel();
-        asss = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -153,408 +100,36 @@ public class VistaMenu extends javax.swing.JFrame {
         });
         jPanel1.add(BackToLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, 40));
 
-        Raimon.setBackground(new java.awt.Color(0, 0, 204));
-        Raimon.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
-        Raimon.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                RaimonMouseClicked(evt);
+        jButton1.setBackground(new java.awt.Color(255, 102, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Ver Equipos/Editar posiciones ");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 470, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Raimon.png"))); // NOI18N
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Instituto Raimon");
-
-        javax.swing.GroupLayout RaimonLayout = new javax.swing.GroupLayout(Raimon);
-        Raimon.setLayout(RaimonLayout);
-        RaimonLayout.setHorizontalGroup(
-            RaimonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RaimonLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RaimonLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addGap(31, 31, 31))
-        );
-        RaimonLayout.setVerticalGroup(
-            RaimonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RaimonLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addContainerGap())
-        );
-
-        jPanel1.add(Raimon, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 160, 190));
-
-        Umbrella.setBackground(new java.awt.Color(0, 0, 204));
-        Umbrella.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
-        Umbrella.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                UmbrellaMouseClicked(evt);
+        jButton2.setBackground(new java.awt.Color(255, 102, 0));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Crear Jugador");
+        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 470, 40));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Umbrella (2).png"))); // NOI18N
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Instituto Umbrella");
-
-        javax.swing.GroupLayout UmbrellaLayout = new javax.swing.GroupLayout(Umbrella);
-        Umbrella.setLayout(UmbrellaLayout);
-        UmbrellaLayout.setHorizontalGroup(
-            UmbrellaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(UmbrellaLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel11)
-                .addContainerGap(13, Short.MAX_VALUE))
-            .addGroup(UmbrellaLayout.createSequentialGroup()
-                .addComponent(jLabel8)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        UmbrellaLayout.setVerticalGroup(
-            UmbrellaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(UmbrellaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(jLabel8)
-                .addContainerGap())
-        );
-
-        jPanel1.add(Umbrella, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 830, 160, -1));
-
-        Brain.setBackground(new java.awt.Color(0, 0, 204));
-        Brain.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
-        Brain.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BrainMouseClicked(evt);
-            }
-        });
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Brainwashing.png"))); // NOI18N
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Instituto Brain");
-
-        javax.swing.GroupLayout BrainLayout = new javax.swing.GroupLayout(Brain);
-        Brain.setLayout(BrainLayout);
-        BrainLayout.setHorizontalGroup(
-            BrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BrainLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(BrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel12)
-                    .addComponent(jLabel6))
-                .addContainerGap(13, Short.MAX_VALUE))
-        );
-        BrainLayout.setVerticalGroup(
-            BrainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BrainLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel6)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel1.add(Brain, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 600, 160, 180));
-
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Selecciona un equipo para ver sus Jugadores:");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
-
-        Sallys.setBackground(new java.awt.Color(0, 0, 204));
-        Sallys.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
-        Sallys.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                SallysMouseClicked(evt);
-            }
-        });
-
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Street_Sally.png"))); // NOI18N
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Street Sallys");
-
-        javax.swing.GroupLayout SallysLayout = new javax.swing.GroupLayout(Sallys);
-        Sallys.setLayout(SallysLayout);
-        SallysLayout.setHorizontalGroup(
-            SallysLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SallysLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(SallysLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SallysLayout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(8, 8, 8)))
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
-        SallysLayout.setVerticalGroup(
-            SallysLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SallysLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel14)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
-                .addComponent(jLabel7)
-                .addContainerGap())
-        );
-
-        jPanel1.add(Sallys, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 596, 160, 180));
-
-        Royal.setBackground(new java.awt.Color(0, 0, 204));
-        Royal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
-        Royal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                RoyalMouseClicked(evt);
-            }
-        });
-
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Royal_Academy.png"))); // NOI18N
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Royal Academy");
-
-        javax.swing.GroupLayout RoyalLayout = new javax.swing.GroupLayout(Royal);
-        Royal.setLayout(RoyalLayout);
-        RoyalLayout.setHorizontalGroup(
-            RoyalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RoyalLayout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addGroup(RoyalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel15))
-                .addContainerGap(13, Short.MAX_VALUE))
-        );
-        RoyalLayout.setVerticalGroup(
-            RoyalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RoyalLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel15)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addContainerGap())
-        );
-
-        jPanel1.add(Royal, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 340, 160, -1));
-
-        Otaku.setBackground(new java.awt.Color(0, 0, 204));
-        Otaku.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
-        Otaku.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                OtakuMouseClicked(evt);
-            }
-        });
-
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Otaku.png"))); // NOI18N
-
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Instituto Otaku");
-
-        javax.swing.GroupLayout OtakuLayout = new javax.swing.GroupLayout(Otaku);
-        Otaku.setLayout(OtakuLayout);
-        OtakuLayout.setHorizontalGroup(
-            OtakuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OtakuLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel16)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, OtakuLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel9)
-                .addContainerGap())
-        );
-        OtakuLayout.setVerticalGroup(
-            OtakuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OtakuLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(jLabel9)
-                .addContainerGap())
-        );
-
-        jPanel1.add(Otaku, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 840, 160, -1));
-
-        IKFC.setBackground(new java.awt.Color(0, 0, 204));
-        IKFC.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
-        IKFC.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                IKFCMouseClicked(evt);
-            }
-        });
-
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Inazuma_KFC.png"))); // NOI18N
-
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Inazuma KFC");
-
-        javax.swing.GroupLayout IKFCLayout = new javax.swing.GroupLayout(IKFC);
-        IKFC.setLayout(IKFCLayout);
-        IKFCLayout.setHorizontalGroup(
-            IKFCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(IKFCLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(IKFCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel17))
-                .addContainerGap(13, Short.MAX_VALUE))
-        );
-        IKFCLayout.setVerticalGroup(
-            IKFCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(IKFCLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel17)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(jLabel10)
-                .addContainerGap())
-        );
-
-        jPanel1.add(IKFC, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 1080, 160, -1));
-
-        Wilds.setBackground(new java.awt.Color(0, 0, 204));
-        Wilds.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
-        Wilds.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                WildsMouseClicked(evt);
-            }
-        });
-
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Wild.png"))); // NOI18N
-
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel19.setText("Instituto Wilds");
-
-        javax.swing.GroupLayout WildsLayout = new javax.swing.GroupLayout(Wilds);
-        Wilds.setLayout(WildsLayout);
-        WildsLayout.setHorizontalGroup(
-            WildsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(WildsLayout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addGroup(WildsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel19)
-                    .addComponent(jLabel18))
-                .addContainerGap(15, Short.MAX_VALUE))
-        );
-        WildsLayout.setVerticalGroup(
-            WildsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(WildsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel18)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel19)
-                .addContainerGap(9, Short.MAX_VALUE))
-        );
-
-        jPanel1.add(Wilds, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 1090, 160, 190));
-
-        Farm.setBackground(new java.awt.Color(0, 0, 204));
-        Farm.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
-        Farm.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                FarmMouseClicked(evt);
-            }
-        });
-        Farm.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Escudo_-_Farm_29.png"))); // NOI18N
-        Farm.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -20, 180, -1));
-
-        jLabel28.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel28.setText("Instituto Farm");
-        Farm.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
-
-        jPanel1.add(Farm, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 1870, 160, 200));
-
-        Shuriken.setBackground(new java.awt.Color(0, 0, 204));
-        Shuriken.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
-        Shuriken.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ShurikenMouseClicked(evt);
-            }
-        });
-        Shuriken.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Escudo_-_Shuriken_29.png"))); // NOI18N
-        Shuriken.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -10, 180, -1));
-
-        jLabel26.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel26.setText("Instituto Shuriken");
-        Shuriken.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, -1, -1));
-
-        jPanel1.add(Shuriken, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 1600, 160, 200));
-
-        Occult.setBackground(new java.awt.Color(0, 0, 204));
-        Occult.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
-        Occult.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                OccultMouseClicked(evt);
-            }
-        });
-        Occult.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Occult.png"))); // NOI18N
-        Occult.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 130, -1));
-
-        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel24.setText("Instituto Occult");
-        Occult.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
-
-        jPanel1.add(Occult, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 1600, 160, 200));
-
-        RaimonOG.setBackground(new java.awt.Color(0, 0, 204));
-        RaimonOG.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
-        RaimonOG.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                RaimonOGMouseClicked(evt);
-            }
-        });
-        RaimonOG.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Raimon_OB_emblem_29.png"))); // NOI18N
-        RaimonOG.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -20, 180, -1));
-
-        jLabel22.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setText("Raimon Original");
-        RaimonOG.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
-
-        jPanel1.add(RaimonOG, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 1350, 160, 200));
-
-        Zeus.setBackground(new java.awt.Color(0, 0, 204));
-        Zeus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 51, 51), null, null));
-        Zeus.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ZeusMouseClicked(evt);
-            }
-        });
-        Zeus.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        asss.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/escudos/Zeus_emblem_29 (2).png"))); // NOI18N
-        Zeus.add(asss, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, -1, -1));
-
-        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setText("Instituto Zeus");
-        Zeus.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
-
-        jPanel1.add(Zeus, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 1350, 160, 200));
+        jButton3.setBackground(new java.awt.Color(255, 102, 0));
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("Crear Equipo");
+        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 470, 40));
 
         jScrollPane2.setViewportView(jPanel1);
 
@@ -566,27 +141,14 @@ public class VistaMenu extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 2159, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 653, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-         VistaLogin login = new VistaLogin();
-    login.setLocationRelativeTo(null); // Centra la ventana de login
-    login.setVisible(true);
-    this.dispose(); // Cierra la ventan
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
-        
-    }//GEN-LAST:event_jPanel2MouseClicked
-
-    private void RoyalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RoyalMouseClicked
-        // TODO add your handling code here:
-           // TODO add your handling code here:
+       // TODO add your handling code here:
         // TODO add your handling code here:
             Royal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -595,46 +157,13 @@ public class VistaMenu extends javax.swing.JFrame {
     ControladorEquipos controlador = new ControladorEquipos(vista, servicios);
     vista.setLocationRelativeTo(null); // Centra la ventana
     
-    vista.setVisible(true);
-    }//GEN-LAST:event_RoyalMouseClicked
+    vista.setVisible(true);       
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void RaimonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RaimonMouseClicked
-        // TODO add your handling code here:
-        // TODO add your handling code here:
-            Raimon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
+        
+    }//GEN-LAST:event_jPanel2MouseClicked
 
-         VistaRaimonCampo vista = new VistaRaimonCampo();
-    vista.setLocationRelativeTo(null); // Centra la ventana
-    vista.setVisible(true);
-    }//GEN-LAST:event_RaimonMouseClicked
-
-    private void BrainMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BrainMouseClicked
-        // TODO add your handling code here:
-         Brain.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        VistaCampoBrain vista = new VistaCampoBrain();
-    vista.setLocationRelativeTo(null); // Centra la ventana
-    vista.setVisible(true);
-    }//GEN-LAST:event_BrainMouseClicked
-
-    private void SallysMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SallysMouseClicked
-        // TODO add your handling code here:
-         // TODO add your handling code here:
-         Sallys.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        VistaCampoStreetSallys vista = new VistaCampoStreetSallys();
-    vista.setLocationRelativeTo(null); // Centra la ventana
-    vista.setVisible(true);
-    }//GEN-LAST:event_SallysMouseClicked
-
-    private void UmbrellaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UmbrellaMouseClicked
-        // TODO add your handling code here:
-         Umbrella.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        VistaCampoUmbrella vista = new VistaCampoUmbrella();
-    vista.setLocationRelativeTo(null); // Centra la ventana
-    vista.setVisible(true);
-    }//GEN-LAST:event_UmbrellaMouseClicked
 private void BackToLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackToLoginActionPerformed
     VistaLogin login = new VistaLogin();
          VistaMusica musica = new VistaMusica();
@@ -644,80 +173,16 @@ private void BackToLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     this.dispose(); // Cierra la ventana actual
 }//GEN-LAST:event_BackToLoginActionPerformed
 
-    private void OtakuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OtakuMouseClicked
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-         Otaku.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        VistaOtakuCampo vista = new VistaOtakuCampo();
-    vista.setLocationRelativeTo(null); // Centra la ventana
-    vista.setVisible(true);
-    }//GEN-LAST:event_OtakuMouseClicked
-
-    private void IKFCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IKFCMouseClicked
-        // TODO add your handling code here:
-         IKFC.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        InazumaKidsVista vista = new InazumaKidsVista();
-    vista.setLocationRelativeTo(null); // Centra la ventana
-    vista.setVisible(true);
-    }//GEN-LAST:event_IKFCMouseClicked
-
-    private void WildsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_WildsMouseClicked
-        // TODO add your handling code here:
-         Wilds.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        VistaWildCampo vista = new VistaWildCampo();
-    vista.setLocationRelativeTo(null); // Centra la ventana
-    vista.setVisible(true);
-    }//GEN-LAST:event_WildsMouseClicked
-
-    private void RaimonOGMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RaimonOGMouseClicked
-        // TODO add your handling code here:
-         RaimonOG.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        RaimonOGVista vista = new RaimonOGVista();
-    vista.setLocationRelativeTo(null); // Centra la ventana
-    vista.setVisible(true);
-    }//GEN-LAST:event_RaimonOGMouseClicked
-
-    private void ZeusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ZeusMouseClicked
-        // TODO add your handling code here:
-         Zeus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        ZeusVistaCampo vista = new ZeusVistaCampo();
-    vista.setLocationRelativeTo(null); // Centra la ventana
-    vista.setVisible(true);
-    }//GEN-LAST:event_ZeusMouseClicked
-
-    private void OccultMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OccultMouseClicked
-        // TODO add your handling code here:
-        Occult.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        VistaOccultCampo vista = new VistaOccultCampo();
-    vista.setLocationRelativeTo(null); // Centra la ventana
-    vista.setVisible(true);
-    }//GEN-LAST:event_OccultMouseClicked
-
-    private void ShurikenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ShurikenMouseClicked
-        // TODO add your handling code here:
-          // TODO add your handling code here:
-        Shuriken.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        VistaCampoShuriken vista = new VistaCampoShuriken();
-    vista.setLocationRelativeTo(null); // Centra la ventana
-    vista.setVisible(true);
-    }//GEN-LAST:event_ShurikenMouseClicked
-
-    private void FarmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FarmMouseClicked
-        // TODO add your handling code here:
-          // TODO add your handling code here:
-          // TODO add your handling code here:
-        Farm.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        VistaCampoFarm vista = new VistaCampoFarm();
-    vista.setLocationRelativeTo(null); // Centra la ventana
-    vista.setVisible(true);
-    }//GEN-LAST:event_FarmMouseClicked
+Servicios servicios = new Servicios();
+VistaCrearJugador vista = new VistaCrearJugador();
+ControladorCrearJugador controlador = new ControladorCrearJugador(vista, servicios);
+vista.setControlador(controlador); // ¡Esto es clave!
+controlador.cargarEquiposEnComboBox();
+controlador.cargarTecnicasEnComboBox();
+vista.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     
 
@@ -729,51 +194,14 @@ private void BackToLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BackToLogin;
-    private javax.swing.JPanel Brain;
-    private javax.swing.JPanel Farm;
-    private javax.swing.JPanel IKFC;
-    private javax.swing.JPanel Occult;
-    private javax.swing.JPanel Otaku;
-    private javax.swing.JPanel Raimon;
-    private javax.swing.JPanel RaimonOG;
-    private javax.swing.JPanel Royal;
-    private javax.swing.JPanel Sallys;
-    private javax.swing.JPanel Shuriken;
-    private javax.swing.JPanel Umbrella;
-    private javax.swing.JPanel Wilds;
-    private javax.swing.JPanel Zeus;
-    private javax.swing.JLabel asss;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JColorChooser jColorChooser1;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JOptionPane jOptionPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;

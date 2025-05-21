@@ -25,7 +25,17 @@ public class ControladorEquipos {
         this.servicios = servicios;
     }
 public String obtenerCarpetaEquipo(String nombreEquipo) {
-    switch (nombreEquipo.trim().toLowerCase()) {
+    // Normaliza el nombre: minúsculas, sin espacios, sin guiones, sin tildes
+    String normalizado = nombreEquipo.trim().toLowerCase()
+        .replace(" ", "_")
+        .replace("-", "_")
+        .replace("á", "a")
+        .replace("é", "e")
+        .replace("í", "i")
+        .replace("ó", "o")
+        .replace("ú", "u");
+
+    switch (normalizado) {
         case "royal_academy": return "royal";
         case "raimon": return "raimon";
         case "brainwashing": return "brainwashing";
@@ -36,17 +46,17 @@ public String obtenerCarpetaEquipo(String nombreEquipo) {
         case "wild": return "wilds";
         case "umbrella": return "umbrella";
         case "sallys_street":
-        case "street sallys":
+        case "street_sallys":
         case "streetsallys":
-            return "streetsallys";
+            return "street_sallys"; // Carpeta real con guion bajo
         case "shuriken": return "Shuriken";
         case "farm": return "Farm";
-        case "raimon og":
-        case "inazuma eleven":
+        case "raimon_og":
+        case "inazuma_eleven":
         case "inazumaeleven":
             return "InazumaEleven";
         // Añade aquí todos los equipos y sus carpetas reales
-        default: return nombreEquipo.replace(" ", "").toLowerCase();
+        default: return normalizado;
     }
 }
 public ControladorEquipos(VistaCampoGeneral vista, Servicios servicios) {

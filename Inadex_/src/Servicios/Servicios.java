@@ -72,7 +72,24 @@ public class Servicios {
     	} 
     }
 
- 
+ public java.util.List<String> getNombresTecnicas() {
+    java.util.List<String> lista = new java.util.ArrayList<>();
+    try {
+        Conectar();
+        String sql = "SELECT nombre FROM tecnicas";
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) {
+            lista.add(rs.getString("nombre"));
+        }
+        rs.close();
+        ps.close();
+        CerrarConexion();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    return lista;
+}
     
     //para cerrar conexión
     public static void CerrarConexion(){
@@ -157,8 +174,35 @@ public boolean loginUsuario(String Usuario, String Contrasena) {
 *VistaBorrar
 */
 
-
-
+public boolean insertarJugador(int id, String nombre, int pt, int pe, int tiro, int aguante, int fisico,
+                              int control, int defensa, int rapidez, int valor, String elemento, String posicion) {
+    String sql = "INSERT INTO jugador (Id_J, Nombre_J, PT, PE, Tiro, Aguante, Fisico, Control, Defensa, Rapidez, Valor, Elemento, Posicion) " +
+                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    try {
+        Conectar();
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setInt(1, id);
+        ps.setString(2, nombre);
+        ps.setInt(3, pt);
+        ps.setInt(4, pe);
+        ps.setInt(5, tiro);
+        ps.setInt(6, aguante);
+        ps.setInt(7, fisico);
+        ps.setInt(8, control);
+        ps.setInt(9, defensa);
+        ps.setInt(10, rapidez);
+        ps.setInt(11, valor);
+        ps.setString(12, elemento);
+        ps.setString(13, posicion);
+        int filas = ps.executeUpdate();
+        ps.close();
+        CerrarConexion();
+        return filas > 0;
+    } catch (Exception e) {
+        e.printStackTrace();
+        return false;
+    }
+}
 public boolean borrarUsuarios() {
     try {
         // Ejecutar la consulta para borrar todos los usuarios
@@ -219,7 +263,42 @@ public boolean borrarUsuarios() {
     *Conseguir jugadores 
     *
     */
-    
+    public boolean insertarJugadorTecnica(int idJugador, int idTecnica) {
+    String sql = "INSERT INTO jugador_tecnica (jugador_id, tecnica_id) VALUES (?, ?)";
+    try {
+        Conectar();
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setInt(1, idJugador);
+        ps.setInt(2, idTecnica);
+        ps.executeUpdate();
+        ps.close();
+        CerrarConexion();
+        return true;
+    } catch (Exception e) {
+        e.printStackTrace();
+        return false;
+    }
+}
+
+public int getIdTecnicaPorNombre(String nombre) {
+    int id = -1;
+    try {
+        Conectar();
+        String sql = "SELECT id FROM tecnicas WHERE nombre = ?";
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setString(1, nombre);
+        ResultSet rs = ps.executeQuery();
+        if (rs.next()) {
+            id = rs.getInt("id");
+        }
+        rs.close();
+        ps.close();
+        CerrarConexion();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    return id;
+}
     
 public Jugador getJugadorPorId(int id) {
     Jugador jugador = null;
@@ -254,6 +333,25 @@ public Jugador getJugadorPorId(int id) {
     }
     return jugador;
 }
+ 
+
+public boolean insertarEquipoJugadorPosicion(int idEquipo, int idJugador) {
+    String sql = "INSERT INTO equipo_jugador_posicion (Id_E, Id_J, posX, posY, nombreX, nombreY) VALUES (?, ?, 400, 300, 400, 379)";
+    try {
+        Conectar();
+        java.sql.PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setInt(1, idEquipo);
+        ps.setInt(2, idJugador);
+        int filas = ps.executeUpdate();
+        ps.close();
+        CerrarConexion();
+        return filas > 0;
+    } catch (Exception e) {
+        e.printStackTrace();
+        return false;
+    }
+}
+
 
 public java.util.List<Tecnica> getTecnicasPorJugador(int idJugador) {
     java.util.List<Tecnica> tecnicas = new java.util.ArrayList<>();

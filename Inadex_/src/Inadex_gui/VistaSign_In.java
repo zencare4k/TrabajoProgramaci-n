@@ -113,6 +113,7 @@ VistaMusica controladorMusica = new VistaMusica();
             }
         });
 
+        Nombre_SignIn.setEditable(false);
         Nombre_SignIn.setBackground(new java.awt.Color(255, 102, 0));
         Nombre_SignIn.setForeground(new java.awt.Color(255, 255, 255));
         Nombre_SignIn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));

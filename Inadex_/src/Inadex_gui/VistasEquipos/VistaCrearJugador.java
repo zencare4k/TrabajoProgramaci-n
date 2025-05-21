@@ -1,0 +1,705 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
+package Inadex_gui.VistasEquipos;
+ import Servicios.Servicios;
+import Controladores.ControladoresEquipos.ControladorCrearJugador;
+/**
+ *
+ * @author zenca
+ */
+public class VistaCrearJugador extends javax.swing.JFrame {
+    /**
+     * Creates new form VistaCrearJugador
+     */
+    public VistaCrearJugador() {
+        initComponents();
+
+          // ComboBox de posiciones
+    Posicion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PR", "DL", "MD", "DF" }));
+    // ComboBox de elementos
+    Elemento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bosque", "Montaña", "Aire", "Fuego" }));
+    
+    }
+    private Controladores.ControladoresEquipos.ControladorCrearJugador controlador;
+
+public void setControlador(Controladores.ControladoresEquipos.ControladorCrearJugador controlador) {
+    this.controlador = controlador;
+}
+public void setEquiposComboBox(java.util.List<String> equipos) {
+    javax.swing.DefaultComboBoxModel<String> model = new javax.swing.DefaultComboBoxModel<>();
+    for (String eq : equipos) {
+        model.addElement(eq);
+    }
+    jComboBox1.setModel(model);
+    
+    
+}
+
+    public Controladores.ControladoresEquipos.ControladorCrearJugador getControlador() {
+    return controlador;
+}
+public javax.swing.JComboBox<String> getSM1() {
+    return SM1;
+}
+public javax.swing.JComboBox<String> getSM2() {
+    return SM2;
+}
+public javax.swing.JComboBox<String> getSM3() {
+    return SM3;
+}
+public javax.swing.JComboBox<String> getSm4() {
+    return Sm4;
+}
+public javax.swing.JLabel getjLabel17() {
+    return jLabel17;
+}
+public javax.swing.JLabel getjLabel18() {
+    return jLabel18;
+}
+public javax.swing.JLabel getjLabel19() {
+    return jLabel19;
+}
+public javax.swing.JLabel getjLabel20() {
+    return jLabel20;
+}
+    public javax.swing.JTextField getAguante() {
+        return Aguante;
+    }
+
+    public javax.swing.JTextField getControl() {
+        return Control;
+    }
+
+    public javax.swing.JButton getCrearJugador() {
+        return CrearJugador;
+    }
+
+    public javax.swing.JTextField getDefensa() {
+        return Defensa;
+    }
+
+    public javax.swing.JComboBox<String> getElemento() {
+        return Elemento;
+    }
+
+    public javax.swing.JTextField getFisico() {
+        return Fisico;
+    }
+
+    public javax.swing.JTextField getID() {
+        return ID;
+    }
+
+    public javax.swing.JTextField getPE() {
+        return PE;
+    }
+
+    public javax.swing.JTextField getPT() {
+        return PT;
+    }
+
+    public javax.swing.JComboBox<String> getPosicion() {
+        return Posicion;
+    }
+
+    public javax.swing.JTextField getRapidez() {
+        return Rapidez;
+    }
+
+    public javax.swing.JButton getSeleccionarImagen() {
+        return SeleccionarImagen;
+    }
+
+    public javax.swing.JTextField getTiro() {
+        return Tiro;
+    }
+
+    public javax.swing.JComboBox<String> getjComboBox1() {
+        return jComboBox1;
+    }
+
+    public javax.swing.JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public javax.swing.JLabel getjLabel10() {
+        return jLabel10;
+    }
+
+    public javax.swing.JLabel getjLabel11() {
+        return jLabel11;
+    }
+
+    public javax.swing.JLabel getjLabel12() {
+        return jLabel12;
+    }
+
+    public javax.swing.JLabel getjLabel13() {
+        return jLabel13;
+    }
+
+    public javax.swing.JLabel getjLabel14() {
+        return jLabel14;
+    }
+
+    public javax.swing.JLabel getjLabel15() {
+        return jLabel15;
+    }
+
+    public javax.swing.JLabel getjLabel16() {
+        return jLabel16;
+    }
+
+    public javax.swing.JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public javax.swing.JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public javax.swing.JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public javax.swing.JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public javax.swing.JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public javax.swing.JLabel getjLabel7() {
+        return jLabel7;
+    }
+
+    public javax.swing.JLabel getjLabel8() {
+        return jLabel8;
+    }
+
+    public javax.swing.JLabel getjLabel9() {
+        return jLabel9;
+    }
+
+    public javax.swing.JPanel getjPanel1() {
+        return jPanel1;
+    }
+
+    public javax.swing.JPanel getjPanel2() {
+        return jPanel2;
+    }
+
+    public javax.swing.JLabel getLabelImagen() {
+        return labelImagen;
+    }
+
+    public javax.swing.JTextField getNombre() {
+        return nombre;
+    }
+
+    public javax.swing.JTextField getValor() {
+        return valor;
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jLabel5 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        SeleccionarImagen = new javax.swing.JButton();
+        labelImagen = new javax.swing.JLabel();
+        PT = new javax.swing.JTextField();
+        ID = new javax.swing.JTextField();
+        Tiro = new javax.swing.JTextField();
+        nombre = new javax.swing.JTextField();
+        PE = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        Control = new javax.swing.JTextField();
+        Aguante = new javax.swing.JTextField();
+        Fisico = new javax.swing.JTextField();
+        valor = new javax.swing.JTextField();
+        Defensa = new javax.swing.JTextField();
+        Rapidez = new javax.swing.JTextField();
+        Elemento = new javax.swing.JComboBox<>();
+        Posicion = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        CrearJugador = new javax.swing.JButton();
+        SM1 = new javax.swing.JComboBox<>();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        SM2 = new javax.swing.JComboBox<>();
+        jLabel19 = new javax.swing.JLabel();
+        SM3 = new javax.swing.JComboBox<>();
+        Sm4 = new javax.swing.JComboBox<>();
+        jLabel20 = new javax.swing.JLabel();
+
+        jLabel5.setText("jLabel5");
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(0, 102, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo_red_2.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 40, -1, -1));
+
+        jPanel2.setBackground(new java.awt.Color(0, 51, 204));
+        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        SeleccionarImagen.setBackground(new java.awt.Color(255, 102, 0));
+        SeleccionarImagen.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        SeleccionarImagen.setForeground(new java.awt.Color(255, 255, 255));
+        SeleccionarImagen.setText("Elegir imagen");
+        SeleccionarImagen.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        SeleccionarImagen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SeleccionarImagenActionPerformed(evt);
+            }
+        });
+
+        labelImagen.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        labelImagen.setForeground(new java.awt.Color(255, 255, 255));
+        labelImagen.setText("Ninguna imagen");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 21, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(SeleccionarImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelImagen))
+                .addGap(27, 27, 27))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(56, Short.MAX_VALUE)
+                .addComponent(labelImagen)
+                .addGap(47, 47, 47)
+                .addComponent(SeleccionarImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 150, 160));
+
+        PT.setBackground(new java.awt.Color(255, 102, 0));
+        PT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        PT.setForeground(new java.awt.Color(255, 255, 255));
+        PT.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(PT, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, 70, 30));
+
+        ID.setBackground(new java.awt.Color(255, 102, 0));
+        ID.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ID.setForeground(new java.awt.Color(255, 255, 255));
+        ID.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 100, 40));
+
+        Tiro.setBackground(new java.awt.Color(255, 102, 0));
+        Tiro.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Tiro.setForeground(new java.awt.Color(255, 255, 255));
+        Tiro.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(Tiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, 70, 30));
+
+        nombre.setBackground(new java.awt.Color(255, 102, 0));
+        nombre.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        nombre.setForeground(new java.awt.Color(255, 255, 255));
+        nombre.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 220, 40));
+
+        PE.setBackground(new java.awt.Color(255, 102, 0));
+        PE.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        PE.setForeground(new java.awt.Color(255, 255, 255));
+        PE.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(PE, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, 70, 30));
+
+        jComboBox1.setBackground(new java.awt.Color(255, 102, 0));
+        jComboBox1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 40, 220, 40));
+
+        Control.setBackground(new java.awt.Color(255, 102, 0));
+        Control.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Control.setForeground(new java.awt.Color(255, 255, 255));
+        Control.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(Control, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 410, 70, 30));
+
+        Aguante.setBackground(new java.awt.Color(255, 102, 0));
+        Aguante.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Aguante.setForeground(new java.awt.Color(255, 255, 255));
+        Aguante.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(Aguante, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 310, 70, 30));
+
+        Fisico.setBackground(new java.awt.Color(255, 102, 0));
+        Fisico.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Fisico.setForeground(new java.awt.Color(255, 255, 255));
+        Fisico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(Fisico, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, 70, 30));
+
+        valor.setBackground(new java.awt.Color(255, 102, 0));
+        valor.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        valor.setForeground(new java.awt.Color(255, 255, 255));
+        valor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 560, 70, 30));
+
+        Defensa.setBackground(new java.awt.Color(255, 102, 0));
+        Defensa.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Defensa.setForeground(new java.awt.Color(255, 255, 255));
+        Defensa.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(Defensa, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 460, 70, 30));
+
+        Rapidez.setBackground(new java.awt.Color(255, 102, 0));
+        Rapidez.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Rapidez.setForeground(new java.awt.Color(255, 255, 255));
+        Rapidez.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(Rapidez, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 510, 70, 30));
+
+        Elemento.setBackground(new java.awt.Color(255, 102, 0));
+        Elemento.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Elemento.setForeground(new java.awt.Color(255, 255, 255));
+        Elemento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Elemento.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(Elemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 100, 40));
+
+        Posicion.setBackground(new java.awt.Color(255, 102, 0));
+        Posicion.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Posicion.setForeground(new java.awt.Color(255, 255, 255));
+        Posicion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Posicion.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(Posicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 100, 40));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Elemento:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Selecciona Equipo:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Posición:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("ID del jugador:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Defensa:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Nombre del jugador:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("PT:");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("PE:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Tiro:");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Aguante:");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, -1, -1));
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Físico:");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, -1, -1));
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Valor:");
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 570, -1, -1));
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Control:");
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 420, -1, -1));
+
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Rapidez:");
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 520, -1, -1));
+
+        CrearJugador.setBackground(new java.awt.Color(255, 102, 0));
+        CrearJugador.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        CrearJugador.setForeground(new java.awt.Color(255, 255, 255));
+        CrearJugador.setText("Crear Jugador");
+        CrearJugador.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        CrearJugador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearJugadorActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CrearJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 520, 160, 50));
+
+        SM1.setBackground(new java.awt.Color(255, 102, 0));
+        SM1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        SM1.setForeground(new java.awt.Color(255, 255, 255));
+        SM1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        SM1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        SM1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SM1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(SM1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 320, 220, 40));
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("Supertecnica 1:");
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 330, -1, -1));
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("Supertecnica 1:");
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 390, -1, -1));
+
+        SM2.setBackground(new java.awt.Color(255, 102, 0));
+        SM2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        SM2.setForeground(new java.awt.Color(255, 255, 255));
+        SM2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        SM2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        SM2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SM2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(SM2, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 380, 220, 40));
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setText("Supertecnica 1:");
+        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 450, -1, -1));
+
+        SM3.setBackground(new java.awt.Color(255, 102, 0));
+        SM3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        SM3.setForeground(new java.awt.Color(255, 255, 255));
+        SM3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        SM3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        SM3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SM3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(SM3, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 440, 220, 40));
+
+        Sm4.setBackground(new java.awt.Color(255, 102, 0));
+        Sm4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Sm4.setForeground(new java.awt.Color(255, 255, 255));
+        Sm4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Sm4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Sm4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Sm4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Sm4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 500, 220, 40));
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("Supertecnica 1:");
+        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 510, -1, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1017, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 653, Short.MAX_VALUE)
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+private String rutaImagenSeleccionada = null;
+
+    private void SeleccionarImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SeleccionarImagenActionPerformed
+        javax.swing.JFileChooser fileChooser = new javax.swing.JFileChooser();
+    fileChooser.setDialogTitle("Selecciona una imagen");
+    fileChooser.setFileFilter(new javax.swing.filechooser.FileNameExtensionFilter("Imágenes", "jpg", "jpeg", "png", "gif"));
+    int resultado = fileChooser.showOpenDialog(this);
+    if (resultado == javax.swing.JFileChooser.APPROVE_OPTION) {
+        java.io.File archivo = fileChooser.getSelectedFile();
+        rutaImagenSeleccionada = archivo.getAbsolutePath(); // Guarda la ruta
+        javax.swing.ImageIcon icono = new javax.swing.ImageIcon(rutaImagenSeleccionada);
+        java.awt.Image img = icono.getImage().getScaledInstance(120, 120, java.awt.Image.SCALE_SMOOTH);
+        labelImagen.setIcon(new javax.swing.ImageIcon(img));
+        labelImagen.setText("");
+    }
+        }//GEN-LAST:event_SeleccionarImagenActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void CrearJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearJugadorActionPerformed
+        // TODO add your handling code here:
+         if (controlador != null) {
+        controlador.crearJugador();
+        
+    }
+    }//GEN-LAST:event_CrearJugadorActionPerformed
+
+    private void SM1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SM1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SM1ActionPerformed
+
+    private void SM2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SM2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SM2ActionPerformed
+
+    private void SM3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SM3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SM3ActionPerformed
+
+    private void Sm4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sm4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Sm4ActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */  
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(VistaCrearJugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(VistaCrearJugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(VistaCrearJugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(VistaCrearJugador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new VistaCrearJugador().setVisible(true);
+                
+            }
+        });
+    }
+public void setTecnicasComboBox(java.util.List<String> tecnicas) {
+    javax.swing.DefaultComboBoxModel<String> model = new javax.swing.DefaultComboBoxModel<>();
+    for (String t : tecnicas) {
+        model.addElement(t);
+    }
+    SM1.setModel(model);
+    SM2.setModel(new javax.swing.DefaultComboBoxModel<>(tecnicas.toArray(new String[0])));
+    SM3.setModel(new javax.swing.DefaultComboBoxModel<>(tecnicas.toArray(new String[0])));
+    Sm4.setModel(new javax.swing.DefaultComboBoxModel<>(tecnicas.toArray(new String[0])));
+}
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Aguante;
+    private javax.swing.JTextField Control;
+    private javax.swing.JButton CrearJugador;
+    private javax.swing.JTextField Defensa;
+    private javax.swing.JComboBox<String> Elemento;
+    private javax.swing.JTextField Fisico;
+    private javax.swing.JTextField ID;
+    private javax.swing.JTextField PE;
+    private javax.swing.JTextField PT;
+    private javax.swing.JComboBox<String> Posicion;
+    private javax.swing.JTextField Rapidez;
+    private javax.swing.JComboBox<String> SM1;
+    private javax.swing.JComboBox<String> SM2;
+    private javax.swing.JComboBox<String> SM3;
+    private javax.swing.JButton SeleccionarImagen;
+    private javax.swing.JComboBox<String> Sm4;
+    private javax.swing.JTextField Tiro;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel labelImagen;
+    private javax.swing.JTextField nombre;
+    private javax.swing.JTextField valor;
+    // End of variables declaration//GEN-END:variables
+
+    public String getRutaImagenSeleccionada() {
+        return rutaImagenSeleccionada;
+    }
+}

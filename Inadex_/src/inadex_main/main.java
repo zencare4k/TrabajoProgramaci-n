@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package inadex_main;
-import Controladores.ControladoresEquipos.ControladorRaimon;
+ 
 import Controladores.ControladorUpdate;
 import Inadex_gui.VistaDelete;
 import Inadex_gui.VistaLogin;
@@ -31,7 +31,7 @@ public class main {
        
     }
             
-    }
+}
             
 
  

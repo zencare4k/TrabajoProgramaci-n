@@ -56,16 +56,16 @@ public class VistaDetalles extends javax.swing.JFrame {
     valor.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
     valor.setForeground(java.awt.Color.WHITE);
 
-    sm1.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    sm1.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 21));
     sm1.setForeground(java.awt.Color.WHITE);
 
-    sm2.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    sm2.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 21));
     sm2.setForeground(java.awt.Color.WHITE);
 
-    sm3.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    sm3.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 21));
     sm3.setForeground(java.awt.Color.WHITE);
 
-    sm4.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
+    sm4.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 21));
     sm4.setForeground(java.awt.Color.WHITE);
 
     jLabel1.setFont(tipoFuente.fuente(tipoFuente.RIO, 0, 24));
@@ -170,16 +170,16 @@ public class VistaDetalles extends javax.swing.JFrame {
         jPanel2.add(valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 670, -1, -1));
 
         sm1.setText("SM1");
-        jPanel2.add(sm1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 350, -1, -1));
+        jPanel2.add(sm1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, -1, -1));
 
         sm2.setText("SM2");
-        jPanel2.add(sm2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, -1, -1));
+        jPanel2.add(sm2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 410, -1, -1));
 
         sm3.setText("SM3");
-        jPanel2.add(sm3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 470, -1, -1));
+        jPanel2.add(sm3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 470, -1, -1));
 
         sm4.setText("SM4");
-        jPanel2.add(sm4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 530, -1, -1));
+        jPanel2.add(sm4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 530, -1, -1));
 
         jLabel1.setText("99");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 80, -1, -1));

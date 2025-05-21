@@ -358,8 +358,7 @@ private void guardarDatosAutocompletar(String usuario, String contrasena) {
         vDelete.setVisible(true);
         vDelete.setResizable(false);
         vDelete.setLocationRelativeTo(null);
-        servicios.borrarUsuarios();
-        dispose();
+         dispose();
               
     
       
