@@ -126,6 +126,42 @@ public boolean registrarUsuario(String Usuario, String Contrasena, String Correo
     }
     
 }
+
+
+    public boolean insertarEquipo(int id, String nombre, String elemento, String tipo) {
+    String sql = "INSERT INTO equipo (Id_E, Nombre_E, elemento, tipo) VALUES (?, ?, ?, ?)";
+    try {
+        Conectar();
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setInt(1, id);
+        ps.setString(2, nombre);
+        ps.setString(3, elemento);
+        ps.setString(4, tipo);
+        int filas = ps.executeUpdate();
+        ps.close();
+        CerrarConexion();
+        return filas > 0;
+    } catch (Exception e) {
+        e.printStackTrace();
+        return false;
+    }
+}
+    public boolean insertarEquipo(int id, String nombre) {
+    String sql = "INSERT INTO equipo (Id_E, Nombre_E) VALUES (?, ?)";
+    try {
+        Conectar();
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setInt(1, id);
+        ps.setString(2, nombre);
+        int filas = ps.executeUpdate();
+        ps.close();
+        CerrarConexion();
+        return filas > 0;
+    } catch (Exception e) {
+        e.printStackTrace();
+        return false;
+    }
+}
     public boolean borrarUsuario(String usuario) {
     String sql = "DELETE FROM usuarios WHERE Usuario = ?";
     try {
@@ -259,6 +295,8 @@ public boolean borrarUsuarios() {
             throw new SQLException(e.getMessage());
         }
     }
+
+
     /*
     *Conseguir jugadores 
     *
@@ -422,6 +460,8 @@ public java.util.List<Tecnica> getTecnicasPorJugador(int idJugador) {
     }
     return lista;
 }
+
+    
 public void actualizarPosicionJugadorCompleta(int idEquipo, int idJugador, int posX, int posY, int nombreX, int nombreY) throws SQLException {
     try {
         Conectar();

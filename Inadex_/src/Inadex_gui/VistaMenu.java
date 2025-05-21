@@ -6,6 +6,7 @@ package Inadex_gui;
 
 import Controladores.ControladoresEquipos.ControladorCrearJugador;
  import Inadex_gui.VistaLogin;
+import Inadex_gui.VistasEquipos.VistaCrearEquipo;
 import Controladores.ControladoresEquipos.ControladorEquipos;
  
 import Inadex_gui.VistasEquipos.VistaCampoGeneral;
@@ -63,7 +64,7 @@ public class VistaMenu extends javax.swing.JFrame {
         BackToLogin = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        CrearEquipo = new javax.swing.JButton();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -124,12 +125,17 @@ public class VistaMenu extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 470, 40));
 
-        jButton3.setBackground(new java.awt.Color(255, 102, 0));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Crear Equipo");
-        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 470, 40));
+        CrearEquipo.setBackground(new java.awt.Color(255, 102, 0));
+        CrearEquipo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        CrearEquipo.setForeground(new java.awt.Color(255, 255, 255));
+        CrearEquipo.setText("Crear Equipo");
+        CrearEquipo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        CrearEquipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearEquipoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CrearEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 470, 40));
 
         jScrollPane2.setViewportView(jPanel1);
 
@@ -155,7 +161,7 @@ public class VistaMenu extends javax.swing.JFrame {
        VistaCampoGeneral vista = new VistaCampoGeneral();
     Servicios servicios = new Servicios();
     ControladorEquipos controlador = new ControladorEquipos(vista, servicios);
-    vista.setLocationRelativeTo(null); // Centra la ventana
+    vista.setLocationRelativeTo(null);  
     
     vista.setVisible(true);       
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -181,8 +187,16 @@ ControladorCrearJugador controlador = new ControladorCrearJugador(vista, servici
 vista.setControlador(controlador); // ¡Esto es clave!
 controlador.cargarEquiposEnComboBox();
 controlador.cargarTecnicasEnComboBox();
+    vista.setLocationRelativeTo(null);  
+
 vista.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+VistaCrearEquipo vistaEquipo = new VistaCrearEquipo();
+    private void CrearEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearEquipoActionPerformed
+        // TODO add your handling code here:
+        vistaEquipo.setLocationRelativeTo(null);
+        vistaEquipo.setVisible(true);
+    }//GEN-LAST:event_CrearEquipoActionPerformed
 
     
 
@@ -194,9 +208,9 @@ vista.setVisible(true);
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BackToLogin;
+    private javax.swing.JButton CrearEquipo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JColorChooser jColorChooser1;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JFileChooser jFileChooser1;

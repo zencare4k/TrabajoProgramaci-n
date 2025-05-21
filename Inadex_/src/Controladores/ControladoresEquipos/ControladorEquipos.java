@@ -36,7 +36,7 @@ public String obtenerCarpetaEquipo(String nombreEquipo) {
         .replace("ú", "u");
 
     switch (normalizado) {
-        case "royal_academy": return "royal";
+        case "royal_academy": return "royal_academy";
         case "raimon": return "raimon";
         case "brainwashing": return "brainwashing";
         case "inazuma_kids_fc": return "inazuma_kfc";

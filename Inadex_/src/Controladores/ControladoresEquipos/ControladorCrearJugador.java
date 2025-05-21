@@ -88,7 +88,7 @@ String tecnica4 = (String) vista.getSm4().getSelectedItem();
     File carpeta = new File(carpetaEquipo);
     if (!carpeta.exists()) carpeta.mkdirs();
     String extension = rutaImagen.substring(rutaImagen.lastIndexOf('.'));
-    String nombreImagen = "_" + id + extension;
+    String nombreImagen = id + extension;
     File destino = new File(carpeta, nombreImagen);
     try {
         Files.copy(

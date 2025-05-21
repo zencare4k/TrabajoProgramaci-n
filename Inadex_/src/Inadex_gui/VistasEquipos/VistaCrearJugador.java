@@ -5,6 +5,8 @@
 package Inadex_gui.VistasEquipos;
  import Servicios.Servicios;
 import Controladores.ControladoresEquipos.ControladorCrearJugador;
+import Inadex_gui.VistaMusica;
+
 /**
  *
  * @author zenca
@@ -256,6 +258,7 @@ public javax.swing.JLabel getjLabel20() {
         SM3 = new javax.swing.JComboBox<>();
         Sm4 = new javax.swing.JComboBox<>();
         jLabel20 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         jLabel5.setText("jLabel5");
 
@@ -306,7 +309,7 @@ public javax.swing.JLabel getjLabel20() {
                 .addContainerGap())
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 150, 160));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 150, 160));
 
         PT.setBackground(new java.awt.Color(255, 102, 0));
         PT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -550,6 +553,18 @@ public javax.swing.JLabel getjLabel20() {
         jLabel20.setText("Supertecnica 1:");
         jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 510, -1, -1));
 
+        jButton1.setBackground(new java.awt.Color(255, 102, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Volver");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 100, 40));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -607,6 +622,12 @@ private String rutaImagenSeleccionada = null;
     private void Sm4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sm4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Sm4ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        dispose();        // TODO add your handling code here:
+        VistaMusica musica = new VistaMusica();
+        musica.playSound("src/resources_audio/OK.wav");
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -671,6 +692,7 @@ public void setTecnicasComboBox(java.util.List<String> tecnicas) {
     private javax.swing.JButton SeleccionarImagen;
     private javax.swing.JComboBox<String> Sm4;
     private javax.swing.JTextField Tiro;
+    private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
