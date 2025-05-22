@@ -8,7 +8,7 @@ import Controladores.ControladoresEquipos.ControladorCrearJugador;
  import Inadex_gui.VistaLogin;
 import Inadex_gui.VistasEquipos.VistaCrearEquipo;
 import Controladores.ControladoresEquipos.ControladorEquipos;
- 
+import Controladores.ControladoresEquipos.ControladorCrearEquipo;
 import Inadex_gui.VistasEquipos.VistaCampoGeneral;
 import Modelos.Jugador;
 import Servicios.Servicios;
@@ -194,8 +194,13 @@ vista.setVisible(true);
 VistaCrearEquipo vistaEquipo = new VistaCrearEquipo();
     private void CrearEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearEquipoActionPerformed
         // TODO add your handling code here:
-        vistaEquipo.setLocationRelativeTo(null);
-        vistaEquipo.setVisible(true);
+  VistaCrearEquipo vista = new VistaCrearEquipo();
+Servicios servicios = new Servicios();
+ControladorCrearEquipo controlador = new ControladorCrearEquipo(vista, servicios);
+vista.setControlador(controlador);
+vista.setLocationRelativeTo(null);
+vista.setVisible(true);
+
     }//GEN-LAST:event_CrearEquipoActionPerformed
 
     
