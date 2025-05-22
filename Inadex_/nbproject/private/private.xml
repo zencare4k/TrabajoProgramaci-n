@@ -12,9 +12,23 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/VistaCrearEquipo.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Controladores/ControladoresEquipos/ControladorEquipos.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/AutoCompleteData.txt</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaLogin.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/VistaCrearJugador.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaSign_In.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Controladores/ControladoresEquipos/ControladorCrearJugador.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/VistaDeleteEquipos.java</file>
             <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Controladores/ControladoresEquipos/ControladorCrearEquipo.java</file>
             <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaMenu.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Servicios/Servicios.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/CheckLogin.txt</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistasEquipos/VistaCrearEquipo.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Controladores/ControladorUpdate.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Controladores/ControladorLogin.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Controladores/ControladoresEquipos/ControladorDeleteEquipos.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Controladores/ControladorSignIn.java</file>
+            <file>file:/C:/Users/zenca/Documents/GitHub/TrabajoProgramaci-n/Inadex_/src/Inadex_gui/VistaMusica.java</file>
         </group>
     </open-files>
 </project-private>

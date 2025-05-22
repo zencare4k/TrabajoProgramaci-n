@@ -71,7 +71,21 @@ public class Servicios {
     		throw new SQLException("");
     	} 
     }
-
+public boolean borrarEquipoPorNombre(String nombreEquipo) {
+    String sql = "DELETE FROM equipo WHERE Nombre_E = ?";
+    try {
+        Conectar();
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setString(1, nombreEquipo);
+        int filas = ps.executeUpdate();
+        ps.close();
+        CerrarConexion();
+        return filas > 0;
+    } catch (Exception e) {
+        e.printStackTrace();
+        return false;
+    }
+}
  public java.util.List<String> getNombresTecnicas() {
     java.util.List<String> lista = new java.util.ArrayList<>();
     try {

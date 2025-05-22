@@ -15,6 +15,8 @@ import Servicios.Servicios;
 import java.util.ArrayList;
 import Inadex_gui.VistasEquipos.VistaCampoGeneral;
 import Inadex_gui.VistasEquipos.VistaCrearJugador;
+import Inadex_gui.VistasEquipos.VistaDeleteEquipos;
+import Controladores.ControladoresEquipos.ControladorDeleteEquipos;
 import javax.swing.JButton;
 import javax.swing.JTable;
 /**
@@ -34,7 +36,7 @@ public class VistaMenu extends javax.swing.JFrame {
     public VistaMenu() {
         initComponents();
         setSize(650, 780);
-            
+          
             Royal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
            
              
@@ -65,6 +67,8 @@ public class VistaMenu extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         CrearEquipo = new javax.swing.JButton();
+        CrearEquipo1 = new javax.swing.JButton();
+        BorrarEquipo = new javax.swing.JButton();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -137,6 +141,30 @@ public class VistaMenu extends javax.swing.JFrame {
         });
         jPanel1.add(CrearEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 470, 40));
 
+        CrearEquipo1.setBackground(new java.awt.Color(255, 102, 0));
+        CrearEquipo1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        CrearEquipo1.setForeground(new java.awt.Color(255, 255, 255));
+        CrearEquipo1.setText("Crear Equipo");
+        CrearEquipo1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        CrearEquipo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearEquipo1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CrearEquipo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 470, 40));
+
+        BorrarEquipo.setBackground(new java.awt.Color(255, 102, 0));
+        BorrarEquipo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BorrarEquipo.setForeground(new java.awt.Color(255, 255, 255));
+        BorrarEquipo.setText("Borrar Equipo");
+        BorrarEquipo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BorrarEquipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BorrarEquipoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BorrarEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 530, 470, 40));
+
         jScrollPane2.setViewportView(jPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -203,6 +231,20 @@ vista.setVisible(true);
 
     }//GEN-LAST:event_CrearEquipoActionPerformed
 
+    private void CrearEquipo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearEquipo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CrearEquipo1ActionPerformed
+
+    private void BorrarEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarEquipoActionPerformed
+        // TODO add your handling code here:
+        VistaDeleteEquipos vista = new VistaDeleteEquipos();
+Servicios servicios = new Servicios();
+ControladorDeleteEquipos controlador = new ControladorDeleteEquipos(vista, servicios);
+vista.setVisible(true);
+vista.setLocationRelativeTo(null);
+
+    }//GEN-LAST:event_BorrarEquipoActionPerformed
+
     
 
     
@@ -213,7 +255,9 @@ vista.setVisible(true);
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BackToLogin;
+    private javax.swing.JButton BorrarEquipo;
     private javax.swing.JButton CrearEquipo;
+    private javax.swing.JButton CrearEquipo1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JColorChooser jColorChooser1;
